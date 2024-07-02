@@ -291,7 +291,9 @@ EditScreen1 As screen:
             DataField: ="{Attachments}"
             Default: =ThisItem.Attachments
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,'{Attachments}')
+            DisplayName: |+
+                =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,'{Attachments}')
+                
             Fill: =RGBA(0, 0, 0, 0)
             Height: =415
             Required: =false
@@ -354,7 +356,7 @@ EditScreen1 As screen:
             Camera1 As camera:
                 Camera: =0
                 Height: =283
-                OnSelect: |-
+                OnSelect: |
                     =Collect(colAttachments,{DisplayName: "Camera "& NameCameraScreen.Text & ".jpg",Id: "Camera "& NameCameraScreen.Text & ".jpg",Value:Self.Photo});Reset(DataCardValue4);
                 Visible: =EditForm1.Mode<>FormMode.View && Dropdown1.Selected.Value="📸 Camera" && varType="add"
                 Width: =364
