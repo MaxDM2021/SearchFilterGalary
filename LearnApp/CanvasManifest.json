@@ -100,7 +100,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 6,
+    "BindingErrorCount": 3,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -135,7 +135,6 @@
   },
   "ScreenOrder": [
     "HomeScreen",
-    "EditScreen1",
-    "ImfoScreen3"
+    "EditScreen1"
   ]
 }

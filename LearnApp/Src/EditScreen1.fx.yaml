@@ -2,7 +2,7 @@ EditScreen1 As screen:
 
     EditForm1 As form:
         DataSource: =TBL_CameraPictureFile
-        Height: =628
+        Height: =538
         Item: =Gallery1.Selected
         Width: =840
         X: =46
@@ -310,9 +310,10 @@ EditScreen1 As screen:
         Label2 As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
             Height: =45
             Size: =25
-            Text: ="Create New Attachment"
+            Text: ="Info Attachment"
             Width: =450
             X: =524
             Y: =20
@@ -329,4 +330,36 @@ EditScreen1 As screen:
             X: =1282
             Y: =15
             ZIndex: =3
+
+    SubmitBtn As button:
+        Fill: =RGBA(250, 155, 112, 1)
+        HoverFill: =RGBA(168, 0, 0, 1)
+        OnSelect: |
+            =If(
+                EditForm1.Mode = FormMode.View,
+               /* Set(
+                    varAttachMode,
+                    "collect"
+                );*/
+               
+                EditForm(EditForm1);
+                Set(varType,"add")
+               // Adding & removing a dummy record and then triggering the reset of attachments control. Without this, delete actions in attachments card do not work correctly for edit form
+              //  Collect(colAttachments,{DisplayName: "test.jpg",Id: "test.jpg",Value:Blank()});Remove(colAttachments,Last(colAttachments));Select(btnReset)
+                ,
+                SubmitForm(EditForm1)
+            );
+        Text: =If(EditForm1.Mode=FormMode.View,"Edit & add attachments", "Submit")
+        X: =46
+        Y: =689
+        ZIndex: =4
+
+    SubmitBtn_1 As button:
+        Fill: =RGBA(250, 155, 112, 1)
+        HoverFill: =RGBA(168, 0, 0, 1)
+        OnSelect: =EditForm(EditForm1);Set(varType,"remove")
+        Text: =If(EditForm1.Mode=FormMode.View,"Edit & add attachments", "Submit")
+        X: =412
+        Y: =689
+        ZIndex: =5
 
