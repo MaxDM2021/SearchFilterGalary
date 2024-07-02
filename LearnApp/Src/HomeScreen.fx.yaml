@@ -58,7 +58,7 @@ HomeScreen As screen:
         Items: =TBL_CameraPictureFile
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =Navigate(ImfoScreen3);
+        OnSelect: =ClearCollect(colAttachments,ThisItem.Attachments);ResetForm(EditForm1);ViewForm(EditForm1);Navigate(EditScreen1,ScreenTransition.Fade)
         TemplateFill: =
         TemplatePadding: =10
         TemplateSize: =124
