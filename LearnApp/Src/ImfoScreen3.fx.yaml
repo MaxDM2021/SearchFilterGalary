@@ -263,3 +263,13 @@ ImfoScreen3 As screen:
         Y: =276
         ZIndex: =7
 
+    Button4_2 As button:
+        Fill: =RGBA(250, 155, 112, 1)
+        Height: =58
+        Size: =20
+        Text: ="Test"
+        Width: =348
+        X: =59
+        Y: =559
+        ZIndex: =8
+

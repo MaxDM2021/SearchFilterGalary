@@ -9,6 +9,7 @@
     "Button1": 7,
     "Button4": 76,
     "Button4_1": 77,
+    "Button4_2": 79,
     "Camera1": 38,
     "Container2": 41,
     "Container3": 55,
@@ -70,7 +71,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/02/2024 16:39:51",
+  "HeaderLastSavedDateTimeUTC": "07/02/2024 16:43:07",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "b06756bc-d133-40aa-9f51-9830bacf389d": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/38cb66ce397840a0a9db5aabada91e12\""
@@ -109,6 +110,7 @@
     "Button1": {},
     "Button4": {},
     "Button4_1": {},
+    "Button4_2": {},
     "Camera1": {},
     "Container2": {},
     "Container3": {},
@@ -178,6 +180,7 @@
     "Button1": 2,
     "Button4": 58,
     "Button4_1": 59,
+    "Button4_2": 58,
     "Camera1": 35,
     "Container2": 11,
     "Container3": 37,
@@ -245,7 +248,7 @@
   "VolatileProperties": {
     "AnalysisLoadTime": 0.096685,
     "ControlCount": {
-      "button": 1,
+      "button": 2,
       "formViewer": 1,
       "icon": 1,
       "label": 6,
