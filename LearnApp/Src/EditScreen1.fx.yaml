@@ -78,10 +78,11 @@ EditScreen1 As screen:
     Form2 As form:
         DataSource: =TBL_CameraPictureFile
         DefaultMode: =FormMode.New
+        Height: =563
         Item: =Gallery1.Selected
         OnSuccess: =Back()
         X: =46
-        Y: =133
+        Y: =97
         ZIndex: =6
 
         Title_DataCard2 As typedDataCard.textualEditCard:
@@ -159,7 +160,7 @@ EditScreen1 As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,Description)
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =153
             MaxLength: =DataSourceInfo([@TBL_CameraPictureFile], DataSourceInfo.MaxLength, Description)
             Required: =false
             Update: =DataCardValue6.Text
@@ -183,6 +184,7 @@ EditScreen1 As screen:
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
+                Height: =87
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -190,7 +192,7 @@ EditScreen1 As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =206
                 X: =30
                 Y: =DataCardKey6.Y + DataCardKey6.Height + 5
                 ZIndex: =2
@@ -294,7 +296,7 @@ EditScreen1 As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,'{Attachments}')
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =405
             Required: =false
             Update: =DataCardValue8.Attachments
             Width: =798
