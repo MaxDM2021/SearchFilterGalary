@@ -78,6 +78,8 @@ EditScreen1 As screen:
     Form2 As form:
         DataSource: =TBL_CameraPictureFile
         DefaultMode: =FormMode.New
+        Item: =Gallery1.Selected
+        OnSuccess: =Back()
         X: =46
         Y: =133
         ZIndex: =6
@@ -288,14 +290,14 @@ EditScreen1 As screen:
         Attachments_DataCard2 As typedDataCard.attachmentsEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
-            Default: =ThisItem.Attachments
+            Default: =colAttachments
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,'{Attachments}')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
             Update: =DataCardValue8.Attachments
-            Width: =266
+            Width: =798
             X: =0
             Y: =1
             ZIndex: =7
@@ -304,7 +306,7 @@ EditScreen1 As screen:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =223
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -320,9 +322,9 @@ EditScreen1 As screen:
                 PaddingRight: =5
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                Width: =237
+                X: =16
+                Y: =69
                 ZIndex: =2
 
             ErrorMessage8 As label:
@@ -349,4 +351,43 @@ EditScreen1 As screen:
                 Wrap: =false
                 Y: =DataCardKey8.Y
                 ZIndex: =4
+
+            Camera2 As camera:
+                Camera: =0
+                Height: =245
+                OnSelect: |-
+                    =Collect(colAttachments,{DisplayName: "Camera "& TextInput2.Text & ".jpg",Id: "Camera "& TextInput2.Text & ".jpg",Value:Self.Photo});Reset(DataCardValue8);
+                Width: =362
+                X: =327
+                Y: =69
+                ZIndex: =5
+
+            Label5 As label:
+                Text: ="Type"
+                Width: =57
+                X: =324
+                Y: =4
+                ZIndex: =6
+
+            Dropdown2 As dropdown:
+                Height: =37
+                Items: =["📸 Camera","✒️ Pen Input","🖼️ Upload Image"]
+                Width: =189
+                X: =394
+                Y: =7
+                ZIndex: =7
+
+            Label5_1 As label:
+                Text: ="Name"
+                Width: =67
+                X: =351
+                Y: =329
+                ZIndex: =8
+
+            TextInput2 As text:
+                Default: =""
+                Width: =142
+                X: =418
+                Y: =329
+                ZIndex: =9
 
