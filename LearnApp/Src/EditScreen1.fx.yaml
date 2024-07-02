@@ -45,20 +45,20 @@ EditScreen1 As screen:
         HoverFill: =RGBA(168, 0, 0, 1)
         OnSelect: |
             =If(
-                EditForm1.Mode = FormMode.View,
+                Form2.Mode = FormMode.View,
                /* Set(
                     varAttachMode,
                     "collect"
                 );*/
                
-                EditForm(EditForm1);
+                EditForm(Form2);
                 Set(varType,"add")
                // Adding & removing a dummy record and then triggering the reset of attachments control. Without this, delete actions in attachments card do not work correctly for edit form
               //  Collect(colAttachments,{DisplayName: "test.jpg",Id: "test.jpg",Value:Blank()});Remove(colAttachments,Last(colAttachments));Select(btnReset)
                 ,
-                SubmitForm(EditForm1)
+                SubmitForm(Form2)
             );
-        Text: =If(EditForm1.Mode=FormMode.View,"Edit & add attachments", "Submit")
+        Text: =If(Form2.Mode=FormMode.View,"Edit & add attachments", "Submit")
         Width: =270
         X: =46
         Y: =689
@@ -67,9 +67,9 @@ EditScreen1 As screen:
     SubmitBtn_1 As button:
         Fill: =RGBA(250, 155, 112, 1)
         HoverFill: =RGBA(168, 0, 0, 1)
-        OnSelect: =EditForm(EditForm1);Set(varType,"remove")
+        OnSelect: =EditForm(Form2);Set(varType,"remove")
         Text: ="Edit & remove attachments"
-        Visible: =EditForm1.Mode=FormMode.View
+        Visible: =Form2.Mode=FormMode.View
         Width: =302
         X: =346
         Y: =689
