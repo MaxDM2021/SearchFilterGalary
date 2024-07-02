@@ -59,7 +59,7 @@ HomeScreen As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |+
-            =ClearCollect(colAttachments,ThisItem.Attachments);ResetForm(EditForm1);ViewForm(EditForm1);Navigate(EditScreen1,ScreenTransition.Fade)
+            =ClearCollect(colAttachments,ThisItem.Attachments);ResetForm(Form2);ViewForm(Form2);Navigate(EditScreen1,ScreenTransition.Fade)
             
             
         TemplateFill: =
