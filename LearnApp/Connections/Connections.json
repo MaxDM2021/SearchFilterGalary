@@ -1,0 +1,24 @@
+{
+  "b06756bc-d133-40aa-9f51-9830bacf389d": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://dldc-my.sharepoint.com/personal/mdymtriiev_dldc_org/_layouts": {
+        "dataSources": {
+          "TBL_CameraPictureFile": {
+            "tableName": "97b093d0-8585-45b6-9a2a-312d379d720c"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "TBL_CameraPictureFile"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "b06756bc-d133-40aa-9f51-9830bacf389d"
+  }
+}
