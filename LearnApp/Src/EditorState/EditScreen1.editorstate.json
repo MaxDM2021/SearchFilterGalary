@@ -429,12 +429,12 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnRemoveFile",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Behavior",
           "PropertyName": "OnUndoRemoveFile",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Behavior",

@@ -260,8 +260,16 @@ EditScreen1 As screen:
                         colAttachments,
                         Self.Attachments
                     );
-                OnRemoveFile: =ClearCollect(colAttachments,Self.Attachments)
-                OnUndoRemoveFile: =ClearCollect(colAttachments,Self.Attachments)
+                OnRemoveFile: |
+                    =ClearCollect(
+                        colAttachments,
+                        Self.Attachments
+                    );
+                OnUndoRemoveFile: |
+                    =ClearCollect(
+                        colAttachments,
+                        Self.Attachments
+                    );
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
