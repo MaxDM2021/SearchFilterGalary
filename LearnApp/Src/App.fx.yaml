@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =true
-    OnStart: =ClearCollect(colAttachments,Defaults(TBL_CameraPictureFile).Attachments)
+    OnStart: =
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
