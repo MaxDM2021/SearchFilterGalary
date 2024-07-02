@@ -33,8 +33,8 @@ HomeScreen As screen:
         OnSelect: |-
             =Clear(colAttachments);
             Set(varType,"add");
-            ResetForm(EditForm1);
-            NewForm(EditForm1);
+            ResetForm(Form2);
+            NewForm(Form2);
             
             Navigate(
                 EditScreen1,
