@@ -31,7 +31,7 @@ HomeScreen As screen:
         BorderColor: =RGBA(102, 182, 227, 1)
         DelayItemLoading: =true
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =540
+        Height: =554
         Items: =TBL_CameraPictureFile
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
