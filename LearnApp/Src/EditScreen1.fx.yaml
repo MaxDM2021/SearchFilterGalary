@@ -75,15 +75,14 @@ EditScreen1 As screen:
         Y: =689
         ZIndex: =5
 
-    EditForm1 As form:
+    Form2 As form:
         DataSource: =TBL_CameraPictureFile
-        Height: =542
-        Width: =802
-        X: =40
-        Y: =110
+        DefaultMode: =FormMode.New
+        X: =46
+        Y: =133
         ZIndex: =6
 
-        Title_DataCard1 As typedDataCard.textualEditCard:
+        Title_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
             Default: =ThisItem.Title
@@ -93,13 +92,13 @@ EditScreen1 As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@TBL_CameraPictureFile], DataSourceInfo.MaxLength, Title)
             Required: =false
-            Update: =DataCardValue1.Text
-            Width: =267
+            Update: =DataCardValue5.Text
+            Width: =266
             X: =0
             Y: =0
             ZIndex: =7
 
-            DataCardKey1 As label:
+            DataCardKey5 As label:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
@@ -109,7 +108,7 @@ EditScreen1 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue1 As text:
+            DataCardValue5 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -123,10 +122,10 @@ EditScreen1 As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
                 ZIndex: =2
 
-            ErrorMessage1 As label:
+            ErrorMessage5 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -138,20 +137,20 @@ EditScreen1 As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue1.Y + DataCardValue1.Height
+                Y: =DataCardValue5.Y + DataCardValue5.Height
                 ZIndex: =3
 
-            StarVisible1 As label:
+            StarVisible5 As label:
                 Align: =Align.Center
-                Height: =DataCardKey1.Height
+                Height: =DataCardKey5.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey1.Y
+                Y: =DataCardKey5.Y
                 ZIndex: =4
 
-        Description_DataCard1 As typedDataCard.textualEditCard:
+        Description_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Description"
             Default: =ThisItem.Description
@@ -161,13 +160,13 @@ EditScreen1 As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@TBL_CameraPictureFile], DataSourceInfo.MaxLength, Description)
             Required: =false
-            Update: =DataCardValue2.Text
+            Update: =DataCardValue6.Text
             Width: =266
             X: =1
             Y: =0
             ZIndex: =7
 
-            DataCardKey2 As label:
+            DataCardKey6 As label:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
@@ -177,7 +176,7 @@ EditScreen1 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue2 As text:
+            DataCardValue6 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -191,10 +190,10 @@ EditScreen1 As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
                 ZIndex: =2
 
-            ErrorMessage2 As label:
+            ErrorMessage6 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -206,20 +205,20 @@ EditScreen1 As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue2.Y + DataCardValue2.Height
+                Y: =DataCardValue6.Y + DataCardValue6.Height
                 ZIndex: =3
 
-            StarVisible2 As label:
+            StarVisible6 As label:
                 Align: =Align.Center
-                Height: =DataCardKey2.Height
+                Height: =DataCardKey6.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey2.Y
+                Y: =DataCardKey6.Y
                 ZIndex: =4
 
-        Total_Attachments_DataCard1 As typedDataCard.numberEditCard:
+        Total_Attachments_DataCard2 As typedDataCard.numberEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Total_Attachments"
             Default: =ThisItem.Total_Attachments
@@ -228,13 +227,13 @@ EditScreen1 As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue3.Text)
+            Update: =Value(DataCardValue7.Text)
             Width: =266
             X: =2
             Y: =0
             ZIndex: =7
 
-            DataCardKey3 As label:
+            DataCardKey7 As label:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
@@ -244,7 +243,7 @@ EditScreen1 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue3 As text:
+            DataCardValue7 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -258,10 +257,10 @@ EditScreen1 As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
                 ZIndex: =2
 
-            ErrorMessage3 As label:
+            ErrorMessage7 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -273,47 +272,45 @@ EditScreen1 As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue3.Y + DataCardValue3.Height
+                Y: =DataCardValue7.Y + DataCardValue7.Height
                 ZIndex: =3
 
-            StarVisible3 As label:
+            StarVisible7 As label:
                 Align: =Align.Center
-                Height: =DataCardKey3.Height
+                Height: =DataCardKey7.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey3.Y
+                Y: =DataCardKey7.Y
                 ZIndex: =4
 
-        Attachments_DataCard1 As typedDataCard.attachmentsEditCard:
+        Attachments_DataCard2 As typedDataCard.attachmentsEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
             Default: =ThisItem.Attachments
             DisplayMode: =Parent.DisplayMode
-            DisplayName: |+
-                =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,'{Attachments}')
-                
+            DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,'{Attachments}')
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =415
+            Height: =50
             Required: =false
-            Update: =DataCardValue4.Attachments
-            Width: =801
+            Update: =DataCardValue8.Attachments
+            Width: =266
             X: =0
             Y: =1
             ZIndex: =7
 
-            DataCardKey4 As label:
+            DataCardKey8 As label:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
-                Width: =129
+                Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue4 As attachments:
+            DataCardValue8 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
                 IsInDataCard: =true
@@ -323,12 +320,12 @@ EditScreen1 As screen:
                 PaddingRight: =5
                 PaddingTop: =5
                 Tooltip: =Parent.DisplayName
-                Width: =265
+                Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
                 ZIndex: =2
 
-            ErrorMessage4 As label:
+            ErrorMessage8 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -340,64 +337,16 @@ EditScreen1 As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue4.Y + DataCardValue4.Height
+                Y: =DataCardValue8.Y + DataCardValue8.Height
                 ZIndex: =3
 
-            StarVisible4 As label:
+            StarVisible8 As label:
                 Align: =Align.Center
-                Height: =DataCardKey4.Height
+                Height: =DataCardKey8.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey4.Y
+                Y: =DataCardKey8.Y
                 ZIndex: =4
-
-            Camera1 As camera:
-                Camera: =0
-                Height: =283
-                OnSelect: |
-                    =Collect(colAttachments,{DisplayName: "Camera "& NameCameraScreen.Text & ".jpg",Id: "Camera "& NameCameraScreen.Text & ".jpg",Value:Self.Photo});Reset(DataCardValue4);
-                Visible: =EditForm1.Mode<>FormMode.View && Dropdown1.Selected.Value="📸 Camera" && varType="add"
-                Width: =364
-                X: =352
-                Y: =60
-                ZIndex: =5
-
-            Label4 As label:
-                Color: =RGBA(151, 0, 0, 1)
-                Text: ="Type"
-                Width: =64
-                X: =368
-                Y: =10
-                ZIndex: =6
-
-            Label4_1 As label:
-                Color: =RGBA(151, 0, 0, 1)
-                Height: =36
-                Text: ="Name"
-                Width: =78
-                X: =400
-                Y: =364
-                ZIndex: =7
-
-            NameCameraScreen As text:
-                Default: ="Text input"
-                Height: =41
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Width: =147
-                X: =460
-                Y: =359
-                ZIndex: =8
-
-            Dropdown1 As dropdown:
-                ChevronBackground: =RGBA(250, 155, 112, 1)
-                Items: =["📸 Camera","✒️ Pen Input","🖼️ Upload Image"]
-                Width: =263
-                X: =432
-                Y: =10
-                ZIndex: =9
 
