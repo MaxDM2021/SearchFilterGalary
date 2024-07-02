@@ -225,7 +225,7 @@ EditScreen1 As screen:
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
             Default: =colAttachments
-            DisplayMode: =Parent.DisplayMode
+            DisplayMode: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,'{Attachments}')
             DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,'{Attachments}')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =411
@@ -253,7 +253,13 @@ EditScreen1 As screen:
                 Height: =296
                 IsInDataCard: =true
                 Items: =Parent.Default
-                OnAddFile: =ClearCollect(colAttachments,Self.Attachments)
+                MaxAttachments: =10
+                MaxAttachmentSize: =20
+                OnAddFile: |
+                    =ClearCollect(
+                        colAttachments,
+                        Self.Attachments
+                    );
                 OnRemoveFile: =ClearCollect(colAttachments,Self.Attachments)
                 OnUndoRemoveFile: =ClearCollect(colAttachments,Self.Attachments)
                 PaddingBottom: =5
