@@ -52,6 +52,7 @@
     "Icon3": 74,
     "Icon4": 75,
     "Image1": 10,
+    "Image2": 104,
     "ImfoScreen3": 54,
     "InfoForm1": 80,
     "Label1": 6,
@@ -75,14 +76,18 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/02/2024 17:57:29",
+  "HeaderLastSavedDateTimeUTC": "07/02/2024 18:13:57",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "b06756bc-d133-40aa-9f51-9830bacf389d": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/38cb66ce397840a0a9db5aabada91e12\""
   },
   "LocalDatabaseReferencesAsEmpty": true,
-  "LocalResourceFileNames": {},
-  "LocalResourceRootPaths": {},
+  "LocalResourceFileNames": {
+    "LogoMaksDmytriiev": "6de5a4f1-1cad-4637-99a3-ccb3196fda19.png"
+  },
+  "LocalResourceRootPaths": {
+    "LogoMaksDmytriiev": "https://docserverpwaprodweu.blob.core.windows.net/29656ece-22d5-42c0-9c29-98321d030902-1/resource/4c664193-1750-4f9a-a9fe-753f8537a98d.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-07-02T18%3A06%3A16Z&ske=2024-07-03T18%3A21%3A16Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-07-03T18%3A21%3A16Z&sr=b&sp=r&sig=Cubf%2FSCKdHyu3ZbM6TLC0sEmmwH9zNCw0J%2FURnoVgVA%3D"
+  },
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
@@ -94,14 +99,14 @@
   "OrderTemplate": {},
   "OrderXMLTemplate": {
     "attachments": 8,
-    "button": 2,
+    "button": 3,
     "camera": 9,
     "form": 6,
-    "gallery": 3,
+    "gallery": 4,
     "groupContainer": 0,
     "icon": 5,
-    "image": 4,
-    "label": 1,
+    "image": 1,
+    "label": 2,
     "rectangle": 10,
     "text": 7
   },
@@ -156,6 +161,7 @@
     "Icon3": {},
     "Icon4": {},
     "Image1": {},
+    "Image2": {},
     "ImfoScreen3": {},
     "InfoForm1": {},
     "Label1": {},
@@ -230,6 +236,7 @@
     "Icon3": 40,
     "Icon4": 12,
     "Image1": 6,
+    "Image2": 0,
     "ImfoScreen3": 0,
     "InfoForm1": 41,
     "Label1": 1,
@@ -252,6 +259,7 @@
     "TotalAtt": 9
   },
   "ResourcesJsonIndices": {
+    "Image-LogoMaksDmytriiev": 1,
     "Image-SampleImage": 0
   },
   "RuleScreenIdWithoutScreen": {},
