@@ -51,13 +51,15 @@ HomeScreen As screen:
             ZIndex: =2
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(253, 222, 207, 1)
         DelayItemLoading: =true
         Height: =530
         Items: =TBL_CameraPictureFile
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =ClearCollect(colAttachments,ThisItem.Attachments);ResetForm(Form2);ViewForm(Form2);Navigate(EditScreen1,ScreenTransition.Fade)
-        TemplatePadding: =0
+        TemplateFill: =RGBA(0,0,0,0)
+        TemplatePadding: =10
         TemplateSize: =104
         Transition: =Transition.Push
         Width: =1268
@@ -82,7 +84,7 @@ HomeScreen As screen:
         Title1 As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =31
-            HoverFill: =RGBA(253, 222, 207, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -111,20 +113,6 @@ HomeScreen As screen:
             Y: =58
             ZIndex: =3
 
-        Separator1 As rectangle:
-            Height: =8
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
-
-        Rectangle1 As rectangle:
-            Height: =Parent.TemplateHeight - Separator1.Height
-            OnSelect: =Select(Parent)
-            Visible: =ThisItem.IsSelected
-            Width: =4
-            ZIndex: =6
-
         Subtitle1_1 As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
@@ -140,4 +128,14 @@ HomeScreen As screen:
             X: =283
             Y: =58
             ZIndex: =7
+
+        Container1 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(163, 64, 64, 0.19)
+            Height: =104
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =409.3333333333333
+            ZIndex: =8
 
