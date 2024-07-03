@@ -69,6 +69,7 @@ HomeScreen As screen:
         ZIndex: =4
 
         Container1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Regular
             Fill: =RGBA(163, 64, 64, 0.19)
             Height: =104
             RadiusBottomLeft: =20
@@ -78,64 +79,63 @@ HomeScreen As screen:
             Width: =409.3333333333333
             ZIndex: =1
 
-        Image1 As image:
-            Height: =72
-            Image: =LookUp(ThisItem.Attachments,EndsWith( DisplayName,".jpg")||EndsWith( DisplayName,".png")).Value
-            OnSelect: =Select(Parent)
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Width: =87
-            X: =16
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =2
+            Subtitle1_1 As label:
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Gallery1)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: |-
+                    ="Total 📎:" & CountRows(ThisItem.Attachments) 
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Title1.Width
+                X: =305
+                Y: =52
+                ZIndex: =1
 
-        Title1 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =31
-            HoverFill: =RGBA(0, 0, 0, 0)
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =20
-            Text: =ThisItem.Title
-            VerticalAlign: =VerticalAlign.Top
-            Width: =92
-            X: =118
-            Y: =16
-            ZIndex: =3
+            Subtitle1 As label:
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =21
+                OnSelect: =Select(Gallery1)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =ThisItem.Description
+                VerticalAlign: =VerticalAlign.Top
+                X: =Title1.X
+                Y: =52
+                ZIndex: =2
 
-        Subtitle1 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.Description
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title1.Width
-            X: =Title1.X
-            Y: =58
-            ZIndex: =4
+            Title1 As label:
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =31
+                HoverFill: =RGBA(0, 0, 0, 0)
+                OnSelect: =Select(Gallery1)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =20
+                Text: =ThisItem.Title
+                VerticalAlign: =VerticalAlign.Top
+                Width: =92
+                X: =119
+                Y: =14
+                ZIndex: =3
 
-        Subtitle1_1 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: |-
-                ="Total 📎:" & CountRows(ThisItem.Attachments) 
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title1.Width
-            X: =283
-            Y: =58
-            ZIndex: =5
+            Image1 As image:
+                Height: =72
+                Image: =LookUp(ThisItem.Attachments,EndsWith( DisplayName,".jpg")||EndsWith( DisplayName,".png")).Value
+                OnSelect: =Select(Gallery1)
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =87
+                X: =12
+                Y: =9
+                ZIndex: =4
 
