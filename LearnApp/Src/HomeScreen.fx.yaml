@@ -59,10 +59,10 @@ HomeScreen As screen:
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =ClearCollect(colAttachments,ThisItem.Attachments);ResetForm(Form2);ViewForm(Form2);Navigate(EditScreen1,ScreenTransition.Fade)
         TemplateFill: =RGBA(0,0,0,0)
-        TemplatePadding: =10
+        TemplatePadding: =15
         TemplateSize: =104
         Transition: =Transition.Push
-        Width: =1268
+        Width: =1282
         WrapCount: =3
         X: =54
         Y: =204
