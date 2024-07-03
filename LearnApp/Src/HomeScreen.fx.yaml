@@ -59,6 +59,7 @@ HomeScreen As screen:
         OnSelect: =ClearCollect(colAttachments,ThisItem.Attachments);ResetForm(Form2);ViewForm(Form2);Navigate(EditScreen1,ScreenTransition.Fade)
         TemplatePadding: =0
         TemplateSize: =104
+        Transition: =Transition.Push
         Width: =1268
         WrapCount: =3
         X: =54
