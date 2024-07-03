@@ -1,5 +1,5 @@
 App As appinfo:
-    BackEnabled: =true
+    BackEnabled: =false
     OnStart: =
     Theme: =PowerAppsTheme
 

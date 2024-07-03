@@ -54,19 +54,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.Gallery2.AccessibleLabel"
+                  "fullyQualifiedName": "HomeScreen.Gallery1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.Gallery2.AccessibleLabel",
+                  "fullyQualifiedName": "HomeScreen.Gallery1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "HomeScreen",
-                "type": "HomeScreen.Gallery2"
+                "type": "HomeScreen.Gallery1"
               }
             }
           ],
@@ -84,19 +84,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeScreen.Gallery2.TabIndex"
+                  "fullyQualifiedName": "HomeScreen.Gallery1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeScreen.Gallery2.TabIndex",
+                  "fullyQualifiedName": "HomeScreen.Gallery1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "HomeScreen",
-                "type": "HomeScreen.Gallery2"
+                "type": "HomeScreen.Gallery1"
               }
             }
           ],
@@ -473,19 +473,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varType"
+                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.AddMediaButton1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.varType",
+                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.AddMediaButton1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "varType",
-                "module": "App",
-                "type": "App"
+                "member": "AccessibleLabel",
+                "module": "EditScreen1",
+                "type": "EditScreen1.Form2.Attachments_DataCard2.AddMediaButton1"
               }
             }
           ],
@@ -495,8 +495,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         }
       ],
       "tool": {
@@ -567,23 +567,6 @@
                 "level": "Low",
                 "primaryCategory": "accessibility",
                 "whyFix": "Some users can't use a pen and require another way to input information. Example: Typing in a signature."
-              }
-            },
-            {
-              "id": "app-UnusedVariables",
-              "messageStrings": {
-                "issue": {
-                  "text": "Unused variable"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove the unused variable."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
               }
             }
           ],

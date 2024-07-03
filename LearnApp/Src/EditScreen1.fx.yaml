@@ -1,54 +1,15 @@
 EditScreen1 As screen:
 
-    Container2 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(250, 155, 112, 1)
-        Height: =78
-        Width: =1366
-        ZIndex: =3
-
-        Icon1 As icon.BackArrow:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =50
-            Icon: =Icon.BackArrow
-            OnSelect: =Navigate(HomeScreen);
-            Width: =50
-            X: =36
-            Y: =15
-            ZIndex: =1
-
-        Label2 As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =45
-            Size: =25
-            Text: ="Info Attachment"
-            Width: =450
-            X: =459
-            Y: =20
-            ZIndex: =2
-
-        Icon4 As icon.Check:
-            AccessibleLabel: =Self.Tooltip
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =50
-            Icon: =Icon.Check
-            OnSelect: =SubmitForm(Form2);Navigate(HomeScreen);
-            Tooltip: ="Submit item"
-            Width: =50
-            X: =1282
-            Y: =15
-            ZIndex: =3
-
     Form2 As form:
         DataSource: =TBL_CameraPictureFile
-        DefaultMode: =FormMode.New
+        DefaultMode: =FormMode.View
+        Fill: =RGBA(251, 188, 159, 1)
         Height: =563
-        Item: =Gallery2.Selected
+        Item: =Gallery1.Selected
         OnSuccess: =Back()
         X: =46
         Y: =97
-        ZIndex: =6
+        ZIndex: =1
 
         Title_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -282,6 +243,7 @@ EditScreen1 As screen:
             DataCardValue8 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
+                Height: =260
                 IsInDataCard: =true
                 Items: =Parent.Default
                 OnAddFile: |
@@ -339,44 +301,52 @@ EditScreen1 As screen:
                 Height: =245
                 OnSelect: |-
                     =Collect(colAttachments,{DisplayName: "Camera "& TextInput2.Text & ".jpg",Id: "Camera "& TextInput2.Text & ".jpg",Value:Self.Photo});Reset(DataCardValue8);
+                Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="📸 Camera" && varType="add"
                 Width: =362
                 X: =327
                 Y: =69
                 ZIndex: =5
 
-            Label5 As label:
-                Text: ="Type"
-                Width: =57
-                X: =324
-                Y: =4
-                ZIndex: =6
-
             Dropdown2 As dropdown:
                 Height: =37
                 Items: =["📸 Camera","✒️ Pen Input","🖼️ Upload Image"]
+                Visible: =Form2.Mode<>FormMode.View && varType="add"
                 Width: =189
                 X: =394
                 Y: =7
-                ZIndex: =7
+                ZIndex: =6
 
-            Label5_1 As label:
-                Text: ="Name"
-                Width: =67
-                X: =351
-                Y: =329
-                ZIndex: =8
+            Label5 As label:
+                Text: ="Type"
+                Visible: =Form2.Mode<>FormMode.View && varType="add"
+                Width: =57
+                X: =324
+                Y: =4
+                ZIndex: =7
 
             TextInput2 As text:
                 Default: =""
+                Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="📸 Camera" && varType="add"
                 Width: =142
                 X: =418
+                Y: =329
+                ZIndex: =8
+
+            Label5_1 As label:
+                Text: ="Name"
+                Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="📸 Camera" && varType="add"
+                Width: =67
+                X: =351
                 Y: =329
                 ZIndex: =9
 
             PenInput1 As inkControl:
+                Color: =RGBA(20, 20, 20, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="✒️ Pen Input"
                 X: =327
                 Y: =76
-                ZIndex: =10
+                ZIndex: =12
 
             btnCapurePen As button:
                 OnSelect: |-
@@ -385,15 +355,83 @@ EditScreen1 As screen:
                 Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="✒️ Pen Input"
                 X: =418
                 Y: =329
-                ZIndex: =11
+                ZIndex: =13
+
+            AddMediaWithImage1 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =13
+
+                UploadedImage1 As image:
+                    Height: =AddMediaButton1.Height
+                    Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
+                    ImagePosition: =ImagePosition.Fill
+                    Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="🖼️ Upload Image"
+                    Width: =AddMediaButton1.Width
+                    X: =344
+                    Y: =69
+                    ZIndex: =10
+
+                AddMediaButton1 As addMedia:
+                    OnSelect: |-
+                        =Collect(colAttachments,{DisplayName: "Picture "& RandBetween(1,10000) &".jpg",Id: "Picture "& RandBetween(1,10000) &".jpg",Value:UploadedImage1.Image});Reset(DataCardValue8)
+                    Size: =25
+                    Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="🖼️ Upload Image"
+                    X: =344
+                    Y: =69
+                    ZIndex: =11
 
             btnReset As button:
+                Fill: =RGBA(250, 155, 112, 1)
                 Height: =47
+                HoverFill: =RGBA(221, 79, 14, 1)
                 OnSelect: =Reset(DataCardValue8);
                 Text: ="Reset attach"
-                X: =97
-                Y: =314
-                ZIndex: =12
+                X: =16
+                Y: =350
+                ZIndex: =14
+
+    Container2 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(250, 155, 112, 1)
+        Height: =78
+        Width: =1366
+        ZIndex: =2
+
+        Icon1 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =50
+            Icon: =Icon.BackArrow
+            OnSelect: =Navigate(HomeScreen);
+            Width: =50
+            X: =36
+            Y: =15
+            ZIndex: =1
+
+        Label2 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =45
+            Size: =25
+            Text: ="Info Attachment"
+            Width: =450
+            X: =459
+            Y: =20
+            ZIndex: =2
+
+        Icon4 As icon.Check:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =50
+            Icon: =Icon.Check
+            OnSelect: =SubmitForm(Form2);Navigate(HomeScreen);
+            Tooltip: ="Submit item"
+            Width: =50
+            X: =1282
+            Y: =15
+            ZIndex: =3
 
     SubmitBtn_1 As button:
         Fill: =RGBA(250, 155, 112, 1)
@@ -404,7 +442,7 @@ EditScreen1 As screen:
         Width: =302
         X: =46
         Y: =702
-        ZIndex: =7
+        ZIndex: =3
 
     SubmitBtn As button:
         Fill: =RGBA(250, 155, 112, 1)
@@ -428,5 +466,5 @@ EditScreen1 As screen:
         Width: =270
         X: =402
         Y: =702
-        ZIndex: =8
+        ZIndex: =4
 

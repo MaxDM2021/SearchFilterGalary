@@ -2,6 +2,8 @@
   "ComponentIndexes": {},
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
+    "AddMediaButton1": 56,
+    "AddMediaWithImage1": 57,
     "App": 1,
     "Attachments_DataCard2": 37,
     "btnCapurePen": 53,
@@ -27,7 +29,7 @@
     "ErrorMessage7": 36,
     "ErrorMessage8": 46,
     "Form2": 21,
-    "Gallery2": 9,
+    "Gallery1": 9,
     "galleryTemplate1": 10,
     "HeadetContainer": 5,
     "HomeScreen": 4,
@@ -51,11 +53,12 @@
     "Title": 13,
     "Title_DataCard2": 22,
     "Total_Attachments_DataCard2": 32,
-    "TotalAtt": 15
+    "TotalAtt": 15,
+    "UploadedImage1": 55
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/03/2024 19:53:15",
+  "HeaderLastSavedDateTimeUTC": "07/03/2024 21:00:57",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "b06756bc-d133-40aa-9f51-9830bacf389d": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/38cb66ce397840a0a9db5aabada91e12\""
@@ -74,10 +77,16 @@
     "DropDownSample": 2,
     "TBL_CameraPictureFile": 1
   },
-  "OrderGroupControls": {},
+  "OrderGroupControls": {
+    "AddMediaWithImage1": {
+      "AddMediaButton1": 1,
+      "UploadedImage1": 0
+    }
+  },
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
+    "addMedia": 11,
     "attachments": 9,
     "button": 3,
     "camera": 10,
@@ -87,11 +96,13 @@
     "groupContainer": 0,
     "icon": 5,
     "image": 1,
-    "inkControl": 11,
+    "inkControl": 12,
     "label": 2,
     "text": 7
   },
   "OverridablePropertiesEntry": {
+    "AddMediaButton1": {},
+    "AddMediaWithImage1": {},
     "App": {},
     "Attachments_DataCard2": {},
     "btnCapurePen": {},
@@ -117,7 +128,7 @@
     "ErrorMessage7": {},
     "ErrorMessage8": {},
     "Form2": {},
-    "Gallery2": {},
+    "Gallery1": {},
     "galleryTemplate1": {},
     "HeadetContainer": {},
     "HomeScreen": {},
@@ -141,15 +152,18 @@
     "Title": {},
     "Title_DataCard2": {},
     "Total_Attachments_DataCard2": {},
-    "TotalAtt": {}
+    "TotalAtt": {},
+    "UploadedImage1": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
+    "AddMediaButton1": 40,
+    "AddMediaWithImage1": 39,
     "App": 0,
     "Attachments_DataCard2": 31,
-    "btnCapurePen": 42,
-    "btnReset": 39,
+    "btnCapurePen": 45,
+    "btnReset": 46,
     "Button1": 3,
     "Button5": 6,
     "Camera2": 37,
@@ -169,9 +183,9 @@
     "ErrorMessage5": 20,
     "ErrorMessage6": 25,
     "ErrorMessage7": 30,
-    "ErrorMessage8": 43,
+    "ErrorMessage8": 42,
     "Form2": 15,
-    "Gallery2": 4,
+    "Gallery1": 4,
     "galleryTemplate1": 5,
     "HeadetContainer": 0,
     "HomeScreen": 0,
@@ -183,19 +197,20 @@
     "Label1": 2,
     "Label2": 14,
     "Label5": 32,
-    "Label5_1": 40,
-    "PenInput1": 38,
+    "Label5_1": 43,
+    "PenInput1": 41,
     "StarVisible5": 17,
     "StarVisible6": 22,
     "StarVisible7": 27,
     "StarVisible8": 34,
-    "SubmitBtn": 45,
-    "SubmitBtn_1": 44,
-    "TextInput2": 41,
+    "SubmitBtn": 48,
+    "SubmitBtn_1": 47,
+    "TextInput2": 44,
     "Title": 8,
     "Title_DataCard2": 16,
     "Total_Attachments_DataCard2": 26,
-    "TotalAtt": 10
+    "TotalAtt": 10,
+    "UploadedImage1": 38
   },
   "ResourcesJsonIndices": {
     "Image-LogoMaksDmytriiev": 1,

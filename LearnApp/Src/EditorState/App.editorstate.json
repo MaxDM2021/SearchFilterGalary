@@ -7,7 +7,14 @@
         "MinScreenWidth",
         "ConfirmExit",
         "SizeBreakpoints",
-        "BackEnabled",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "BackEnabled",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Theme",
         "OnStart"
       ],
@@ -32,7 +39,7 @@
         {
           "Category": "Data",
           "PropertyName": "BackEnabled",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",

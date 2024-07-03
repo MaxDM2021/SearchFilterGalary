@@ -1,58 +1,7 @@
 HomeScreen As screen:
 
-    HeadetContainer As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(250, 155, 112, 1)
-        Height: =98
-        Width: =1366
-        ZIndex: =1
-
-        Label1 As label:
-            Color: =RGBA(102, 113, 166, 1)
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Bold
-            Height: =56
-            Size: =25
-            Text: ="📸CAMERA & 🎨 PICTURES & 📃FILES"
-            Width: =652
-            X: =330
-            Y: =27
-            ZIndex: =1
-
-        Image2 As image:
-            Height: =70
-            Image: =LogoMaksDmytriiev
-            Width: =74
-            X: =45
-            Y: =13
-            ZIndex: =2
-
-    Button1 As button:
-        Fill: =RGBA(250, 155, 112, 1)
-        Height: =42
-        HoverFill: =RGBA(168, 0, 0, 1)
-        OnSelect: |-
-            =Clear(colAttachments);
-            Set(varType,"add");
-            ResetForm(Form2);
-            NewForm(Form2);
-            
-            Navigate(
-                EditScreen1,
-                ScreenTransition.Fade
-            )
-            
-            
-            
-            //Clear(colAttachments);NewForm(EditForm1);Navigate(EditScreen1, ScreenTransition.None)
-        Text: ="+ New Record"
-        Width: =188
-        X: =54
-        Y: =138
-        ZIndex: =2
-
-    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(102, 182, 227, 1)
-        DelayItemLoading: =true
         Fill: =RGBA(255, 255, 255, 1)
         Height: =554
         Items: =TBL_CameraPictureFile
@@ -62,7 +11,6 @@ HomeScreen As screen:
             =ClearCollect(colAttachments,ThisItem.Attachments);ResetForm(Form2);ViewForm(Form2);Navigate(EditScreen1,ScreenTransition.Fade)
             
             
-        TemplateFill: =
         TemplatePadding: =10
         TemplateSize: =124
         Transition: =Transition.Push
@@ -70,7 +18,7 @@ HomeScreen As screen:
         WrapCount: =3
         X: =40
         Y: =192
-        ZIndex: =3
+        ZIndex: =1
 
         Button5 As button:
             BorderColor: =RGBA(251, 188, 159, 1)
@@ -140,4 +88,54 @@ HomeScreen As screen:
             X: =132
             Y: =20
             ZIndex: =5
+
+    Button1 As button:
+        Fill: =RGBA(250, 155, 112, 1)
+        Height: =42
+        HoverFill: =RGBA(168, 0, 0, 1)
+        OnSelect: |-
+            =Clear(colAttachments);
+            Set(varType,"add");
+            ResetForm(Form2);
+            NewForm(Form2);
+            
+            Navigate(
+                EditScreen1,
+                ScreenTransition.Fade
+            )
+            
+            
+            
+            //Clear(colAttachments);NewForm(EditForm1);Navigate(EditScreen1, ScreenTransition.None)
+        Text: ="+ New Record"
+        Width: =188
+        X: =54
+        Y: =138
+        ZIndex: =2
+
+    HeadetContainer As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(250, 155, 112, 1)
+        Height: =98
+        Width: =1366
+        ZIndex: =3
+
+        Label1 As label:
+            Color: =RGBA(102, 113, 166, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =56
+            Size: =25
+            Text: ="📸CAMERA & 🎨 PICTURES & 📃FILES"
+            Width: =652
+            X: =330
+            Y: =27
+            ZIndex: =1
+
+        Image2 As image:
+            Height: =70
+            Image: =LogoMaksDmytriiev
+            Width: =74
+            X: =45
+            Y: =13
+            ZIndex: =2
 
