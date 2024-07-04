@@ -403,26 +403,12 @@ EditScreen1 As screen:
                     Y: =69
                     ZIndex: =11
 
-            btnReset As button:
-                Fill: =RGBA(102, 182, 227, 1)
-                Height: =47
-                HoverFill: =RGBA(0, 94, 146, 1)
-                OnSelect: |-
-                    =UpdateContext({ resetAttachments: true });
-                    UpdateContext({ resetAttachments: false });
-                Text: ="Reset all attach"
-                Visible: =If(Form2.Mode = FormMode.New, true, false)
-                Width: =171
-                X: =16
-                Y: =350
-                ZIndex: =14
-
-            Label3 As label:
+            HiddenResetControl As text:
+                Default: ="Text input"
                 Height: =44
-                Text: ="Text"
                 Visible: =false
-                Width: =76
-                X: =201
+                Width: =132
+                X: =212
                 Y: =353
                 ZIndex: =15
 
@@ -517,4 +503,20 @@ EditScreen1 As screen:
         X: =260
         Y: =320
         ZIndex: =6
+
+    "'Clear All Attach' As button":
+        Fill: =RGBA(102, 182, 227, 1)
+        Height: =47
+        HoverFill: =RGBA(0, 94, 146, 1)
+        OnSelect: |-
+            =UpdateContext({ resetAttachments: true });
+            UpdateContext({ resetAttachments: false });
+        Text: ="Reset all attach"
+        Visible: |-
+            =true
+            //If(Form2.Mode = FormMode.New, true, false)
+        Width: =171
+        X: =718
+        Y: =695
+        ZIndex: =7
 

@@ -1583,6 +1583,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.HiddenResetControl.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.HiddenResetControl.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "EditScreen1",
+                "type": "EditScreen1.Form2.Attachments_DataCard2.HiddenResetControl"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.LogoMaksDmytriiev"
                 }
               ],
