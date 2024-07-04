@@ -576,7 +576,7 @@ EditScreen1 As screen:
             Height: =50
             Icon: =Icon.DocumentPDF
             OnSelect: |-
-                =Office365Outlook.SendEmailV2(User().Email, "Event Itinerary Report","PDF From Power Apps",{Attachments: Table({Name:"EventItinerary.pdf",ContentBytes:PDF(Gallery3,{ExpandContainers:true})})})
+                =Office365Outlook.SendEmailV2(User().Email, "Event Itinerary Report","PDF From Power Apps",{Attachments: Table({Name:"EventItinerary.pdf",ContentBytes:PDF(Label4)})})
             Width: =50
             X: =1217
             Y: =15
@@ -607,4 +607,10 @@ EditScreen1 As screen:
             Width: =324
             Y: =3
             ZIndex: =1
+
+    Label4 As label:
+        Text: ="Text"
+        X: =790
+        Y: =702
+        ZIndex: =9
 
