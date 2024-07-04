@@ -186,7 +186,7 @@ EditScreen1 As screen:
 
             DataCardValue7 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =If(Form2.Mode = FormMode.View, ThisItem.Total_Attachments, CountRows(ThisItem.Attachments))
+                Default: = CountRows(ThisItem.Attachments)
                 DelayOutput: =true
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(0, 0, 0, 0)
