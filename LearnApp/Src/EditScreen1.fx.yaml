@@ -111,12 +111,14 @@ EditScreen1 As screen:
 
             DataCardValue6 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =1
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =87
                 HoverColor: =RGBA(0, 121, 187, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =10
@@ -184,12 +186,16 @@ EditScreen1 As screen:
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 0)
                 Format: =TextFormat.Number
+                HoverColor: =RGBA(0, 121, 187, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
                 PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
+                PressedFill: =
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
