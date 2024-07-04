@@ -421,6 +421,16 @@ EditScreen1 As screen:
             Y: =20
             ZIndex: =2
 
+        Icon2 As icon.Trash:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =50
+            Icon: =Icon.Trash
+            OnSelect: =Remove([@TBL_CameraPictureFile], Gallery1.Selected); If (IsEmpty(Errors([@TBL_CameraPictureFile], Gallery1.Selected)), Back())
+            Width: =50
+            X: =1290
+            Y: =15
+            ZIndex: =3
+
     SubmitBtn_1 As button:
         Fill: =RGBA(250, 155, 112, 1)
         HoverFill: =RGBA(168, 0, 0, 1)
