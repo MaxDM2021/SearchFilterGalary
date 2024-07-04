@@ -376,7 +376,7 @@
             "Rules": [
               {
                 "Category": "Design",
-                "InvariantScript": "15",
+                "InvariantScript": "108",
                 "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
@@ -400,7 +400,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Parent.TemplateWidth-Self.Width - 10",
+                "InvariantScript": "585",
                 "Property": "X",
                 "RuleProviderType": "Unknown"
               },
@@ -3045,7 +3045,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638557016908278008",
+    "LastModifiedTimestamp": "638557017347228542",
     "Name": "SPListItemAttachmentsViewer",
     "Rules": [
       {
@@ -3187,7 +3187,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638557016908278008",
+  "LastModifiedTimestamp": "638557017347228542",
   "Name": "ddb85c2becef4d36a42d5adcf736fbc8",
   "OverridableProperties": {},
   "TemplateOriginalName": "df504236bbdb49c1bff618d4cba4d349",
