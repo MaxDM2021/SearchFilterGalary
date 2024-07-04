@@ -41,6 +41,20 @@
     "OverridableProperties": {},
     "Version": "2.3.0"
   },
+  "audioPlayback": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/audioPlayback",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "audioPlayback",
+    "OverridableProperties": {},
+    "Version": "2.3.1"
+  },
   "button": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -224,6 +238,20 @@
     "OverridableProperties": {},
     "Version": "2.5.1"
   },
+  "pdfViewer": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/pdfViewer",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "pdfViewer",
+    "OverridableProperties": {},
+    "Version": "2.3.0"
+  },
   "screen": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -265,5 +293,19 @@
     "Name": "typedDataCard",
     "OverridableProperties": {},
     "Version": "1.0.6"
+  },
+  "videoPlayback": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/videoPlayback",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "videoPlayback",
+    "OverridableProperties": {},
+    "Version": "2.4.1"
   }
 }

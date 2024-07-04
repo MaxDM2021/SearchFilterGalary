@@ -456,3 +456,31 @@ EditScreen1 As screen:
         Y: =702
         ZIndex: =4
 
+    SPListItemAttachmentsViewer_1 As SPListItemAttachmentsViewer:
+        Height: =576
+        OnReset: |-
+            =Set(
+                varOpenPdf,
+                false
+            );
+            Set(
+                galData,
+                ForAll(
+                    Sequence(CountRows(SPListItemAttachmentsViewer_1.Items)),
+                    Patch(
+                        Last(
+                            FirstN(
+                                SPListItemAttachmentsViewer_1.Items,
+                                Value
+                            )
+                        ),
+                        {RowNo: Value}
+                    )
+                )
+            );
+            Reset(galAttachments)
+        Width: =424
+        X: =910
+        Y: =102
+        ZIndex: =5
+
