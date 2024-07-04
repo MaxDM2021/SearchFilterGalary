@@ -407,7 +407,9 @@ EditScreen1 As screen:
                 Height: =47
                 HoverFill: =RGBA(0, 94, 146, 1)
                 OnSelect: =Reset(DataCardValue8);
-                Text: ="Reset attach"
+                Text: ="Reset all attach"
+                Visible: =If(Form2.Mode = FormMode.New, true, false)
+                Width: =171
                 X: =16
                 Y: =350
                 ZIndex: =14
