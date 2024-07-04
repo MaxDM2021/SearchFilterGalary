@@ -193,15 +193,17 @@ EditScreen1 As screen:
                 Format: =TextFormat.Number
                 HoverColor: =RGBA(0, 121, 187, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
+                OnChange: =true
                 PaddingLeft: =5
                 PressedFill: =
                 RadiusBottomLeft: =10
                 RadiusBottomRight: =10
                 RadiusTopLeft: =10
                 RadiusTopRight: =10
+                Size: =20
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
-                X: =30
+                X: =39
                 Y: =DataCardKey7.Y + DataCardKey7.Height + 5
                 ZIndex: =2
 
