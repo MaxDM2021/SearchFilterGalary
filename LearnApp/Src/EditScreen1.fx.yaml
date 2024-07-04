@@ -43,6 +43,7 @@ EditScreen1 As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Fill: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 121, 187, 1)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =10
@@ -113,7 +114,7 @@ EditScreen1 As screen:
                 DisplayMode: =Parent.DisplayMode
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =87
-                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverColor: =RGBA(0, 121, 187, 1)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =10
