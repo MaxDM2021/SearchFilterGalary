@@ -1,9 +1,9 @@
 HomeScreen As screen:
 
     Button1 As button:
-        Fill: =RGBA(250, 155, 112, 1)
+        Fill: =RGBA(102, 182, 227, 1)
         Height: =42
-        HoverFill: =RGBA(168, 0, 0, 1)
+        HoverFill: =RGBA(9, 33, 98, 1)
         OnSelect: |-
             =Clear(colAttachments);
             Set(varType,"add");
@@ -20,39 +20,41 @@ HomeScreen As screen:
             //Clear(colAttachments);NewForm(EditForm1);Navigate(EditScreen1, ScreenTransition.None)
         Text: ="+ New Record"
         Width: =188
-        X: =54
-        Y: =138
+        X: =72
+        Y: =144
         ZIndex: =2
 
     HeadetContainer As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(250, 155, 112, 1)
+        Fill: =RGBA(153, 207, 236, 1)
         Height: =98
         Width: =1366
         ZIndex: =3
 
         Label1 As label:
-            Color: =RGBA(102, 113, 166, 1)
+            Color: =RGBA(255, 255, 255, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Bold
             Height: =56
             Size: =25
-            Text: ="📸CAMERA & 🎨 PICTURES & 📃FILES"
-            Width: =652
-            X: =330
-            Y: =27
+            Text: ="CAMERA & PICTURES & FILES"
+            Width: =470
+            X: =94
+            Y: =20
             ZIndex: =1
 
-        Image2 As image:
-            Height: =70
-            Image: =LogoMaksDmytriiev
-            Width: =74
-            X: =45
-            Y: =13
+        Icon3 As icon.DocumentwithContent:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =50
+            Icon: =Icon.DocumentWithContent
+            Width: =50
+            X: =31
+            Y: =26
             ZIndex: =2
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(253, 222, 207, 1)
         DelayItemLoading: =true
+        Fill: =RGBA(204, 157, 157, 0)
         Height: =530
         Items: =TBL_CameraPictureFile
         Layout: =Layout.Vertical
@@ -70,7 +72,7 @@ HomeScreen As screen:
 
         Container1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Regular
-            Fill: =RGBA(163, 64, 64, 0.19)
+            Fill: =RGBA(219, 219, 46, 0.46)
             Height: =104
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
@@ -92,7 +94,7 @@ HomeScreen As screen:
                 VerticalAlign: =VerticalAlign.Top
                 Width: =Title1.Width
                 X: =305
-                Y: =52
+                Y: =60
                 ZIndex: =1
 
             Subtitle1 As label:
@@ -106,7 +108,7 @@ HomeScreen As screen:
                 Text: =ThisItem.Description
                 VerticalAlign: =VerticalAlign.Top
                 X: =Title1.X
-                Y: =52
+                Y: =60
                 ZIndex: =2
 
             Title1 As label:
@@ -122,20 +124,20 @@ HomeScreen As screen:
                 Text: =ThisItem.Title
                 VerticalAlign: =VerticalAlign.Top
                 Width: =92
-                X: =119
-                Y: =14
+                X: =148
+                Y: =21
                 ZIndex: =3
 
             Image1 As image:
-                Height: =72
+                Height: =67
                 Image: =LookUp(ThisItem.Attachments,EndsWith( DisplayName,".jpg")||EndsWith( DisplayName,".png")).Value
                 OnSelect: =Select(Gallery1)
-                RadiusBottomLeft: =8
-                RadiusBottomRight: =8
-                RadiusTopLeft: =8
-                RadiusTopRight: =8
-                Width: =87
-                X: =12
-                Y: =9
+                RadiusBottomLeft: =12
+                RadiusBottomRight: =12
+                RadiusTopLeft: =12
+                RadiusTopRight: =12
+                Width: =101
+                X: =19
+                Y: =21
                 ZIndex: =4
 

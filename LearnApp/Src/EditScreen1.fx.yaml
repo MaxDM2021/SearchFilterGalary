@@ -3,7 +3,7 @@ EditScreen1 As screen:
     Form2 As form:
         DataSource: =TBL_CameraPictureFile
         DefaultMode: =FormMode.View
-        Fill: =RGBA(251, 188, 159, 1)
+        Fill: =RGBA(237, 223, 154, 0.87)
         Height: =563
         Item: =Gallery1.Selected
         OnSuccess: =Back()
@@ -42,12 +42,13 @@ EditScreen1 As screen:
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 0)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
@@ -110,13 +111,15 @@ EditScreen1 As screen:
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 0)
                 Height: =87
+                HoverColor: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
                 Tooltip: =Parent.DisplayName
                 Width: =206
                 X: =30
@@ -308,6 +311,8 @@ EditScreen1 As screen:
                 ZIndex: =5
 
             Dropdown2 As dropdown:
+                ChevronBackground: =RGBA(0, 0, 0, 0)
+                ChevronFill: =RGBA(0, 121, 187, 1)
                 Height: =37
                 Items: =["📸 Camera","✒️ Pen Input","🖼️ Upload Image"]
                 Visible: =Form2.Mode<>FormMode.View && varType="add"
@@ -384,9 +389,9 @@ EditScreen1 As screen:
                     ZIndex: =11
 
             btnReset As button:
-                Fill: =RGBA(250, 155, 112, 1)
+                Fill: =RGBA(102, 182, 227, 1)
                 Height: =47
-                HoverFill: =RGBA(221, 79, 14, 1)
+                HoverFill: =RGBA(0, 94, 146, 1)
                 OnSelect: =Reset(DataCardValue8);
                 Text: ="Reset attach"
                 X: =16
@@ -394,7 +399,7 @@ EditScreen1 As screen:
                 ZIndex: =14
 
     Container2 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(250, 155, 112, 1)
+        Fill: =RGBA(153, 207, 236, 1)
         Height: =78
         Width: =1366
         ZIndex: =2
@@ -417,8 +422,8 @@ EditScreen1 As screen:
             Size: =25
             Text: ="Info Attachment"
             Width: =450
-            X: =459
-            Y: =20
+            X: =19
+            Y: =17
             ZIndex: =2
 
         Icon2 As icon.Trash:
@@ -445,8 +450,8 @@ EditScreen1 As screen:
         ZIndex: =3
 
     SubmitBtn As button:
-        Fill: =RGBA(250, 155, 112, 1)
-        HoverFill: =RGBA(168, 0, 0, 1)
+        Fill: =RGBA(102, 182, 227, 1)
+        HoverFill: =RGBA(0, 94, 146, 1)
         OnSelect: |
             =If(
                 Form2.Mode = FormMode.View,
