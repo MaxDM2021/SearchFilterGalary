@@ -186,9 +186,9 @@ EditScreen1 As screen:
 
             DataCardValue7 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =If(Form2.Mode = FormMode.View, ThisItem.Total_Attachments, CountRows(ThisItem.Attachments))
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(0, 0, 0, 0)
                 Format: =TextFormat.Number
                 HoverColor: =RGBA(0, 121, 187, 1)
