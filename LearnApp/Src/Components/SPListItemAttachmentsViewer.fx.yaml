@@ -183,7 +183,6 @@ SPListItemAttachmentsViewer As CanvasComponent:
                     ).Result
             Width: =48
             X: =585
-            Y: =108
             ZIndex: =5
 
         AttachmentNumber As label:
