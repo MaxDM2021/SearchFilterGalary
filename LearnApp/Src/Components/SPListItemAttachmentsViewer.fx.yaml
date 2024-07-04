@@ -115,7 +115,6 @@ SPListItemAttachmentsViewer As CanvasComponent:
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth - 110
             X: =55
-            Y: =111
             ZIndex: =1
 
         AttachmentName As label:
@@ -131,7 +130,7 @@ SPListItemAttachmentsViewer As CanvasComponent:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 64
             X: =32
-            Y: =AttachmentImage.Y + AttachmentImage.Height + 16
+            Y: =285
             ZIndex: =2
 
         videoPlay As videoPlayback:
@@ -199,8 +198,8 @@ SPListItemAttachmentsViewer As CanvasComponent:
             Text: ="Showing " & ThisItem.RowNo  & " of " &  CountRows(SPListItemAttachmentsViewer.Items)
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 64
-            X: =40
-            Y: =AttachmentName.Y + AttachmentName.Height + 16
+            X: =32
+            Y: =321
             ZIndex: =6
 
         icoDownload As icon.Edit:
