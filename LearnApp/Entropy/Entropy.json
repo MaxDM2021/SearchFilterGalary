@@ -1,6 +1,5 @@
 {
   "ComponentIndexes": {
-    "Component1": 3,
     "SPListItemAttachmentsViewer": 2,
     "SPListItemAttachmentsViewer_1": 2
   },
@@ -18,7 +17,6 @@
     "Button1": 63,
     "Camera2": 97,
     "Clear All Attach": 105,
-    "Component1": 112,
     "Container1": 66,
     "ContainerAttachDataCardValue": 108,
     "ContainerViewer": 110,
@@ -81,7 +79,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/04/2024 14:59:49",
+  "HeaderLastSavedDateTimeUTC": "07/04/2024 15:22:13",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "b06756bc-d133-40aa-9f51-9830bacf389d": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/38cb66ce397840a0a9db5aabada91e12\""
@@ -98,11 +96,9 @@
     "RDWhite (1)": "https://docserverpwaprodweu.blob.core.windows.net/5383f4a6-f87b-4265-923c-e266a3461225-1/resource/Assets0Images097c1782d-1446-4b32-967c-5c54cf0c06f8.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-07-04T14%3A23%3A11Z&ske=2024-07-05T14%3A38%3A11Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-07-05T14%3A38%3A11Z&sr=b&sp=r&sig=VVujQsrfE0eaau5I5phD4pAgkdMVKBH0trQy0a%2B4%2FrQ%3D"
   },
   "OrderComponentMetadata": {
-    "93bf7c410f93482c939ad777277009b9": 1,
     "ddb85c2becef4d36a42d5adcf736fbc8": 0
   },
   "OrderComponentTemplate": {
-    "93bf7c410f93482c939ad777277009b9": 1,
     "ddb85c2becef4d36a42d5adcf736fbc8": 0
   },
   "OrderDataSource": {
@@ -151,7 +147,6 @@
     "Button1": {},
     "Camera2": {},
     "Clear All Attach": {},
-    "Component1": {},
     "Container1": {},
     "ContainerAttachDataCardValue": {},
     "ContainerViewer": {},
@@ -227,7 +222,6 @@
     "Button1": 3,
     "Camera2": 39,
     "Clear All Attach": 48,
-    "Component1": 0,
     "Container1": 6,
     "ContainerAttachDataCardValue": 37,
     "ContainerViewer": 49,
@@ -257,11 +251,11 @@
     "HomeScreen": 0,
     "Host": 0,
     "icoClosePDFViewer": 64,
-    "icoDownload": 57,
+    "icoDownload": 56,
     "Icon1": 12,
     "Icon2": 14,
     "Icon3": 2,
-    "icoPDF": 56,
+    "icoPDF": 57,
     "Image1": 7,
     "Label1": 1,
     "Label2": 13,

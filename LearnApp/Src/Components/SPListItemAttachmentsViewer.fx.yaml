@@ -64,7 +64,7 @@ SPListItemAttachmentsViewer As CanvasComponent:
         AttachmentImage As image:
             BorderColor: =SPListItemAttachmentsViewer.TextColor
             BorderThickness: =If(SPListItemAttachmentsViewer.Border,2,0)
-            Height: =Parent.TemplateHeight/1.5
+            Height: =347
             Image: |-
                 =With(
                     {
@@ -114,8 +114,8 @@ SPListItemAttachmentsViewer As CanvasComponent:
                 )
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth - 110
-            X: =(Parent.TemplateWidth-Self.Width)/2
-            Y: =(Parent.TemplateHeight-Self.Height)/2 - 50
+            X: =55
+            Y: =111
             ZIndex: =1
 
         AttachmentName As label:
@@ -182,6 +182,8 @@ SPListItemAttachmentsViewer As CanvasComponent:
                         ), {Result: ThisRecord.Value})
                     ).Result
             Width: =48
+            X: =363
+            Y: =19
             ZIndex: =5
 
         AttachmentNumber As label:
@@ -210,8 +212,8 @@ SPListItemAttachmentsViewer As CanvasComponent:
             Visible: |-
                 =Not("appres://" in ThisItem.AbsoluteUri)
             Width: =47
-            X: =167
-            Y: =15
+            X: =192
+            Y: =19
             ZIndex: =7
 
     PDFViewerAttachment As pdfViewer:
@@ -240,15 +242,16 @@ SPListItemAttachmentsViewer As CanvasComponent:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
-        Color: =RGBA(118, 0, 0, 1)
+        Color: =RGBA(0, 121, 187, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Size: =25
+        Height: =96
+        Size: =20
         Text: ="No Attachments"
         Visible: =CountRows(SPListItemAttachmentsViewer.Items)=0
-        Width: =196
-        X: =(Parent.Width-Self.Width)/2
-        Y: =(Parent.Height-Self.Height)/2
+        Width: =206
+        X: =105
+        Y: =246
         ZIndex: =5
 

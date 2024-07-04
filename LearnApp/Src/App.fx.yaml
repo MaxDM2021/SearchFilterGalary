@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: =ClearCollect(colAttachments,Defaults(Informaition).Attachments)
+    OnStart: =
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
