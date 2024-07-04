@@ -81,7 +81,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/04/2024 14:59:13",
+  "HeaderLastSavedDateTimeUTC": "07/04/2024 14:59:49",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "b06756bc-d133-40aa-9f51-9830bacf389d": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/38cb66ce397840a0a9db5aabada91e12\""
@@ -218,11 +218,11 @@
     "AddMediaButton1": 41,
     "AddMediaWithImage1": 42,
     "App": 0,
-    "AttachmentImage": 57,
+    "AttachmentImage": 58,
     "AttachmentName": 61,
     "AttachmentNumber": 62,
     "Attachments_DataCard2": 32,
-    "audioPlay": 59,
+    "audioPlay": 60,
     "btnCapurePen": 47,
     "Button1": 3,
     "Camera2": 39,
@@ -257,11 +257,11 @@
     "HomeScreen": 0,
     "Host": 0,
     "icoClosePDFViewer": 64,
-    "icoDownload": 56,
+    "icoDownload": 57,
     "Icon1": 12,
     "Icon2": 14,
     "Icon3": 2,
-    "icoPDF": 60,
+    "icoPDF": 56,
     "Image1": 7,
     "Label1": 1,
     "Label2": 13,
@@ -286,7 +286,7 @@
     "Title1": 8,
     "Total_Attachments_DataCard2": 27,
     "UploadedImage1": 40,
-    "videoPlay": 58
+    "videoPlay": 59
   },
   "ResourcesJsonIndices": {
     "Audio-SampleAudio": 5,

@@ -170,7 +170,7 @@ SPListItemAttachmentsViewer As CanvasComponent:
 
         icoPDF As icon.Edit:
             BorderColor: =RGBA(69, 186, 184, 1)
-            Color: =RGBA(197, 24, 128, 1)
+            Color: =RGBA(0, 121, 187, 1)
             Height: =41
             Icon: =Icon.DocumentPDF
             OnSelect: =Set(varOpenPdf,true)
@@ -182,7 +182,6 @@ SPListItemAttachmentsViewer As CanvasComponent:
                         ), {Result: ThisRecord.Value})
                     ).Result
             Width: =48
-            X: =585
             ZIndex: =5
 
         AttachmentNumber As label:
