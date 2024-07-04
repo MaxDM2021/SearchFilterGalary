@@ -417,6 +417,15 @@ EditScreen1 As screen:
                 Y: =350
                 ZIndex: =14
 
+            Label3 As label:
+                Height: =44
+                Text: ="Text"
+                Visible: =false
+                Width: =76
+                X: =201
+                Y: =353
+                ZIndex: =15
+
     Container2 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(153, 207, 236, 1)
         Height: =78
@@ -495,27 +504,6 @@ EditScreen1 As screen:
     SPListItemAttachmentsViewer_1 As SPListItemAttachmentsViewer:
         Height: =576
         Items: =DataCardValue8.Attachments
-        OnReset: |-
-            =Set(
-                varOpenPdf,
-                false
-            );
-            Set(
-                galData,
-                ForAll(
-                    Sequence(CountRows(SPListItemAttachmentsViewer_1.Items)),
-                    Patch(
-                        Last(
-                            FirstN(
-                                SPListItemAttachmentsViewer_1.Items,
-                                Value
-                            )
-                        ),
-                        {RowNo: Value}
-                    )
-                )
-            );
-            Reset(galAttachments)
         Width: =424
         X: =910
         Y: =102
