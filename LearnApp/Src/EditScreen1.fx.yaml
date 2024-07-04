@@ -47,6 +47,7 @@ EditScreen1 As screen:
                 HoverFill: =RGBA(0, 0, 0, 0)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
+                PressedColor: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =10
                 RadiusBottomRight: =10
                 RadiusTopLeft: =10
