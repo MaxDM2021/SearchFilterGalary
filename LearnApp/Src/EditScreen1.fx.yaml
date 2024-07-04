@@ -426,6 +426,8 @@ EditScreen1 As screen:
             Height: =50
             Icon: =Icon.Trash
             OnSelect: =Remove([@TBL_CameraPictureFile], Gallery1.Selected); If (IsEmpty(Errors([@TBL_CameraPictureFile], Gallery1.Selected)), Back())
+            Visible: |
+                =If(Form2.Mode = FormMode.View, true, false)
             Width: =50
             X: =1290
             Y: =15
