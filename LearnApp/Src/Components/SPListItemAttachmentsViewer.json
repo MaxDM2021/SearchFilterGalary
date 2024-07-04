@@ -27,7 +27,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 53,
+            "PublishOrderIndex": 55,
             "Rules": [
               {
                 "Category": "Design",
@@ -67,7 +67,7 @@
               {
                 "AFDDataSourceName": "",
                 "AutoRuleBindingEnabled": false,
-                "AutoRuleBindingString": "RGBA(69, 186, 184, 1)",
+                "AutoRuleBindingString": "",
                 "InvariantPropertyName": "Color",
                 "IsLockable": false,
                 "NameMapSourceSchema": "?"
@@ -124,7 +124,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 54,
+            "PublishOrderIndex": 56,
             "Rules": [
               {
                 "Category": "Design",
@@ -140,14 +140,14 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "8",
+                "InvariantScript": "167",
                 "Property": "X",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.BorderColor",
-                "Property": "FocusedBorderColor",
+                "InvariantScript": "Self.Fill",
+                "Property": "PressedFill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -194,8 +194,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.Fill",
-                "Property": "HoverFill",
+                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
+                "Property": "HoverBorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -212,20 +212,20 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
-                "Property": "HoverBorderColor",
+                "InvariantScript": "Self.Fill",
+                "Property": "HoverFill",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "SPListItemAttachmentsViewer.TextColor",
-                "Property": "Color",
+                "InvariantScript": "ColorFade(Self.Color, -20%)",
+                "Property": "PressedColor",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Not(\"appres://\" in ThisItem.AbsoluteUri)",
-                "Property": "Visible",
+                "InvariantScript": "Self.Fill",
+                "Property": "DisabledFill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -248,26 +248,26 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "ColorFade(Self.Color, -20%)",
-                "Property": "PressedColor",
+                "InvariantScript": "RGBA(39, 113, 194, 1)",
+                "Property": "Color",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "Not(\"appres://\" in ThisItem.AbsoluteUri)",
+                "Property": "Visible",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "Self.BorderColor",
+                "Property": "FocusedBorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
                 "InvariantScript": "ColorFade(Self.Color, 20%)",
                 "Property": "HoverColor",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "Self.Fill",
-                "Property": "DisabledFill",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "Self.Fill",
-                "Property": "PressedFill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -372,7 +372,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 55,
+            "PublishOrderIndex": 57,
             "Rules": [
               {
                 "Category": "Design",
@@ -388,8 +388,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Parent.TemplateWidth-Self.Width - 10",
-                "Property": "X",
+                "InvariantScript": "ColorFade(Self.Color, -20%)",
+                "Property": "PressedColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -400,8 +400,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "ColorFade(Self.Color, -20%)",
-                "Property": "PressedColor",
+                "InvariantScript": "Parent.TemplateWidth-Self.Width - 10",
+                "Property": "X",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -448,20 +448,14 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "ColorFade(Self.Color, 20%)",
-                "Property": "HoverColor",
+                "InvariantScript": "\"pdf\" in Last(\n        ForAll(Split(\n            ThisItem.DisplayName,\n            \".\"\n        ), {Result: ThisRecord.Value})\n    ).Result",
+                "Property": "Visible",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.BorderColor",
-                "Property": "FocusedBorderColor",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "Self.Fill",
-                "Property": "DisabledFill",
+                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
+                "Property": "HoverBorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -473,7 +467,13 @@
               {
                 "Category": "Design",
                 "InvariantScript": "Self.Fill",
-                "Property": "PressedFill",
+                "Property": "DisabledFill",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "Self.Fill",
+                "Property": "HoverFill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -497,13 +497,13 @@
               {
                 "Category": "Design",
                 "InvariantScript": "Self.Fill",
-                "Property": "HoverFill",
+                "Property": "PressedFill",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "\"pdf\" in Last(\n        ForAll(Split(\n            ThisItem.DisplayName,\n            \".\"\n        ), {Result: ThisRecord.Value})\n    ).Result",
-                "Property": "Visible",
+                "InvariantScript": "ColorFade(Self.Color, 20%)",
+                "Property": "HoverColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -514,8 +514,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
-                "Property": "HoverBorderColor",
+                "InvariantScript": "Self.BorderColor",
+                "Property": "FocusedBorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -647,7 +647,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 56,
+            "PublishOrderIndex": 58,
             "Rules": [
               {
                 "Category": "Data",
@@ -657,14 +657,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Parent.TemplateWidth - 110",
-                "Property": "Width",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
-                "Property": "PressedBorderColor",
+                "InvariantScript": "Self.BorderColor",
+                "Property": "FocusedBorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -693,8 +687,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "If(SPListItemAttachmentsViewer.Border,2,0)",
-                "Property": "BorderThickness",
+                "InvariantScript": "ColorFade(Self.Fill, -20%)",
+                "Property": "PressedFill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -759,8 +753,14 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Parent.TemplateHeight/1.5",
-                "Property": "Height",
+                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
+                "Property": "HoverBorderColor",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "ColorFade(Self.BorderColor, -20%)",
+                "Property": "PressedBorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -771,8 +771,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "SPListItemAttachmentsViewer.TextColor",
-                "Property": "BorderColor",
+                "InvariantScript": "ColorFade(Self.Fill, 20%)",
+                "Property": "HoverFill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -801,32 +801,32 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "ColorFade(Self.Fill, -20%)",
-                "Property": "PressedFill",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "Self.BorderColor",
-                "Property": "FocusedBorderColor",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
-                "Property": "HoverBorderColor",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "ColorFade(Self.Fill, 20%)",
-                "Property": "HoverFill",
+                "InvariantScript": "If(SPListItemAttachmentsViewer.Border,2,0)",
+                "Property": "BorderThickness",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
                 "InvariantScript": "(Parent.TemplateHeight-Self.Height)/2 - 50",
                 "Property": "Y",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "Parent.TemplateWidth - 110",
+                "Property": "Width",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "Parent.TemplateHeight/1.5",
+                "Property": "Height",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "SPListItemAttachmentsViewer.TextColor",
+                "Property": "BorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -927,7 +927,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 57,
+            "PublishOrderIndex": 59,
             "Rules": [
               {
                 "Category": "Data",
@@ -937,8 +937,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "AttachmentImage.Height",
-                "Property": "Height",
+                "InvariantScript": "AttachmentImage.Y",
+                "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -949,26 +949,20 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.BorderColor",
-                "Property": "FocusedBorderColor",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
                 "InvariantScript": "\"mp4\" in Last(\n        ForAll(Split(\n            ThisItem.DisplayName,\n            \".\"\n        ), {Result: ThisRecord.Value})\n    ).Result",
                 "Property": "Visible",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "AttachmentImage.X",
-                "Property": "X",
+                "InvariantScript": "Self.BorderColor",
+                "Property": "FocusedBorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "AttachmentImage.Y",
-                "Property": "Y",
+                "InvariantScript": "AttachmentImage.Height",
+                "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -999,6 +993,12 @@
                 "Category": "Design",
                 "InvariantScript": "ImagePosition.Fill",
                 "Property": "ImagePosition",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "AttachmentImage.X",
+                "Property": "X",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1105,7 +1105,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 58,
+            "PublishOrderIndex": 60,
             "Rules": [
               {
                 "Category": "Data",
@@ -1115,8 +1115,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "AttachmentImage.Height",
-                "Property": "Height",
+                "InvariantScript": "AttachmentImage.Y",
+                "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1133,8 +1133,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.BorderColor",
-                "Property": "FocusedBorderColor",
+                "InvariantScript": "AttachmentImage.X",
+                "Property": "X",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1145,14 +1145,20 @@
               },
               {
                 "Category": "Design",
+                "InvariantScript": "Self.BorderColor",
+                "Property": "FocusedBorderColor",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
                 "InvariantScript": "4",
                 "Property": "ZIndex",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "AttachmentImage.Y",
-                "Property": "Y",
+                "InvariantScript": "AttachmentImage.Height",
+                "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1177,12 +1183,6 @@
                 "Category": "Design",
                 "InvariantScript": "RGBA(69, 186, 184, 1)",
                 "Property": "BorderColor",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "AttachmentImage.X",
-                "Property": "X",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1226,7 +1226,7 @@
               {
                 "AFDDataSourceName": "",
                 "AutoRuleBindingEnabled": false,
-                "AutoRuleBindingString": "RGBA(255, 255, 255, 1)",
+                "AutoRuleBindingString": "",
                 "InvariantPropertyName": "Color",
                 "IsLockable": false,
                 "NameMapSourceSchema": "?"
@@ -1298,7 +1298,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 59,
+            "PublishOrderIndex": 61,
             "Rules": [
               {
                 "Category": "Data",
@@ -1321,13 +1321,7 @@
               {
                 "Category": "Design",
                 "InvariantScript": "Self.BorderColor",
-                "Property": "HoverBorderColor",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "AttachmentImage.Y + AttachmentImage.Height + 16",
-                "Property": "Y",
+                "Property": "FocusedBorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1362,7 +1356,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "16",
+                "InvariantScript": "20",
                 "Property": "Size",
                 "RuleProviderType": "Unknown"
               },
@@ -1410,8 +1404,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.BorderColor",
-                "Property": "FocusedBorderColor",
+                "InvariantScript": "AttachmentImage.Y + AttachmentImage.Height + 16",
+                "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1428,6 +1422,12 @@
               },
               {
                 "Category": "Design",
+                "InvariantScript": "Self.BorderColor",
+                "Property": "HoverBorderColor",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
                 "InvariantScript": "32",
                 "Property": "X",
                 "RuleProviderType": "Unknown"
@@ -1440,20 +1440,20 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.Color",
-                "Property": "PressedColor",
+                "InvariantScript": "RGBA(0, 121, 187, 1)",
+                "Property": "Color",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.Size * 1.8",
-                "Property": "Height",
+                "InvariantScript": "Self.Fill",
+                "Property": "PressedFill",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Parent.TemplateWidth - 64",
-                "Property": "Width",
+                "InvariantScript": "Self.BorderColor",
+                "Property": "PressedBorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1470,8 +1470,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.Fill",
-                "Property": "PressedFill",
+                "InvariantScript": "Self.Size * 1.8",
+                "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1500,14 +1500,14 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.BorderColor",
-                "Property": "PressedBorderColor",
+                "InvariantScript": "Parent.TemplateWidth - 64",
+                "Property": "Width",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "SPListItemAttachmentsViewer.TextColor",
-                "Property": "Color",
+                "InvariantScript": "Self.Color",
+                "Property": "PressedColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1551,7 +1551,7 @@
               {
                 "AFDDataSourceName": "",
                 "AutoRuleBindingEnabled": false,
-                "AutoRuleBindingString": "RGBA(255, 255, 255, 1)",
+                "AutoRuleBindingString": "",
                 "InvariantPropertyName": "Color",
                 "IsLockable": false,
                 "NameMapSourceSchema": "?"
@@ -1570,7 +1570,14 @@
               "PressedFill",
               "HoverFill",
               "Font",
-              "FontWeight",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "FontWeight",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               {
                 "AFDDataSourceName": "",
                 "AutoRuleBindingEnabled": false,
@@ -1630,7 +1637,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 60,
+            "PublishOrderIndex": 62,
             "Rules": [
               {
                 "Category": "Data",
@@ -1652,20 +1659,20 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Parent.TemplateWidth - 64",
-                "Property": "Width",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "Self.Color",
-                "Property": "HoverColor",
+                "InvariantScript": "Self.BorderColor",
+                "Property": "PressedBorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
                 "InvariantScript": "6",
                 "Property": "ZIndex",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "Self.BorderColor",
+                "Property": "HoverBorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1688,8 +1695,8 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.Color",
-                "Property": "PressedColor",
+                "InvariantScript": "RGBA(0, 121, 187, 1)",
+                "Property": "Color",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1706,13 +1713,13 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "FontWeight.Semibold",
+                "InvariantScript": "FontWeight.Normal",
                 "Property": "FontWeight",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "16",
+                "InvariantScript": "20",
                 "Property": "Size",
                 "RuleProviderType": "Unknown"
               },
@@ -1784,14 +1791,14 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.BorderColor",
-                "Property": "PressedBorderColor",
+                "InvariantScript": "Parent.TemplateWidth - 64",
+                "Property": "Width",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "SPListItemAttachmentsViewer.TextColor",
-                "Property": "Color",
+                "InvariantScript": "Self.Color",
+                "Property": "PressedColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1814,20 +1821,14 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.Size * 1.8",
-                "Property": "Height",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
                 "InvariantScript": "Self.Fill",
                 "Property": "PressedFill",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Self.BorderColor",
-                "Property": "FocusedBorderColor",
+                "InvariantScript": "Self.Size * 1.8",
+                "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1838,8 +1839,14 @@
               },
               {
                 "Category": "Design",
+                "InvariantScript": "Self.Color",
+                "Property": "HoverColor",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
                 "InvariantScript": "Self.BorderColor",
-                "Property": "HoverBorderColor",
+                "Property": "FocusedBorderColor",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1982,14 +1989,8 @@
         "OptimizeForDevices": "Off",
         "Parent": "SPListItemAttachmentsViewer",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 52,
+        "PublishOrderIndex": 54,
         "Rules": [
-          {
-            "Category": "Data",
-            "InvariantScript": "SPListItemAttachmentsViewer.WrapCount",
-            "Property": "WrapCount",
-            "RuleProviderType": "Unknown"
-          },
           {
             "Category": "Data",
             "InvariantScript": "galData",
@@ -1997,27 +1998,33 @@
             "RuleProviderType": "Unknown"
           },
           {
+            "Category": "Data",
+            "InvariantScript": "SPListItemAttachmentsViewer.WrapCount",
+            "Property": "WrapCount",
+            "RuleProviderType": "Unknown"
+          },
+          {
             "Category": "Design",
-            "InvariantScript": "SPListItemAttachmentsViewer.BackgroundColor",
-            "Property": "Fill",
+            "InvariantScript": "Self.BorderColor",
+            "Property": "PressedBorderColor",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
             "InvariantScript": "Self.Fill",
-            "Property": "PressedFill",
+            "Property": "HoverFill",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "Parent.Height",
-            "Property": "Height",
+            "InvariantScript": "Self.BorderColor",
+            "Property": "LoadingSpinnerColor",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "Parent.Width",
-            "Property": "Width",
+            "InvariantScript": "Self.BorderColor",
+            "Property": "DisabledBorderColor",
             "RuleProviderType": "Unknown"
           },
           {
@@ -2065,7 +2072,13 @@
           {
             "Category": "Design",
             "InvariantScript": "Self.BorderColor",
-            "Property": "PressedBorderColor",
+            "Property": "FocusedBorderColor",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "SPListItemAttachmentsViewer.BackgroundColor",
+            "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
           {
@@ -2076,8 +2089,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Parent.Width",
-            "Property": "TemplateSize",
+            "InvariantScript": "Self.BorderColor",
+            "Property": "HoverBorderColor",
             "RuleProviderType": "Unknown"
           },
           {
@@ -2088,14 +2101,14 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Self.BorderColor",
-            "Property": "HoverBorderColor",
+            "InvariantScript": "Parent.Width",
+            "Property": "TemplateSize",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "Self.BorderColor",
-            "Property": "DisabledBorderColor",
+            "InvariantScript": "Parent.Width",
+            "Property": "Width",
             "RuleProviderType": "Unknown"
           },
           {
@@ -2112,26 +2125,20 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Self.BorderColor",
-            "Property": "LoadingSpinnerColor",
+            "InvariantScript": "Parent.Height",
+            "Property": "Height",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
             "InvariantScript": "Self.Fill",
-            "Property": "HoverFill",
+            "Property": "PressedFill",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
             "InvariantScript": "Self.Fill",
             "Property": "DisabledFill",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Self.BorderColor",
-            "Property": "FocusedBorderColor",
             "RuleProviderType": "Unknown"
           },
           {
@@ -2251,7 +2258,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "SPListItemAttachmentsViewer",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 61,
+        "PublishOrderIndex": 63,
         "Rules": [
           {
             "Category": "Data",
@@ -2452,7 +2459,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "SPListItemAttachmentsViewer",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 62,
+        "PublishOrderIndex": 64,
         "Rules": [
           {
             "Category": "Design",
@@ -2722,7 +2729,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "SPListItemAttachmentsViewer",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 63,
+        "PublishOrderIndex": 65,
         "Rules": [
           {
             "Category": "Data",
@@ -2780,8 +2787,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "CountRows(SPListItemAttachmentsViewer.Items)=0",
-            "Property": "Visible",
+            "InvariantScript": "(Parent.Width-Self.Width)/2",
+            "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
@@ -2882,7 +2889,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "18",
+            "InvariantScript": "25",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           },
@@ -2918,8 +2925,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "(Parent.Width-Self.Width)/2",
-            "Property": "X",
+            "InvariantScript": "CountRows(SPListItemAttachmentsViewer.Items)=0",
+            "Property": "Visible",
             "RuleProviderType": "Unknown"
           },
           {
@@ -3038,7 +3045,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638557002439203228",
+    "LastModifiedTimestamp": "638557016908278008",
     "Name": "SPListItemAttachmentsViewer",
     "Rules": [
       {
@@ -3180,7 +3187,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638557002439203228",
+  "LastModifiedTimestamp": "638557016908278008",
   "Name": "ddb85c2becef4d36a42d5adcf736fbc8",
   "OverridableProperties": {},
   "TemplateOriginalName": "df504236bbdb49c1bff618d4cba4d349",

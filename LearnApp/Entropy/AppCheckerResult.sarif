@@ -864,19 +864,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Container2.Icon1.AccessibleLabel"
+                  "fullyQualifiedName": "EditScreen1.HeaderContainerEditScreen.Icon1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Container2.Icon1.AccessibleLabel",
+                  "fullyQualifiedName": "EditScreen1.HeaderContainerEditScreen.Icon1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditScreen1",
-                "type": "EditScreen1.Container2.Icon1"
+                "type": "EditScreen1.HeaderContainerEditScreen.Icon1"
               }
             }
           ],
@@ -894,19 +894,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Container2.Icon1.TabIndex"
+                  "fullyQualifiedName": "EditScreen1.HeaderContainerEditScreen.Icon1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Container2.Icon1.TabIndex",
+                  "fullyQualifiedName": "EditScreen1.HeaderContainerEditScreen.Icon1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "EditScreen1",
-                "type": "EditScreen1.Container2.Icon1"
+                "type": "EditScreen1.HeaderContainerEditScreen.Icon1"
               }
             }
           ],
@@ -924,19 +924,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Container2.Icon2.AccessibleLabel"
+                  "fullyQualifiedName": "EditScreen1.HeaderContainerEditScreen.Icon2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Container2.Icon2.AccessibleLabel",
+                  "fullyQualifiedName": "EditScreen1.HeaderContainerEditScreen.Icon2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditScreen1",
-                "type": "EditScreen1.Container2.Icon2"
+                "type": "EditScreen1.HeaderContainerEditScreen.Icon2"
               }
             }
           ],
@@ -954,19 +954,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Container2.Icon2.TabIndex"
+                  "fullyQualifiedName": "EditScreen1.HeaderContainerEditScreen.Icon2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Container2.Icon2.TabIndex",
+                  "fullyQualifiedName": "EditScreen1.HeaderContainerEditScreen.Icon2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "EditScreen1",
-                "type": "EditScreen1.Container2.Icon2"
+                "type": "EditScreen1.HeaderContainerEditScreen.Icon2"
               }
             }
           ],
@@ -984,19 +984,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Form2.Title_DataCard2.DataCardValue5.AccessibleLabel"
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.TextInput2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Form2.Title_DataCard2.DataCardValue5.AccessibleLabel",
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.TextInput2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditScreen1",
-                "type": "EditScreen1.Form2.Title_DataCard2.DataCardValue5"
+                "type": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.TextInput2"
               }
             }
           ],
@@ -1014,19 +1014,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Form2.Description_DataCard2.DataCardValue6.AccessibleLabel"
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.PenInput1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Form2.Description_DataCard2.DataCardValue6.AccessibleLabel",
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.PenInput1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditScreen1",
-                "type": "EditScreen1.Form2.Description_DataCard2.DataCardValue6"
+                "type": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.PenInput1"
               }
             }
           ],
@@ -1044,19 +1044,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Form2.Total_Attachments_DataCard2.DataCardValue7.AccessibleLabel"
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.Camera2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Form2.Total_Attachments_DataCard2.DataCardValue7.AccessibleLabel",
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.Camera2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditScreen1",
-                "type": "EditScreen1.Form2.Total_Attachments_DataCard2.DataCardValue7"
+                "type": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.Camera2"
               }
             }
           ],
@@ -1074,19 +1074,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.Dropdown2.AccessibleLabel"
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.ContainerAttachDataCardValue.DataCardValue8.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.Dropdown2.AccessibleLabel",
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.ContainerAttachDataCardValue.DataCardValue8.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditScreen1",
-                "type": "EditScreen1.Form2.Attachments_DataCard2.Dropdown2"
+                "type": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.ContainerAttachDataCardValue.DataCardValue8"
               }
             }
           ],
@@ -1104,19 +1104,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.DataCardValue8.AccessibleLabel"
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.Dropdown2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.DataCardValue8.AccessibleLabel",
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.Dropdown2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditScreen1",
-                "type": "EditScreen1.Form2.Attachments_DataCard2.DataCardValue8"
+                "type": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.Dropdown2"
               }
             }
           ],
@@ -1134,78 +1134,18 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.Camera2.AccessibleLabel"
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.PenInput1"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.Camera2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "EditScreen1",
-                "type": "EditScreen1.Form2.Attachments_DataCard2.Camera2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.AddMediaButton1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.AddMediaButton1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "EditScreen1",
-                "type": "EditScreen1.Form2.Attachments_DataCard2.AddMediaButton1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.PenInput1"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.PenInput1",
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.PenInput1",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "module": "EditScreen1",
-                "type": "EditScreen1.Form2.Attachments_DataCard2.PenInput1"
+                "type": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.PenInput1"
               }
             }
           ],
@@ -1223,19 +1163,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.PenInput1.AccessibleLabel"
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Total_Attachments_DataCard2.DataCardValue7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.PenInput1.AccessibleLabel",
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Total_Attachments_DataCard2.DataCardValue7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditScreen1",
-                "type": "EditScreen1.Form2.Attachments_DataCard2.PenInput1"
+                "type": "EditScreen1.FormContainer.Form2.Total_Attachments_DataCard2.DataCardValue7"
               }
             }
           ],
@@ -1253,19 +1193,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.TextInput2.AccessibleLabel"
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Description_DataCard2.DataCardValue6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.TextInput2.AccessibleLabel",
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Description_DataCard2.DataCardValue6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditScreen1",
-                "type": "EditScreen1.Form2.Attachments_DataCard2.TextInput2"
+                "type": "EditScreen1.FormContainer.Form2.Description_DataCard2.DataCardValue6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Title_DataCard2.DataCardValue5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Title_DataCard2.DataCardValue5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "EditScreen1",
+                "type": "EditScreen1.FormContainer.Form2.Title_DataCard2.DataCardValue5"
               }
             }
           ],
@@ -1583,19 +1553,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.HiddenResetControl.AccessibleLabel"
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.AddMediaButton1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditScreen1.Form2.Attachments_DataCard2.HiddenResetControl.AccessibleLabel",
+                  "fullyQualifiedName": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.AddMediaButton1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditScreen1",
-                "type": "EditScreen1.Form2.Attachments_DataCard2.HiddenResetControl"
+                "type": "EditScreen1.FormContainer.Form2.Attachments_DataCard2.AddMediaButton1"
               }
             }
           ],

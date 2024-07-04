@@ -1,470 +1,440 @@
 EditScreen1 As screen:
 
-    Form2 As form:
-        DataSource: =TBL_CameraPictureFile
-        DefaultMode: =FormMode.View
-        Fill: =RGBA(237, 223, 154, 0.87)
+    FormContainer As groupContainer.manualLayoutContainer:
         Height: =563
-        Item: =Gallery1.Selected
-        OnSuccess: =Back()
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Width: =800
         X: =46
-        Y: =97
-        ZIndex: =1
-
-        Title_DataCard2 As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Title"
-            Default: =ThisItem.Title
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,Title)
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@TBL_CameraPictureFile], DataSourceInfo.MaxLength, Title)
-            Required: =false
-            Update: =DataCardValue5.Text
-            Width: =266
-            X: =0
-            Y: =0
-            ZIndex: =7
-
-            DataCardKey5 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue5 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Fill: =RGBA(0, 0, 0, 0)
-                HoverColor: =RGBA(0, 121, 187, 1)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                PressedColor: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =10
-                RadiusBottomRight: =10
-                RadiusTopLeft: =10
-                RadiusTopRight: =10
-                Size: =20
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
-                ZIndex: =2
-
-            ErrorMessage5 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue5.Y + DataCardValue5.Height
-                ZIndex: =3
-
-            StarVisible5 As label:
-                Align: =Align.Center
-                Height: =DataCardKey5.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey5.Y
-                ZIndex: =4
-
-        Description_DataCard2 As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Description"
-            Default: =ThisItem.Description
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,Description)
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =153
-            MaxLength: =DataSourceInfo([@TBL_CameraPictureFile], DataSourceInfo.MaxLength, Description)
-            Required: =false
-            Update: =DataCardValue6.Text
-            Width: =266
-            X: =1
-            Y: =0
-            ZIndex: =7
-
-            DataCardKey6 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue6 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =1
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =87
-                HoverColor: =RGBA(0, 121, 187, 1)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                MaxLength: =Parent.MaxLength
-                Mode: =TextMode.MultiLine
-                PaddingLeft: =5
-                RadiusBottomLeft: =10
-                RadiusBottomRight: =10
-                RadiusTopLeft: =10
-                RadiusTopRight: =10
-                Size: =20
-                Tooltip: =Parent.DisplayName
-                Width: =206
-                X: =30
-                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
-                ZIndex: =2
-
-            ErrorMessage6 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue6.Y + DataCardValue6.Height
-                ZIndex: =3
-
-            StarVisible6 As label:
-                Align: =Align.Center
-                Height: =DataCardKey6.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey6.Y
-                ZIndex: =4
-
-        Total_Attachments_DataCard2 As typedDataCard.numberEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Total_Attachments"
-            Default: =ThisItem.Total_Attachments
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,Total_Attachments)
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Value(DataCardValue7.Text)
-            Width: =266
-            X: =2
-            Y: =0
-            ZIndex: =7
-
-            DataCardKey7 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue7 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Value(CountRows(DataCardValue8.Attachments))
-                DelayOutput: =true
-                DisplayMode: =DisplayMode.View
-                Fill: =RGBA(0, 0, 0, 0)
-                Format: =TextFormat.Number
-                HoverColor: =RGBA(0, 121, 187, 1)
-                HoverFill: =RGBA(0, 0, 0, 0)
-                OnChange: =true
-                PaddingLeft: =5
-                PressedFill: =
-                RadiusBottomLeft: =10
-                RadiusBottomRight: =10
-                RadiusTopLeft: =10
-                RadiusTopRight: =10
-                Size: =20
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =39
-                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
-                ZIndex: =2
-
-            ErrorMessage7 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue7.Y + DataCardValue7.Height
-                ZIndex: =3
-
-            StarVisible7 As label:
-                Align: =Align.Center
-                Height: =DataCardKey7.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey7.Y
-                ZIndex: =4
-
-        Attachments_DataCard2 As typedDataCard.attachmentsEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="{Attachments}"
-            Default: =colAttachments
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,Attachments)
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =405
-            Required: =false
-            Update: =DataCardValue8.Attachments
-            Width: =798
-            X: =0
-            Y: =1
-            ZIndex: =7
-
-            DataCardKey8 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =223
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue8 As attachments:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DisplayMode: =Parent.DisplayMode
-                Height: =260
-                IsInDataCard: =true
-                Items: =Parent.Default
-                OnAddFile: |
-                    =ClearCollect(
-                        colAttachments,
-                        Self.Attachments
-                    );
-                OnRemoveFile: |
-                    =ClearCollect(
-                        colAttachments,
-                        Self.Attachments
-                    );
-                OnUndoRemoveFile: |
-                    =ClearCollect(
-                        colAttachments,
-                        Self.Attachments
-                    );
-                PaddingBottom: =5
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PaddingRight: =5
-                PaddingTop: =5
-                Reset: =resetAttachments
-                Tooltip: =Parent.DisplayName
-                Width: =237
-                X: =16
-                Y: =69
-                ZIndex: =2
-
-            ErrorMessage8 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue8.Y + DataCardValue8.Height
-                ZIndex: =3
-
-            StarVisible8 As label:
-                Align: =Align.Center
-                Height: =DataCardKey8.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey8.Y
-                ZIndex: =4
-
-            Camera2 As camera:
-                Camera: =0
-                Height: =245
-                OnSelect: |-
-                    =Collect(colAttachments,{DisplayName: "Camera "& TextInput2.Text & ".jpg",Id: "Camera "& TextInput2.Text & ".jpg",Value:Self.Photo});Reset(DataCardValue8);
-                Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="📸 Camera" && varType="add"
-                Width: =362
-                X: =327
-                Y: =69
-                ZIndex: =5
-
-            Dropdown2 As dropdown:
-                ChevronBackground: =RGBA(0, 0, 0, 0)
-                ChevronFill: =RGBA(0, 121, 187, 1)
-                Height: =37
-                Items: =["📸 Camera","✒️ Pen Input","🖼️ Upload Image"]
-                Visible: =Form2.Mode<>FormMode.View && varType="add"
-                Width: =189
-                X: =394
-                Y: =7
-                ZIndex: =6
-
-            Label5 As label:
-                Text: ="Type"
-                Visible: =Form2.Mode<>FormMode.View && varType="add"
-                Width: =57
-                X: =324
-                Y: =4
-                ZIndex: =7
-
-            TextInput2 As text:
-                Default: =""
-                Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="📸 Camera" && varType="add"
-                Width: =142
-                X: =418
-                Y: =329
-                ZIndex: =8
-
-            Label5_1 As label:
-                Text: ="Name"
-                Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="📸 Camera" && varType="add"
-                Width: =67
-                X: =351
-                Y: =329
-                ZIndex: =9
-
-            PenInput1 As inkControl:
-                Color: =RGBA(20, 20, 20, 1)
-                Fill: =RGBA(255, 255, 255, 1)
-                Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="✒️ Pen Input"
-                X: =327
-                Y: =76
-                ZIndex: =12
-
-            btnCapurePen As button:
-                OnSelect: |-
-                    =Collect(colAttachments,{DisplayName: "Pen "& RandBetween(1,10000) &".jpg",Id: "Pen "& RandBetween(1,10000) &".jpg",Value:PenInput1.Image});Reset(DataCardValue8);
-                Text: ="✒️ Capture"
-                Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="✒️ Pen Input"
-                X: =418
-                Y: =329
-                ZIndex: =13
-
-            AddMediaWithImage1 As group:
-                Height: =5
-                Width: =5
-                X: =40
-                Y: =40
-                ZIndex: =13
-
-                UploadedImage1 As image:
-                    Height: =AddMediaButton1.Height
-                    Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
-                    ImagePosition: =ImagePosition.Fill
-                    Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="🖼️ Upload Image"
-                    Width: =AddMediaButton1.Width
-                    X: =344
-                    Y: =69
-                    ZIndex: =10
-
-                AddMediaButton1 As addMedia:
-                    OnSelect: |-
-                        =Collect(colAttachments,{DisplayName: "Picture "& RandBetween(1,10000) &".jpg",Id: "Picture "& RandBetween(1,10000) &".jpg",Value:UploadedImage1.Image});Reset(DataCardValue8)
-                    Size: =25
-                    Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="🖼️ Upload Image"
-                    X: =344
-                    Y: =69
-                    ZIndex: =11
-
-            HiddenResetControl As text:
-                Default: ="Text input"
-                Height: =44
-                Visible: =false
-                Width: =132
-                X: =212
-                Y: =353
-                ZIndex: =15
-
-            "'Clear All Attach' As button":
-                Fill: =RGBA(102, 182, 227, 1)
-                Height: =47
-                HoverFill: =RGBA(0, 94, 146, 1)
-                OnSelect: |-
-                    =UpdateContext({ resetAttachments: true });
-                    UpdateContext({ resetAttachments: false });
-                Text: ="Reset all attach"
-                Visible: =If(Form2.Mode = FormMode.New, true, false)
-                Width: =171
-                X: =30
-                Y: =350
-                ZIndex: =16
-
-    Container2 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(153, 207, 236, 1)
-        Height: =78
-        Width: =1366
+        Y: =108
         ZIndex: =2
 
-        Icon1 As icon.BackArrow:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =50
-            Icon: =Icon.BackArrow
-            OnSelect: =Navigate(HomeScreen);
-            Width: =50
-            X: =36
-            Y: =15
+        Form2 As form:
+            DataSource: =TBL_CameraPictureFile
+            DefaultMode: =FormMode.View
+            Fill: =RGBA(237, 223, 154, 0.87)
+            Height: =563
+            Item: =Gallery1.Selected
+            OnSuccess: =Back()
             ZIndex: =1
 
-        Label2 As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =50
-            Size: =25
-            Text: ="Info Attachment"
-            Width: =300
-            X: =105
-            Y: =15
-            ZIndex: =2
+            Title_DataCard2 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Title"
+                Default: =ThisItem.Title
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,Title)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@TBL_CameraPictureFile], DataSourceInfo.MaxLength, Title)
+                Required: =false
+                Update: =DataCardValue5.Text
+                Width: =266
+                X: =0
+                Y: =0
+                ZIndex: =7
 
-        Icon2 As icon.Trash:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =50
-            Icon: =Icon.Trash
-            OnSelect: =Remove([@TBL_CameraPictureFile], Gallery1.Selected); If (IsEmpty(Errors([@TBL_CameraPictureFile], Gallery1.Selected)), Back())
-            Visible: |
-                =If(Form2.Mode = FormMode.View, true, false)
-            Width: =50
-            X: =1290
-            Y: =15
-            ZIndex: =3
+                DataCardKey5 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue5 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Fill: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(0, 121, 187, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =20
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage5 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue5.Y + DataCardValue5.Height
+                    ZIndex: =3
+
+                StarVisible5 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey5.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey5.Y
+                    ZIndex: =4
+
+            Description_DataCard2 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Description"
+                Default: =ThisItem.Description
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,Description)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =153
+                MaxLength: =DataSourceInfo([@TBL_CameraPictureFile], DataSourceInfo.MaxLength, Description)
+                Required: =false
+                Update: =DataCardValue6.Text
+                Width: =266
+                X: =1
+                Y: =0
+                ZIndex: =7
+
+                DataCardKey6 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue6 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    BorderThickness: =1
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =87
+                    HoverColor: =RGBA(0, 121, 187, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    MaxLength: =Parent.MaxLength
+                    Mode: =TextMode.MultiLine
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =20
+                    Tooltip: =Parent.DisplayName
+                    Width: =206
+                    X: =30
+                    Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage6 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue6.Y + DataCardValue6.Height
+                    ZIndex: =3
+
+                StarVisible6 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey6.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey6.Y
+                    ZIndex: =4
+
+            Total_Attachments_DataCard2 As typedDataCard.numberEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Total_Attachments"
+                Default: =ThisItem.Total_Attachments
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,Total_Attachments)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =Value(DataCardValue7.Text)
+                Width: =266
+                X: =2
+                Y: =0
+                ZIndex: =7
+
+                DataCardKey7 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue7 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Value(CountRows(DataCardValue8.Attachments))
+                    DelayOutput: =true
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Format: =TextFormat.Number
+                    HoverColor: =RGBA(0, 121, 187, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    OnChange: =true
+                    PaddingLeft: =5
+                    PressedFill: =
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =20
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =39
+                    Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage7 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue7.Y + DataCardValue7.Height
+                    ZIndex: =3
+
+                StarVisible7 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey7.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey7.Y
+                    ZIndex: =4
+
+            Attachments_DataCard2 As typedDataCard.attachmentsEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="{Attachments}"
+                Default: =colAttachments
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@TBL_CameraPictureFile],DataSourceInfo.DisplayName,Attachments)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =405
+                Required: =false
+                Update: =DataCardValue8.Attachments
+                Width: =798
+                X: =0
+                Y: =1
+                ZIndex: =7
+
+                DataCardKey8 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =223
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                ErrorMessage8 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue8.Y + DataCardValue8.Height
+                    ZIndex: =3
+
+                StarVisible8 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey8.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey8.Y
+                    ZIndex: =4
+
+                Camera2 As camera:
+                    Camera: =0
+                    Height: =245
+                    OnSelect: |-
+                        =Collect(colAttachments,{DisplayName: "Camera "& TextInput2.Text & ".jpg",Id: "Camera "& TextInput2.Text & ".jpg",Value:Self.Photo});Reset(DataCardValue8);
+                    Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="📸 Camera" && varType="add"
+                    Width: =362
+                    X: =327
+                    Y: =69
+                    ZIndex: =5
+
+                Dropdown2 As dropdown:
+                    ChevronBackground: =RGBA(0, 0, 0, 0)
+                    ChevronFill: =RGBA(0, 121, 187, 1)
+                    Height: =37
+                    Items: =["📸 Camera","✒️ Pen Input","🖼️ Upload Image"]
+                    Visible: =Form2.Mode<>FormMode.View && varType="add"
+                    Width: =189
+                    X: =394
+                    Y: =7
+                    ZIndex: =6
+
+                Label5 As label:
+                    Text: ="Type"
+                    Visible: =Form2.Mode<>FormMode.View && varType="add"
+                    Width: =57
+                    X: =324
+                    Y: =4
+                    ZIndex: =7
+
+                TextInput2 As text:
+                    Default: =""
+                    Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="📸 Camera" && varType="add"
+                    Width: =142
+                    X: =418
+                    Y: =329
+                    ZIndex: =8
+
+                Label5_1 As label:
+                    Text: ="Name"
+                    Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="📸 Camera" && varType="add"
+                    Width: =67
+                    X: =351
+                    Y: =329
+                    ZIndex: =9
+
+                PenInput1 As inkControl:
+                    Color: =RGBA(20, 20, 20, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="✒️ Pen Input"
+                    X: =327
+                    Y: =76
+                    ZIndex: =12
+
+                btnCapurePen As button:
+                    OnSelect: |-
+                        =Collect(colAttachments,{DisplayName: "Pen "& RandBetween(1,10000) &".jpg",Id: "Pen "& RandBetween(1,10000) &".jpg",Value:PenInput1.Image});Reset(DataCardValue8);
+                    Text: ="✒️ Capture"
+                    Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="✒️ Pen Input"
+                    X: =418
+                    Y: =329
+                    ZIndex: =13
+
+                AddMediaWithImage1 As group:
+                    Height: =5
+                    Width: =5
+                    X: =40
+                    Y: =40
+                    ZIndex: =13
+
+                    UploadedImage1 As image:
+                        Height: =AddMediaButton1.Height
+                        Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
+                        ImagePosition: =ImagePosition.Fill
+                        Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="🖼️ Upload Image"
+                        Width: =AddMediaButton1.Width
+                        X: =344
+                        Y: =69
+                        ZIndex: =10
+
+                    AddMediaButton1 As addMedia:
+                        OnSelect: |-
+                            =Collect(colAttachments,{DisplayName: "Picture "& RandBetween(1,10000) &".jpg",Id: "Picture "& RandBetween(1,10000) &".jpg",Value:UploadedImage1.Image});Reset(DataCardValue8)
+                        Size: =25
+                        Visible: =Form2.Mode<>FormMode.View && Dropdown2.Selected.Value="🖼️ Upload Image"
+                        X: =344
+                        Y: =69
+                        ZIndex: =11
+
+                "'Clear All Attach' As button":
+                    Fill: =RGBA(102, 182, 227, 1)
+                    Height: =47
+                    HoverFill: =RGBA(0, 94, 146, 1)
+                    OnSelect: |-
+                        =UpdateContext({ resetAttachments: true });
+                        UpdateContext({ resetAttachments: false });
+                    Text: ="Reset all attach"
+                    Visible: =If(Form2.Mode = FormMode.New, true, false)
+                    Width: =171
+                    X: =30
+                    Y: =350
+                    ZIndex: =16
+
+                ContainerAttachDataCardValue As groupContainer.manualLayoutContainer:
+                    Height: =260
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Width: =237
+                    X: =16
+                    Y: =69
+                    ZIndex: =17
+
+                    DataCardValue8 As attachments:
+                        BorderColor: =If(IsBlank(Attachments_DataCard2.Error), Parent.BorderColor, Color.Red)
+                        BorderThickness: =0
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =260
+                        IsInDataCard: =true
+                        Items: =Attachments_DataCard2.Default
+                        OnAddFile: |
+                            =ClearCollect(
+                                colAttachments,
+                                Self.Attachments
+                            );
+                        OnRemoveFile: |
+                            =ClearCollect(
+                                colAttachments,
+                                Self.Attachments
+                            );
+                        OnUndoRemoveFile: |
+                            =ClearCollect(
+                                colAttachments,
+                                Self.Attachments
+                            );
+                        PaddingBottom: =5
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Reset: =resetAttachments
+                        Tooltip: =Attachments_DataCard2.DisplayName
+                        Width: =237
+                        ZIndex: =1
 
     SubmitBtn_1 As button:
         Fill: =RGBA(250, 155, 112, 1)
@@ -501,14 +471,6 @@ EditScreen1 As screen:
         Y: =702
         ZIndex: =4
 
-    SPListItemAttachmentsViewer_1 As SPListItemAttachmentsViewer:
-        Height: =576
-        Items: =DataCardValue8.Attachments
-        Width: =424
-        X: =910
-        Y: =102
-        ZIndex: =5
-
     Rectangle1 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =259
@@ -517,4 +479,62 @@ EditScreen1 As screen:
         X: =260
         Y: =320
         ZIndex: =6
+
+    HeaderContainerEditScreen As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(153, 207, 236, 1)
+        Height: =78
+        Width: =1366
+        ZIndex: =7
+
+        Icon1 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =50
+            Icon: =Icon.BackArrow
+            OnSelect: =Navigate(HomeScreen);
+            Width: =50
+            X: =36
+            Y: =15
+            ZIndex: =1
+
+        Label2 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =50
+            Size: =25
+            Text: ="Info Attachment"
+            Width: =300
+            X: =105
+            Y: =15
+            ZIndex: =2
+
+        Icon2 As icon.Trash:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =50
+            Icon: =Icon.Trash
+            OnSelect: =Remove([@TBL_CameraPictureFile], Gallery1.Selected); If (IsEmpty(Errors([@TBL_CameraPictureFile], Gallery1.Selected)), Back())
+            Visible: |
+                =If(Form2.Mode = FormMode.View, true, false)
+            Width: =50
+            X: =1290
+            Y: =15
+            ZIndex: =3
+
+    ContainerViewer As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(0, 121, 187, 1)
+        BorderThickness: =1
+        Height: =563
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Width: =424
+        X: =910
+        Y: =108
+        ZIndex: =8
+
+        SPListItemAttachmentsViewer_1 As SPListItemAttachmentsViewer:
+            Height: =570
+            Items: =DataCardValue8.Attachments
+            Width: =424
 
