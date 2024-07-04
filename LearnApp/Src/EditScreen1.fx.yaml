@@ -458,6 +458,7 @@ EditScreen1 As screen:
 
     SPListItemAttachmentsViewer_1 As SPListItemAttachmentsViewer:
         Height: =576
+        Items: =DataCardValue8.Attachments
         OnReset: |-
             =Set(
                 varOpenPdf,
