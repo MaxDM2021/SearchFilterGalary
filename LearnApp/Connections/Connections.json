@@ -10,12 +10,16 @@
         "dataSources": {
           "TBL_CameraPictureFile": {
             "tableName": "97b093d0-8585-45b6-9a2a-312d379d720c"
+          },
+          "TBL_User_Credential": {
+            "tableName": "02cba00d-94b6-4163-a7bc-45362c664e45"
           }
         }
       }
     },
     "dataSources": [
-      "TBL_CameraPictureFile"
+      "TBL_CameraPictureFile",
+      "TBL_User_Credential"
     ],
     "dependencies": {},
     "dependents": [],

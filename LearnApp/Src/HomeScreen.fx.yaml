@@ -22,34 +22,7 @@ HomeScreen As screen:
         Width: =188
         X: =72
         Y: =144
-        ZIndex: =2
-
-    HeadetContainer As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(153, 207, 236, 1)
-        Height: =98
-        Width: =1366
-        ZIndex: =3
-
-        Label1 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Bold
-            Height: =56
-            Size: =25
-            Text: ="CAMERA & PICTURES & FILES"
-            Width: =470
-            X: =94
-            Y: =20
-            ZIndex: =1
-
-        Icon3 As icon.DocumentwithContent:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =50
-            Icon: =Icon.DocumentWithContent
-            Width: =50
-            X: =31
-            Y: =26
-            ZIndex: =2
+        ZIndex: =1
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(253, 222, 207, 1)
@@ -68,7 +41,7 @@ HomeScreen As screen:
         WrapCount: =3
         X: =54
         Y: =204
-        ZIndex: =4
+        ZIndex: =2
 
         Container1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Regular
@@ -140,4 +113,52 @@ HomeScreen As screen:
                 X: =19
                 Y: =21
                 ZIndex: =4
+
+    HeadetContainer As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(153, 207, 236, 1)
+        Height: =98
+        Width: =1366
+        ZIndex: =3
+
+        Label1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =56
+            Size: =25
+            Text: ="CAMERA & PICTURES & FILES"
+            Width: =470
+            X: =94
+            Y: =20
+            ZIndex: =1
+
+        Icon3 As icon.DocumentwithContent:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =50
+            Icon: =Icon.DocumentWithContent
+            Width: =50
+            X: =31
+            Y: =26
+            ZIndex: =2
+
+        Icon4 As icon.NextArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =50
+            Icon: =Icon.NextArrow
+            OnSelect: =Navigate(LoginScreen)
+            Width: =50
+            X: =1294
+            Y: =26
+            ZIndex: =3
+
+        Label3 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =45
+            Size: =15
+            Text: ="LOG OUT"
+            Width: =103
+            X: =1180
+            Y: =31
+            ZIndex: =4
 
