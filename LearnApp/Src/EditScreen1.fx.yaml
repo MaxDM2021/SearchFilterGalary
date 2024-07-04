@@ -412,6 +412,20 @@ EditScreen1 As screen:
                 Y: =353
                 ZIndex: =15
 
+            "'Clear All Attach' As button":
+                Fill: =RGBA(102, 182, 227, 1)
+                Height: =47
+                HoverFill: =RGBA(0, 94, 146, 1)
+                OnSelect: |-
+                    =UpdateContext({ resetAttachments: true });
+                    UpdateContext({ resetAttachments: false });
+                Text: ="Reset all attach"
+                Visible: =If(Form2.Mode = FormMode.New, true, false)
+                Width: =171
+                X: =30
+                Y: =350
+                ZIndex: =16
+
     Container2 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(153, 207, 236, 1)
         Height: =78
@@ -503,20 +517,4 @@ EditScreen1 As screen:
         X: =260
         Y: =320
         ZIndex: =6
-
-    "'Clear All Attach' As button":
-        Fill: =RGBA(102, 182, 227, 1)
-        Height: =47
-        HoverFill: =RGBA(0, 94, 146, 1)
-        OnSelect: |-
-            =UpdateContext({ resetAttachments: true });
-            UpdateContext({ resetAttachments: false });
-        Text: ="Reset all attach"
-        Visible: |-
-            =true
-            //If(Form2.Mode = FormMode.New, true, false)
-        Width: =171
-        X: =718
-        Y: =695
-        ZIndex: =7
 

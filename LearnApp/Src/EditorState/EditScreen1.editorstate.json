@@ -248,7 +248,7 @@
       "MetaDataIDKey": "",
       "Name": "AddMediaWithImage1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 14,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -895,7 +895,7 @@
       "MetaDataIDKey": "",
       "Name": "Clear All Attach",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8876,7 +8876,7 @@
       "MetaDataIDKey": "",
       "Name": "SubmitBtn",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9150,7 +9150,7 @@
       "MetaDataIDKey": "",
       "Name": "SubmitBtn_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
