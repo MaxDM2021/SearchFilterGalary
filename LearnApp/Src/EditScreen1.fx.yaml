@@ -1,4 +1,5 @@
 EditScreen1 As screen:
+    OnVisible: =ClearCollect(ColImages, Gallery3.AllItems)
 
     FormContainer As groupContainer.manualLayoutContainer:
         Height: =563
