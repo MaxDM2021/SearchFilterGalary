@@ -1,4 +1,4 @@
-<widget xmlns="http://openajax.org/metadata" spec="1.0" id="http://microsoft.com/appmagic/audioPlayback" name="audioPlayback" jsClass="AppMagic.Controls.Playback.AudioPlayback" authoringjsClass="AppMagic.Controls.Playback.AuthoringAudioPlayback" version="2.3.1" styleable="true" runtimeCost="1" xmlns:appMagic="http://schemas.microsoft.com/appMagic">
+<widget xmlns="http://openajax.org/metadata" spec="1.0" id="http://microsoft.com/appmagic/audioPlayback" name="audioPlayback" jsClass="AppMagic.Controls.Playback.AudioPlayback" authoringjsClass="AppMagic.Controls.Playback.AuthoringAudioPlayback" version="2.3.0" styleable="true" runtimeCost="1" xmlns:appMagic="http://schemas.microsoft.com/appMagic">
   <author name="Microsoft AppMagic" />
   <license type="text/html"><![CDATA[<p>TODO:  Need license text here.</p>]]></license>
   <description><![CDATA[AUDIOPLAYBACK
@@ -287,8 +287,5 @@
   </appMagic:conversion>
   <appMagic:conversion from="2.2.1" to="2.3.0">
     <!-- Updates to appMagic:requirements -->
-  </appMagic:conversion>
-  <appMagic:conversion from="2.3.0" to="2.3.1">
-    <!-- Fixed slider CSS appearance -->
   </appMagic:conversion>
 </widget>

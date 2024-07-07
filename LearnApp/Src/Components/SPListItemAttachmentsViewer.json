@@ -529,7 +529,7 @@
               "LastModifiedTimestamp": "0",
               "Name": "videoPlayback",
               "OverridableProperties": {},
-              "Version": "2.4.1"
+              "Version": "2.4.0"
             },
             "Type": "ControlInfo",
             "VariantName": ""
@@ -707,7 +707,7 @@
               "LastModifiedTimestamp": "0",
               "Name": "audioPlayback",
               "OverridableProperties": {},
-              "Version": "2.3.1"
+              "Version": "2.3.0"
             },
             "Type": "ControlInfo",
             "VariantName": ""
@@ -3038,7 +3038,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638557226463263418",
+    "LastModifiedTimestamp": "638559649897598553",
     "Name": "SPListItemAttachmentsViewer",
     "Rules": [
       {
@@ -3180,7 +3180,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638557226463263418",
+  "LastModifiedTimestamp": "638559649897598553",
   "Name": "ddb85c2becef4d36a42d5adcf736fbc8",
   "OverridableProperties": {},
   "TemplateOriginalName": "df504236bbdb49c1bff618d4cba4d349",

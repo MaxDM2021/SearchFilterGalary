@@ -71,7 +71,6 @@
       "longlivingcache": false,
       "mobilenativerendering": false,
       "nativecdsexperimental": true,
-      "offlineprofilegenerationemitscolumns": false,
       "onegrid": false,
       "optimizedforteamsmeeting": false,
       "packagemodernruntime": false,
@@ -101,7 +100,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 9,
+    "BindingErrorCount": 11,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
