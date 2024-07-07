@@ -130,7 +130,7 @@ SPListItemAttachmentsViewer As CanvasComponent:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 64
             X: =32
-            Y: =285
+            Y: =299
             ZIndex: =2
 
         videoPlay As videoPlayback:
@@ -199,7 +199,7 @@ SPListItemAttachmentsViewer As CanvasComponent:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 64
             X: =32
-            Y: =321
+            Y: =335
             ZIndex: =6
 
         icoDownload As icon.Edit:

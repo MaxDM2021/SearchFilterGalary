@@ -27,7 +27,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 121,
+            "PublishOrderIndex": 122,
             "Rules": [
               {
                 "Category": "Design",
@@ -151,7 +151,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 122,
+            "PublishOrderIndex": 123,
             "Rules": [
               {
                 "Category": "Data",
@@ -431,7 +431,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 123,
+            "PublishOrderIndex": 124,
             "Rules": [
               {
                 "Category": "Data",
@@ -609,7 +609,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 124,
+            "PublishOrderIndex": 125,
             "Rules": [
               {
                 "Category": "Data",
@@ -784,7 +784,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 125,
+            "PublishOrderIndex": 126,
             "Rules": [
               {
                 "Category": "Design",
@@ -1032,7 +1032,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 126,
+            "PublishOrderIndex": 127,
             "Rules": [
               {
                 "Category": "Design",
@@ -1291,7 +1291,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 127,
+            "PublishOrderIndex": 128,
             "Rules": [
               {
                 "Category": "Data",
@@ -1463,7 +1463,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "285",
+                "InvariantScript": "299",
                 "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
@@ -1630,7 +1630,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 128,
+            "PublishOrderIndex": 129,
             "Rules": [
               {
                 "Category": "Data",
@@ -1790,7 +1790,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "321",
+                "InvariantScript": "335",
                 "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
@@ -1982,7 +1982,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "SPListItemAttachmentsViewer",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 120,
+        "PublishOrderIndex": 121,
         "Rules": [
           {
             "Category": "Data",
@@ -2251,7 +2251,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "SPListItemAttachmentsViewer",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 129,
+        "PublishOrderIndex": 130,
         "Rules": [
           {
             "Category": "Data",
@@ -2452,7 +2452,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "SPListItemAttachmentsViewer",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 130,
+        "PublishOrderIndex": 131,
         "Rules": [
           {
             "Category": "Design",
@@ -2722,7 +2722,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "SPListItemAttachmentsViewer",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 131,
+        "PublishOrderIndex": 132,
         "Rules": [
           {
             "Category": "Data",
@@ -3038,7 +3038,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638559649897598553",
+    "LastModifiedTimestamp": "638559790042266471",
     "Name": "SPListItemAttachmentsViewer",
     "Rules": [
       {
@@ -3180,7 +3180,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638559649897598553",
+  "LastModifiedTimestamp": "638559790042266471",
   "Name": "ddb85c2becef4d36a42d5adcf736fbc8",
   "OverridableProperties": {},
   "TemplateOriginalName": "df504236bbdb49c1bff618d4cba4d349",
