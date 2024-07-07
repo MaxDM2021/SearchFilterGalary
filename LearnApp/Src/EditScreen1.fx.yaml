@@ -1,5 +1,15 @@
 EditScreen1 As screen:
-    OnVisible: =
+    OnVisible: |+
+        =ClearCollect(ColImages, Gallery3.AllItems);
+        
+        Set(
+            HtmlContent,
+            Concat(
+                ColImages,
+                "<img src='" & ThisRecord.Id & "' style='width:100%;height:auto;'/><br/>"
+            )
+        )
+        
 
     FormContainer As groupContainer.manualLayoutContainer:
         Height: =563
@@ -617,4 +627,10 @@ EditScreen1 As screen:
         X: =910
         Y: =529
         ZIndex: =10
+
+    HtmlText1 As htmlViewer:
+        HtmlText: =
+        X: =787
+        Y: =600
+        ZIndex: =11
 
