@@ -246,10 +246,8 @@ ExpenseScreen As screen:
                 OnSelect: |
                     =//Global Variables
                     Set(varFirstName, TextInput1_6.Text);
-                    Set(varLastName, TextInput1_5.Text);
                     Set(varEmail, TextInput1_7.Text);
                     Set(varStartDate, DatePicker1.SelectedDate);
-                    Set(varEndDate, DatePicker1_1.SelectedDate);
                     Set(varTotalHours, TextInput1_8.Text);
                     
                     

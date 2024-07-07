@@ -248,7 +248,14 @@
     "Button1_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "OnSelect",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "//Global Variables\nSet(varFirstName, TextInput1_6.Text);\nSet(varLastName, TextInput1_5.Text);\nSet(varEmail, TextInput1_7.Text);\nSet(varStartDate, DatePicker1.SelectedDate);\nSet(varEndDate, DatePicker1_1.SelectedDate);\nSet(varTotalHours, TextInput1_8.Text);\n\n\n\n//Context Variables\nUpdateContext({varReset: false});\nUpdateContext({varReset: true});\n\n//Works after click \"Undo\"\nUpdateContext({varLoadPrevValue: false});\n",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Text",
         "BorderThickness",
         "Fill",
@@ -477,7 +484,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",
