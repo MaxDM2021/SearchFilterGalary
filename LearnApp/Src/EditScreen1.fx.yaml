@@ -589,6 +589,7 @@ EditScreen1 As screen:
         ZIndex: =8
 
         Image4 As image:
+            AccessibleLabel: ="1"
             Height: =167
             Image: =ThisItem.AbsoluteUri
             OnSelect: =Select(Parent)
