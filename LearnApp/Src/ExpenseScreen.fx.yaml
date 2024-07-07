@@ -94,7 +94,7 @@ ExpenseScreen As screen:
                 Default: |-
                     =If(
                         varLoadPrevValue,
-                        varFirstName,
+                        varType,
                         ""
                     )
                 Fill: =RGBA(152, 208, 70, 1)
@@ -119,7 +119,7 @@ ExpenseScreen As screen:
                 Default: |-
                     =If(
                         varLoadPrevValue,
-                        varEmail,
+                        varDescription,
                         ""
                     )
                 Fill: =RGBA(152, 208, 70, 1)
@@ -154,7 +154,7 @@ ExpenseScreen As screen:
                 DefaultDate: |-
                     =If(
                         varLoadPrevValue,
-                        varStartDate,
+                        varDate,
                         ""
                     )
                 DisabledBorderColor: =RGBA(141, 198, 63, 1)
@@ -174,7 +174,7 @@ ExpenseScreen As screen:
                 BorderThickness: =0
                 Default: |+
                     =If (varLoadPrevValue,
-                    varTotalHours,
+                    varReceipt,
                     ""
                     )
                     
@@ -211,27 +211,27 @@ ExpenseScreen As screen:
                     );
                     //Global Variables
                     Set(
-                        varFirstName,
+                        varTipe,
                         TextInput1_6.Text
                     );
                     
                     Set(
-                        varSecondName,
+                        varCost,
                         TextInput1_9.Text
                     );
                     
                     
                     Set(
-                        varEmail,
+                        varDescription,
                         TextInput1_7.Text
                     );
                     Set(
-                        varStartDate,
+                        varDate,
                         DatePicker1.SelectedDate
                     );
                     
                     Set(
-                        varTotalHours,
+                        varReceipt,
                         TextInput1_8.Text
                     );
                     //Context Variables
@@ -252,12 +252,11 @@ ExpenseScreen As screen:
                 HoverFill: =ColorFade(Self.Fill, -20%)
                 OnSelect: |
                     =//Global Variables
-                    Set(varFirstName, TextInput1_6.Text);
-                    Set(varSecondName, TextInput1_6.Text);
-                    Set(varEmail, TextInput1_7.Text);
-                    Set(varStartDate, DatePicker1.SelectedDate);
-                    Set(varTotalHours, TextInput1_8.Text);
-                    Set(varTotalHours, TextInput1_9.Text);
+                    Set(varType, TextInput1_6.Text);
+                    Set(varDescription, TextInput1_7.Text);
+                    Set(varDate, DatePicker1.SelectedDate);
+                    Set(varReceipt, TextInput1_8.Text);
+                    Set(varCost, TextInput1_9.Text);
                     
                     
                     
@@ -332,7 +331,7 @@ ExpenseScreen As screen:
                 Default: |-
                     =If(
                         varLoadPrevValue,
-                        varSecondName,
+                        varCost,
                         ""
                     )
                 Fill: =RGBA(152, 208, 70, 1)
