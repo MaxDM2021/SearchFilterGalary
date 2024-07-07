@@ -337,7 +337,6 @@ ExpenseScreen As screen:
                     )
                 Fill: =RGBA(152, 208, 70, 1)
                 FocusedBorderColor: =
-                Format: =TextFormat.Number
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 Reset: =varReset
                 Width: =Parent.Width*.425
