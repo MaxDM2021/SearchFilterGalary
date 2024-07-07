@@ -1,15 +1,5 @@
 EditScreen1 As screen:
-    OnVisible: |+
-        =ClearCollect(ColImages, Gallery3.AllItems);
-        
-        Set(
-            HtmlContent,
-            Concat(
-                ColImages,
-                "<img src='" & ThisRecord.AbsoluteUri & "' style='width:100%;height:auto;'/><br/>"
-            )
-        )
-        
+    OnVisible: =
 
     FormContainer As groupContainer.manualLayoutContainer:
         Height: =563
@@ -587,6 +577,7 @@ EditScreen1 As screen:
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =216
+        ItemAccessibleLabel: ="1"
         Items: =colAttachments
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -627,10 +618,4 @@ EditScreen1 As screen:
         X: =910
         Y: =529
         ZIndex: =10
-
-    HtmlText1 As htmlViewer:
-        HtmlText: =HtmlContent
-        X: =787
-        Y: =600
-        ZIndex: =11
 
