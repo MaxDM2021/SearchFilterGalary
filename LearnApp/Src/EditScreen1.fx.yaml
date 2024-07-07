@@ -6,7 +6,7 @@ EditScreen1 As screen:
             HtmlContent,
             Concat(
                 ColImages,
-                "<img src='" & ThisRecord.Id & "' style='width:100%;height:auto;'/><br/>"
+                "<img src='" & ThisRecord.AbsoluteUri & "' style='width:100%;height:auto;'/><br/>"
             )
         )
         
