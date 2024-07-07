@@ -211,7 +211,7 @@ ExpenseScreen As screen:
                     );
                     //Global Variables
                     Set(
-                        varTipe,
+                        varType,
                         TextInput1_6.Text
                     );
                     
