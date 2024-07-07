@@ -27,7 +27,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 95,
+            "PublishOrderIndex": 96,
             "Rules": [
               {
                 "Category": "Design",
@@ -151,7 +151,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 96,
+            "PublishOrderIndex": 97,
             "Rules": [
               {
                 "Category": "Data",
@@ -431,7 +431,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 97,
+            "PublishOrderIndex": 98,
             "Rules": [
               {
                 "Category": "Data",
@@ -609,7 +609,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 98,
+            "PublishOrderIndex": 99,
             "Rules": [
               {
                 "Category": "Data",
@@ -784,7 +784,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 99,
+            "PublishOrderIndex": 100,
             "Rules": [
               {
                 "Category": "Design",
@@ -1032,7 +1032,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 100,
+            "PublishOrderIndex": 101,
             "Rules": [
               {
                 "Category": "Design",
@@ -1291,7 +1291,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 101,
+            "PublishOrderIndex": 102,
             "Rules": [
               {
                 "Category": "Data",
@@ -1630,7 +1630,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "galAttachments",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 102,
+            "PublishOrderIndex": 103,
             "Rules": [
               {
                 "Category": "Data",
@@ -1982,7 +1982,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "SPListItemAttachmentsViewer",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 94,
+        "PublishOrderIndex": 95,
         "Rules": [
           {
             "Category": "Data",
@@ -2251,7 +2251,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "SPListItemAttachmentsViewer",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 103,
+        "PublishOrderIndex": 104,
         "Rules": [
           {
             "Category": "Data",
@@ -2452,7 +2452,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "SPListItemAttachmentsViewer",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 104,
+        "PublishOrderIndex": 105,
         "Rules": [
           {
             "Category": "Design",
@@ -2722,7 +2722,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "SPListItemAttachmentsViewer",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 105,
+        "PublishOrderIndex": 106,
         "Rules": [
           {
             "Category": "Data",
