@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 107,
+                  "charOffset": 81,
                   "snippet": {
                     "text": "Description"
                   }
@@ -63,10 +63,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 40,
-                  "charOffset": 95,
+                  "charLength": 1,
+                  "charOffset": 92,
                   "snippet": {
-                    "text": "StartsWith( Description, txtSearch.Text)"
+                    "text": "="
                   }
                 }
               },
@@ -79,7 +79,7 @@
           ],
           "message": {
             "arguments": [
-              "StartsWith"
+              "Or"
             ],
             "id": "issue"
           },
@@ -103,10 +103,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 2,
-                  "charOffset": 91,
+                  "charLength": 52,
+                  "charOffset": 56,
                   "snippet": {
-                    "text": "||"
+                    "text": "Or(Title=txtSearch.Text, Description=txtSearch.Text)"
                   }
                 }
               },
@@ -119,7 +119,7 @@
           ],
           "message": {
             "arguments": [
-              "Filter"
+              "Or"
             ],
             "id": "issue"
           },

@@ -32,8 +32,8 @@ HomeScreen As screen:
         Items: |+
             =If (txtSearch.Text,
             Filter(TBL_CameraPictureFile,
-                (StartsWith(Title, txtSearch.Text) ||  StartsWith( Description, txtSearch.Text)) 
-                ),TBL_CameraPictureFile)
+                Or(Title=txtSearch.Text, Description=txtSearch.Text)) 
+                ,TBL_CameraPictureFile)
             
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
