@@ -31,7 +31,7 @@ HomeScreen As screen:
         Height: =496
         Items: |+
             =//TBL_CameraPictureFile
-            If(txtSearch.Text=Blank(), TBL_CameraPictureFile, 
+            If(IsBlank(txtSearch.Text),TBL_CameraPictureFile, 
             Filter(TBL_CameraPictureFile,
              Or(Title=txtSearch.Text, Description=txtSearch.Text))) 
                 
