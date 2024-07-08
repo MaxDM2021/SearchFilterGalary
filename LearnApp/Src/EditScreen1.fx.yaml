@@ -617,6 +617,7 @@ EditScreen1 As screen:
         Items: =colAttachments
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        TabIndex: =10
         TemplatePadding: =4
         TemplateSize: =Min(320, Self.Height - 60)
         Width: =886
