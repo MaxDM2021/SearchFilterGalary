@@ -30,10 +30,10 @@ HomeScreen As screen:
         Fill: =RGBA(204, 157, 157, 0)
         Height: =496
         Items: |+
-            =//TBL_CameraPictureFile
+            =If (txtSearch.Text,
             Filter(TBL_CameraPictureFile,
-                Or( Title = txtSearch.Text, Description=txtSearch.Text) 
-                )
+                (StartsWith(Title, txtSearch.Text) ||  StartsWith( Description, txtSearch.Text)) 
+                ),TBL_CameraPictureFile)
             
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
