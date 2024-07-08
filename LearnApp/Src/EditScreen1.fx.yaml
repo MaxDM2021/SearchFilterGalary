@@ -613,16 +613,16 @@ EditScreen1 As screen:
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_OneImageTwoColumnVariant_ver5.0'":
         DelayItemLoading: =true
-        Height: =503
+        Height: =233
         Items: =colAttachments
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TabIndex: =10
         TemplatePadding: =4
         TemplateSize: =Min(320, Self.Height - 60)
-        Width: =886
-        X: =447
-        Y: =240
+        Width: =423
+        X: =910
+        Y: =510
         ZIndex: =8
 
         Image4 As image:
