@@ -472,33 +472,6 @@ EditScreen1 As screen:
                     Y: =69
                     ZIndex: =20
 
-    "Gallery2 As gallery.'BrowseLayout_Vertical_OneImageTwoColumnVariant_ver5.0'":
-        DelayItemLoading: =true
-        Height: =503
-        Items: =colAttachments
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =4
-        TemplateSize: =Min(320, Self.Height - 60)
-        Width: =886
-        X: =447
-        Y: =240
-        ZIndex: =1
-
-        Image4 As image:
-            Height: =305
-            Image: =ThisItem.AbsoluteUri
-            ImagePosition: =ImagePosition.Fill
-            OnSelect: =Select(Parent)
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Width: =725
-            X: =45
-            Y: =15
-            ZIndex: =1
-
     SubmitBtn_1 As button:
         Fill: =RGBA(250, 155, 112, 1)
         HoverFill: =RGBA(168, 0, 0, 1)
@@ -636,5 +609,32 @@ EditScreen1 As screen:
         Width: =50
         X: =1003
         Y: =14
-        ZIndex: =10
+        ZIndex: =7
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_OneImageTwoColumnVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =503
+        Items: =colAttachments
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =4
+        TemplateSize: =Min(320, Self.Height - 60)
+        Width: =886
+        X: =447
+        Y: =240
+        ZIndex: =8
+
+        Image4 As image:
+            Height: =305
+            Image: =ThisItem.AbsoluteUri
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =725
+            X: =45
+            Y: =15
+            ZIndex: =1
 
