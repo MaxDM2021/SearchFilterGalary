@@ -23,10 +23,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 2,
-                  "charOffset": 124,
+                  "charLength": 11,
+                  "charOffset": 88,
                   "snippet": {
-                    "text": "in"
+                    "text": "Description"
                   }
                 }
               },
@@ -39,7 +39,7 @@
           ],
           "message": {
             "arguments": [
-              "Title"
+              "Description"
             ],
             "id": "issue"
           },
@@ -63,10 +63,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 2,
-                  "charOffset": 133,
+                  "charLength": 1,
+                  "charOffset": 99,
                   "snippet": {
-                    "text": "||"
+                    "text": "="
                   }
                 }
               },
@@ -79,7 +79,47 @@
           ],
           "message": {
             "arguments": [
-              "Filter"
+              "Or"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomeScreen.Gallery1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.Gallery1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 55,
+                  "charOffset": 60,
+                  "snippet": {
+                    "text": "Or( Title = txtSearch.Text, Description=txtSearch.Text)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "HomeScreen",
+                "type": "HomeScreen.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Or"
             ],
             "id": "issue"
           },

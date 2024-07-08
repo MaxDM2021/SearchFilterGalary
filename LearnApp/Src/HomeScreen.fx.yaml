@@ -29,15 +29,12 @@ HomeScreen As screen:
         DelayItemLoading: =true
         Fill: =RGBA(204, 157, 157, 0)
         Height: =496
-        Items: |-
+        Items: |+
             =//TBL_CameraPictureFile
-            
-            If(varDataCount < varDelegationLimit,
-                Filter(TBL_CameraPictureFile,
-                    txtSearch.Text in Title || txtSearch.Text in Description
+            Filter(TBL_CameraPictureFile,
+                Or( Title = txtSearch.Text, Description=txtSearch.Text) 
                 )
             
-            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =ClearCollect(colAttachments,ThisItem.Attachments);ResetForm(Form2);ViewForm(Form2);Navigate(EditScreen1,ScreenTransition.Fade)
