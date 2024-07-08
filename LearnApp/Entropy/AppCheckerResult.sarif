@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 81,
+                  "charOffset": 60,
                   "snippet": {
                     "text": "Description"
                   }
@@ -64,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 92,
+                  "charOffset": 71,
                   "snippet": {
                     "text": "="
                   }
@@ -104,7 +104,7 @@
                 },
                 "region": {
                   "charLength": 52,
-                  "charOffset": 56,
+                  "charOffset": 35,
                   "snippet": {
                     "text": "Or(Title=txtSearch.Text, Description=txtSearch.Text)"
                   }
