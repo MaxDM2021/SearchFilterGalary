@@ -474,19 +474,19 @@ EditScreen1 As screen:
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_OneImageTwoColumnVariant_ver5.0'":
         DelayItemLoading: =true
-        Height: =235
+        Height: =503
         Items: =colAttachments
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =4
         TemplateSize: =Min(320, Self.Height - 60)
-        Width: =424
-        X: =910
-        Y: =507
+        Width: =886
+        X: =447
+        Y: =240
         ZIndex: =1
 
         Image4 As image:
-            Height: =Parent.TemplateHeight
+            Height: =305
             Image: =ThisItem.AbsoluteUri
             ImagePosition: =ImagePosition.Fill
             OnSelect: =Select(Parent)
@@ -494,7 +494,9 @@ EditScreen1 As screen:
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            Width: =Parent.TemplateWidth
+            Width: =725
+            X: =45
+            Y: =15
             ZIndex: =1
 
     SubmitBtn_1 As button:
@@ -615,7 +617,22 @@ EditScreen1 As screen:
         Height: =50
         Icon: =Icon.DocumentPDF
         OnSelect: |-
-            =Office365Outlook.SendEmailV2(User().Email, "Event Itinerary Report","PDF From Power Apps",{Attachments: Table({Name:"EventItinerary.pdf",ContentBytes:PDF(Gallery2, {ExpandContainers: true})})})
+            =Office365Outlook.SendEmailV2(
+                User().Email,
+                "Event Itinerary Report",
+                "PDF From Power Apps",
+                {
+                    Attachments: Table(
+                        {
+                            Name: "EventItinerary.pdf",
+                            ContentBytes: PDF(
+                                Gallery2,
+                                {ExpandContainers: true}
+                            )
+                        }
+                    )
+                }
+            )
         Width: =50
         X: =1003
         Y: =14
