@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: =
+    OnStart: =Set(varDelegationLimit,500)
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
