@@ -30,8 +30,9 @@ HomeScreen As screen:
         Fill: =RGBA(204, 157, 157, 0)
         Height: =496
         Items: |+
-            =Filter(TBL_CameraPictureFile,
-                Or(Title=txtSearch.Text, Description=txtSearch.Text)) 
+            =If(txtSearch.Text=Blank(), TBL_CameraPictureFile, 
+            Filter(TBL_CameraPictureFile,
+                Or(Title=txtSearch.Text, Description=txtSearch.Text))) 
                 
             
         Layout: =Layout.Vertical
