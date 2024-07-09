@@ -11,9 +11,7 @@ EditScreen1 As screen:
             DelayItemLoading: =true
             Height: =201
             Items: |+
-                =Set(LoadingComplete, false);
-                ClearCollect(CollectedData, colAttachments); // или другая функция, загружающая данные в галерею
-                Set(LoadingComplete, true);
+                =colAttachments
                 
                 
                 
