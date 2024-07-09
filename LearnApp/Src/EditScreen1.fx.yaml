@@ -10,7 +10,14 @@ EditScreen1 As screen:
         "Gallery2 As gallery.'BrowseLayout_Vertical_OneImageTwoColumnVariant_ver5.0'":
             DelayItemLoading: =true
             Height: =201
-            Items: =colAttachments
+            Items: |+
+                =Set(LoadingComplete, false);
+                ClearCollect(CollectedData, colAttachments); // или другая функция, загружающая данные в галерею
+                Set(LoadingComplete, true);
+                
+                
+                
+                
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TabIndex: =10
@@ -622,7 +629,8 @@ EditScreen1 As screen:
             Height: =50
             Icon: =Icon.DocumentPDF
             OnSelect: |-
-                =Office365Outlook.SendEmailV2(
+                =
+                Office365Outlook.SendEmailV2(
                     User().Email,
                     "Event Itinerary Report",
                     "PDF From Power Apps",
