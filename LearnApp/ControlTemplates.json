@@ -53,7 +53,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "audioPlayback",
     "OverridableProperties": {},
-    "Version": "2.3.0"
+    "Version": "2.3.1"
   },
   "button": {
     "CustomGroupControlTemplateName": "",
@@ -362,6 +362,6 @@
     "LastModifiedTimestamp": "0",
     "Name": "videoPlayback",
     "OverridableProperties": {},
-    "Version": "2.4.0"
+    "Version": "2.4.1"
   }
 }
