@@ -1,0 +1,104 @@
+{
+  "ComponentIndexes": {
+    "Component1": 2
+  },
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "Button1": 8,
+    "Button1_1": 10,
+    "Button2": 6,
+    "Button3": 11,
+    "Component1": 4,
+    "DataTable10": 13,
+    "Host": 3,
+    "Label1": 9,
+    "Label1_1": 12,
+    "Label1_2": 16,
+    "Label1_3": 17,
+    "Label1_4": 14,
+    "Label2": 5,
+    "Screen1": 7,
+    "Screen2": 15
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "07/12/2024 10:10:35",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {},
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OrderComponentMetadata": {
+    "6dd86e8d31184f40865b2c3414373505": 0
+  },
+  "OrderComponentTemplate": {
+    "6dd86e8d31184f40865b2c3414373505": 0
+  },
+  "OrderDataSource": {
+    "New tables": 3,
+    "New tables\\cr0d8_newtable_statecode": 0,
+    "New tables\\cr0d8_newtable_statuscode": 1,
+    "New tables\\default.cds_cr0d8_newtable_views": 2
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "button": 0,
+    "label": 1
+  },
+  "OverridablePropertiesEntry": {
+    "App": {},
+    "Button1": {},
+    "Button1_1": {},
+    "Button2": {},
+    "Button3": {},
+    "Component1": {},
+    "DataTable10": {},
+    "Host": {},
+    "Label1": {},
+    "Label1_1": {},
+    "Label1_2": {},
+    "Label1_3": {},
+    "Label1_4": {},
+    "Label2": {},
+    "Screen1": {},
+    "Screen2": {}
+  },
+  "PCFDynamicSchemaForIRRetrievalEntry": {},
+  "PCFTemplateEntry": {},
+  "PublishOrderIndices": {
+    "App": 0,
+    "Button1": 0,
+    "Button1_1": 2,
+    "Button2": 10,
+    "Button3": 3,
+    "Component1": 0,
+    "DataTable10": 5,
+    "Host": 0,
+    "Label1": 1,
+    "Label1_1": 4,
+    "Label1_2": 7,
+    "Label1_3": 8,
+    "Label1_4": 6,
+    "Label2": 9,
+    "Screen1": 0,
+    "Screen2": 0
+  },
+  "ResourcesJsonIndices": {},
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.2349432,
+    "ControlCount": {
+      "6dd86e8d31184f40865b2c3414373505": 1,
+      "button": 4,
+      "dataTable": 1,
+      "label": 6,
+      "screen": 2
+    },
+    "DeserializationLoadTime": 1.2120889
+  },
+  "WasLocalDatabaseReferencesEmpty": false
+}

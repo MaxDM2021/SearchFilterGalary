@@ -1,0 +1,21 @@
+Component1 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Label2 As label:
+        Text: =varComponentText
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    Button2 As button:
+        OnSelect: =Set(varComponentText, "My Text")
+        Text: ="Button"
+        X: =30
+        Y: =118
+        ZIndex: =2
+

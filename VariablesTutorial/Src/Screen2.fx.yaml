@@ -1,0 +1,18 @@
+Screen2 As screen:
+
+    Label1_2 As label:
+        Height: =125
+        Text: =varChangeText
+        Width: =464
+        X: =34
+        Y: =62
+        ZIndex: =1
+
+    Label1_3 As label:
+        Height: =125
+        Text: =varTextContext
+        Width: =497
+        X: =860
+        Y: =80
+        ZIndex: =2
+

@@ -1,0 +1,66 @@
+Screen1 As screen:
+
+    Label1 As label:
+        Height: =125
+        Text: =varChangeText
+        Width: =757
+        X: =92
+        Y: =62
+        ZIndex: =1
+
+    Button1 As button:
+        OnSelect: =Set(varChangeText, "Welcom to MDS | Last Minute Coders")
+        Text: ="Global Btn"
+        X: =80
+        Y: =62
+        ZIndex: =2
+
+    Label1_1 As label:
+        Height: =125
+        Text: =varTextContext
+        Width: =757
+        X: =584
+        Y: =62
+        ZIndex: =3
+
+    Button1_1 As button:
+        OnSelect: |-
+            =UpdateContext({varTextContext: "This type of variablecan be used within a screen only"})
+        Text: ="Context Btn"
+        X: =314
+        Y: =62
+        ZIndex: =4
+
+    Label1_4 As label:
+        Height: =125
+        Text: =varTextContext
+        Width: =757
+        X: =584
+        Y: =429
+        ZIndex: =5
+
+    Button3 As button:
+        OnSelect: |-
+            =Collect(
+                colEmp,
+                {
+                    empID: 1,
+                    empName: "Vinay",
+                    empDept: "IT"
+                }
+            )
+        Text: ="Collection  Btn"
+        X: =557
+        Y: =62
+        ZIndex: =8
+
+    DataTable10 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =172
+        Width: =672
+        X: =80
+        Y: =407
+        ZIndex: =11
+
