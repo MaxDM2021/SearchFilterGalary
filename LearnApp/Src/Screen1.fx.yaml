@@ -1,0 +1,448 @@
+Screen1 As screen:
+
+    Container1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(102, 182, 227, 1)
+        Height: =98
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Label1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =46
+            Size: =25
+            Text: ="Search & Filter Gallery"
+            Width: =424
+            X: =Parent.Width/2-Self.Width/2
+            Y: =Parent.Height/3.5
+            ZIndex: =1
+
+        Icon1 As icon.Search:
+            Color: =RGBA(255, 255, 255, 1)
+            Icon: =Icon.Search
+            X: =Parent.Width*.02
+            Y: =19
+            ZIndex: =2
+
+    DataTable1 As dataGrid:
+        BorderThickness: =1
+        HeadingFill: =RGBA(221, 79, 14, 1)
+        Height: =49
+        Items: =Filter(TBL_WorkProgressTracker3, StartsWith(Title,txtSearch.Text))
+        SelectedFill: =RGBA(153, 207, 236, 1)
+        Width: =1323
+        X: =20
+        Y: =244
+        ZIndex: =2
+
+        Title_1 As customControl.dataColumn:
+            AutoWidth: =true
+            DisplayName: ="Title"
+            FieldName: ="Title"
+            Height: =0
+            IsHyperlink: =false
+            Order: =0
+            Required: =false
+            TitleProperty: =""
+            Type: ="s"
+            VariantName: ="textualViewCard"
+            Width: =276
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        Description_1 As customControl.dataColumn:
+            AutoWidth: =true
+            DisplayName: ="Description"
+            FieldName: ="Description"
+            Height: =0
+            IsHyperlink: =false
+            Order: =1
+            Required: =false
+            TitleProperty: =""
+            Type: ="s"
+            VariantName: ="textualViewCard"
+            Width: =276
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        Category As customControl.dataColumn:
+            AutoWidth: =false
+            DisplayName: ="Category"
+            FieldName: ="Category"
+            Height: =0
+            IsHyperlink: =false
+            Order: =2
+            Required: =false
+            TitleProperty: ="Value"
+            Type: ="E"
+            VariantName: ="comboBoxViewCard"
+            Width: =123
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        Progress_1 As customControl.dataColumn:
+            AutoWidth: =false
+            DisplayName: ="Progress"
+            FieldName: ="Progress"
+            Height: =0
+            IsHyperlink: =false
+            Order: =3
+            Required: =false
+            TitleProperty: ="Value"
+            Type: ="E"
+            VariantName: ="comboBoxViewCard"
+            Width: =130
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        Priority_1 As customControl.dataColumn:
+            AutoWidth: =false
+            DisplayName: ="Priority"
+            FieldName: ="Priority"
+            Height: =0
+            IsHyperlink: =false
+            Order: =4
+            Required: =false
+            TitleProperty: ="Value"
+            Type: ="E"
+            VariantName: ="comboBoxViewCard"
+            Width: =116
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+        Start_Date As customControl.dataColumn:
+            AutoWidth: =false
+            DisplayName: ="Start_Date"
+            FieldName: ="Start_Date"
+            Height: =0
+            IsHyperlink: =false
+            Order: =5
+            Required: =false
+            TitleProperty: =""
+            Type: ="D"
+            VariantName: ="textualViewCard"
+            Width: =110
+            X: =0
+            Y: =0
+            ZIndex: =6
+
+        Due_Date As customControl.dataColumn:
+            AutoWidth: =false
+            DisplayName: ="Due_Date"
+            FieldName: ="Due_Date"
+            Height: =0
+            IsHyperlink: =false
+            Order: =6
+            Required: =false
+            TitleProperty: =""
+            Type: ="D"
+            VariantName: ="textualViewCard"
+            Width: =98
+            X: =0
+            Y: =0
+            ZIndex: =7
+
+        Assigned_to As customControl.dataColumn:
+            AutoWidth: =false
+            DisplayName: ="Assigned_to"
+            FieldName: ="Assigned_to"
+            Height: =0
+            IsHyperlink: =false
+            Order: =7
+            Required: =false
+            TitleProperty: ="DisplayName"
+            Type: ="E"
+            VariantName: ="comboBoxViewCard"
+            Width: =178
+            X: =0
+            Y: =0
+            ZIndex: =8
+
+    Label2 As label:
+        FontWeight: =FontWeight.Bold
+        Text: |-
+            ="Galary Item Count: " &CountRows(GalleryData.AllItems)
+        Width: =196
+        X: =570
+        Y: =715
+        ZIndex: =6
+
+    "GalleryData As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Height: =345
+        Items: |-
+            =If(
+                varDataCount < varDelegationLimit,
+                Filter(
+                    Filter(
+                        TBL_WorkProgressTracker3,
+                        (Priority.Value = Dropdown_Priority.Selected.Value || Dropdown_Priority.Selected.Value = Blank()) && (Progress.Value = Dropdown_Progress.Selected.Value || Dropdown_Progress.Selected.Value = Blank())
+                    ),
+                    txtSearch.Text in Title || txtSearch.Text in ID || txtSearch.Text in Priority.Value || txtSearch.Text in Assigned_to.DisplayName
+                ),
+                Filter(
+                    TBL_WorkProgressTracker3,
+                    (Priority.Value = Dropdown_Priority.Selected.Value || Dropdown_Priority.Selected.Value = Blank()) && (Progress.Value = Dropdown_Progress.Selected.Value || Dropdown_Progress.Selected.Value = Blank())
+                )
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =43
+        Transition: =Transition.Pop
+        Width: =1323
+        X: =20
+        Y: =320
+        ZIndex: =7
+
+        Title3 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =143
+            X: =65
+            Y: =8
+            ZIndex: =2
+
+        Subtitle2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Description
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title3.Width
+            X: =287
+            Y: =12
+            ZIndex: =3
+
+        Separator1 As rectangle:
+            Fill: =RGBA(204, 208, 225, 1)
+            Height: =2
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle1 As rectangle:
+            Height: =Parent.TemplateHeight - Separator1.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Subtitle2_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =27
+            HoverFill: =RGBA(204, 231, 246, 1)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Category.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =120
+            X: =562
+            Y: =12
+            ZIndex: =7
+
+        Subtitle2_2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =27
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Progress.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =120
+            X: =688
+            Y: =9
+            ZIndex: =8
+
+        Subtitle2_3 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =27
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Priority.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =113
+            X: =808
+            Y: =9
+            ZIndex: =9
+
+        Subtitle2_4 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =27
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Start_Date
+            VerticalAlign: =VerticalAlign.Top
+            Width: =113
+            X: =921
+            Y: =12
+            ZIndex: =10
+
+        Subtitle2_5 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Due_Date
+            VerticalAlign: =VerticalAlign.Top
+            Width: =96
+            X: =1034
+            Y: =12
+            ZIndex: =11
+
+        Subtitle2_6 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =27
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Assigned_to.DisplayName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =154
+            X: =1143
+            Y: =12
+            ZIndex: =12
+
+    Button2 As button:
+        Fill: =RGBA(102, 182, 227, 1)
+        Height: =95
+        Text: =
+        Width: =369
+        X: =590
+        Y: =123
+        ZIndex: =8
+
+    Label3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =36
+        Text: ="Priority"
+        Width: =82
+        X: =616
+        Y: =123
+        ZIndex: =9
+
+    Label3_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =36
+        Text: ="Progress"
+        Width: =82
+        X: =813
+        Y: =123
+        ZIndex: =10
+
+    Dropdown_Priority As dropdown:
+        AllowEmptySelection: =true
+        ChevronBackground: =RGBA(0, 0, 0, 0)
+        ChevronFill: =RGBA(39, 113, 194, 1)
+        Height: =36
+        Items: =Choices(TBL_WorkProgressTracker3.Priority) 
+        Width: =114
+        X: =616
+        Y: =165
+        ZIndex: =11
+
+    Dropdown_Progress As dropdown:
+        AllowEmptySelection: =true
+        ChevronBackground: =RGBA(0, 0, 0, 0)
+        ChevronFill: =RGBA(39, 113, 194, 1)
+        Height: =36
+        Items: =Choices(TBL_WorkProgressTracker3.Progress) 
+        Width: =114
+        X: =814
+        Y: =165
+        ZIndex: =12
+
+    Button3 As button:
+        BorderThickness: =0
+        Fill: =RGBA(102, 182, 227, 1)
+        OnSelect: =Reset(Dropdown_Priority); Reset(Dropdown_Progress);Reset(txtSearch);
+        Text: ="Reset"
+        X: =410
+        Y: =150
+        ZIndex: =13
+
+    Slider1 As slider:
+        Default: =CountRows(GalleryData.AllItems)
+        Max: =varDelegationLimit
+        OnChange: =Set(varDataCount, Self.Value)
+        X: =33
+        Y: =705
+        ZIndex: =14
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =15
+
+        Button1 As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(102, 182, 227, 1)
+            Height: =95
+            Text: =
+            Visible: =varDataCount<varDelegationLimit
+            Width: =332
+            X: =1011
+            Y: =123
+            ZIndex: =3
+
+        txtSearch As text:
+            Default: =
+            Height: =41
+            PaddingLeft: =45
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Visible: =varDataCount<varDelegationLimit
+            Width: =266
+            X: =1044
+            Y: =150
+            ZIndex: =4
+
+        Icon1_1 As icon.Search:
+            Color: =RGBA(102, 182, 227, 1)
+            Height: =41
+            Icon: =Icon.Search
+            Visible: =varDataCount<varDelegationLimit
+            Width: =26
+            X: =1055
+            Y: =150
+            ZIndex: =5
+
