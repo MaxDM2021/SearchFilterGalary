@@ -1,0 +1,204 @@
+Screen1 As screen:
+    Fill: =RGBA(9, 33, 98, 1)
+
+    Container1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =992
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =640
+        Y: =144
+        ZIndex: =1
+
+        Icon3 As icon.DocumentPDF:
+            Icon: =Icon.DocumentPDF
+            OnSelect: |
+                =Office365Outlook.SendEmailV2(User().Email, "Event Itinerary Report","PDF From Power Apps",{Attachments: Table({Name:"EventItinerary.pdf",ContentBytes:PDF(Container2)})})
+            X: =46
+            Y: =70
+            ZIndex: =1
+
+        Container2 As groupContainer.horizontalAutoLayoutContainer:
+            Height: =785
+            LayoutMode: =LayoutMode.Auto
+            Width: =640
+            Y: =206
+            ZIndex: =2
+
+            DataTable4 As dataTable.datatable:
+                BorderStyle: =BorderStyle.Solid
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                HeadingSize: =21
+                Height: =500
+                Items: =TBL_WorkProgressTracker2
+                LayoutMinHeight: =250
+                LayoutMinWidth: =320
+                Size: =21
+                Width: =640
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+                Title_Column2 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Title"
+                    FieldName: ="Title"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =1
+                    Text: =ThisItem.Title
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =3
+
+                Description_Column2 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Description"
+                    FieldName: ="Description"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =2
+                    Text: =ThisItem.Description
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =4
+
+                Category_Column2 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Category"
+                    FieldName: ="Category0"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =3
+                    Text: =ThisItem.Category
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =5
+
+                Progress_Column2 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Progress"
+                    FieldName: ="Progress"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =4
+                    Text: =ThisItem.Progress.Value
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =6
+
+                Priority_Column2 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Priority"
+                    FieldName: ="Priority"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =5
+                    Text: =ThisItem.Priority.Value
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =7
+
+                "'Start date_Column2' As dataTableColumn.textualColumn":
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Start date"
+                    FieldName: ="StartDate"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =6
+                    Text: =ThisItem.'Start date'
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =8
+
+                "'Due date_Column2' As dataTableColumn.textualColumn":
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Due date"
+                    FieldName: ="DueDate"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =7
+                    Text: =ThisItem.'Due date'
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =9
+
+                "'Assigned to_Column2' As dataTableColumn.textualColumn":
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Assigned to"
+                    FieldName: ="AssignedTo0"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =8
+                    Text: =ThisItem.'Assigned to'.DisplayName
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =10
+
+                Notes_Column2 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Notes"
+                    FieldName: ="Notes"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =9
+                    Text: =ThisItem.Notes
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =11
+
+                Attachments_Column2 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Attachments"
+                    FieldName: ="{Attachments}"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =10
+                    Text: =ThisItem.Attachments
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =12
+
+    Label1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =76
+        Size: =30
+        Text: ="Event itinerary"
+        Width: =323
+        X: =158
+        Y: =40
+        ZIndex: =2
+
+    Icon2 As icon.ListWatchlistRemind:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =84
+        Icon: =Icon.ListWatchlistRemind
+        Width: =87
+        X: =37
+        Y: =32
+        ZIndex: =3
+

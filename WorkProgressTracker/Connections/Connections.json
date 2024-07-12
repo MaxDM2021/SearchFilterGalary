@@ -1,0 +1,52 @@
+{
+  "254ead87-d26f-40b6-8d0b-7fcb2bc386ef": {
+    "appActions": [
+      "SendEmailV2"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1686/1.0.1686.3706/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "254ead87-d26f-40b6-8d0b-7fcb2bc386ef"
+  },
+  "db7bbcd3-d278-48f1-a12c-6b348462a3c5": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write",
+      "providers/PowerPlatform.Governance/Operations/Delete"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://dldc-my.sharepoint.com/personal/mdymtriiev_dldc_org": {
+        "dataSources": {
+          "TBL_WorkProgressTracker2": {
+            "tableName": "9b75e6e0-94d0-42ac-91b2-f8cb25722b17"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "TBL_WorkProgressTracker2"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "db7bbcd3-d278-48f1-a12c-6b348462a3c5"
+  }
+}
