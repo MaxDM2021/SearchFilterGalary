@@ -1,0 +1,50 @@
+{
+  "8f40d253-c098-406b-b084-544d9b24388c": {
+    "appActions": [
+      "SearchUserV2"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "8f40d253-c098-406b-b084-544d9b24388c"
+  },
+  "accc7d19-60a8-4c4a-9f89-b4516b87494e": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://dldc-my.sharepoint.com/personal/mdymtriiev_dldc_org/_layouts": {
+        "dataSources": {
+          "TBL_WorkProgressTracker4": {
+            "tableName": "407b975d-05a1-4342-bab5-d1908c31e35e"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "TBL_WorkProgressTracker4"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "accc7d19-60a8-4c4a-9f89-b4516b87494e"
+  }
+}

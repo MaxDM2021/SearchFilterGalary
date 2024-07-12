@@ -1,0 +1,255 @@
+Screen1 As screen:
+    OnVisible: |-
+        =Set(
+            varSearchText,
+            Blank()
+        );
+        Select(btnSPSearch)
+
+    Container1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(220, 153, 153, 1)
+        Height: =89
+        Width: =1366
+        ZIndex: =1
+
+        Label1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =35
+            Size: =25
+            Text: ="SEARCH BOX 1"
+            Width: =260
+            X: =Parent.Width/2-Self.Width/2
+            Y: =Parent.Height/2-Self.Height/2
+            ZIndex: =1
+
+        Icon1 As icon.Search:
+            Color: =RGBA(255, 255, 255, 1)
+            Icon: =Icon.Search
+            X: =Parent.Width*.02
+            Y: =12
+            ZIndex: =2
+
+    Container2 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(250, 155, 112, 1)
+        Height: =51
+        Width: =1366
+        Y: =197
+        ZIndex: =2
+
+        Label2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =51
+            Size: =19
+            Text: ="Task Name (Text)"
+            Width: =256
+            X: =47
+            ZIndex: =1
+
+        Label2_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =51
+            Size: =19
+            Text: ="Assigned To (Person)"
+            Width: =284
+            X: =364
+            ZIndex: =2
+
+        Label2_2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =51
+            Size: =19
+            Text: ="Departament (Lookup)"
+            Width: =305
+            X: =700
+            ZIndex: =3
+
+        Label2_3 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =51
+            Size: =19
+            Text: ="Progress (Choice)"
+            Width: =305
+            X: =1061
+            ZIndex: =4
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =477
+        Items: |-
+            =Filter(
+                TBL_WorkProgressTracker4,
+                Or(
+                    StartsWith(
+                        Title,
+                        varSearchText
+                    ),
+                    And(
+                        varProgress.Value <> Blank(),
+                        Progress.Value = varProgress.Value
+                    ),
+                    And(
+                        varDepartment.Value <> Blank(),
+                        Departament.Value = varDepartment.Value
+                    ),
+                    And(
+                        varAssignedTo.Mail <> Blank(),
+                        Assigned_to.Email = varAssignedTo.Mail
+                    )
+                )
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =65
+        Width: =1324
+        X: =18
+        Y: =261
+        ZIndex: =3
+
+        Title1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =69
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =17
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =313
+            X: =4
+            ZIndex: =2
+
+        Subtitle1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =15
+            Text: =ThisItem.Assigned_to.DisplayName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =224
+            X: =348
+            ZIndex: =3
+
+        Separator1 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle1 As rectangle:
+            Height: =Parent.TemplateHeight - Separator1.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Subtitle1_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =ThisItem.Departament.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =224
+            X: =689
+            ZIndex: =7
+
+        Subtitle1_2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =15
+            Text: =ThisItem.Progress.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =224
+            X: =1050
+            ZIndex: =8
+
+    txtSPSearch As text:
+        Clear: =true
+        Default: =
+        DisabledBorderColor: =RGBA(253, 222, 207, 1)
+        Height: =48
+        HintText: ="🔎 Search"
+        OnChange: =If(IsBlank(Self.Text), Select(btnSPSearch))
+        PaddingLeft: =5
+        PressedBorderColor: =RGBA(203, 102, 102, 1)
+        Size: =15
+        Width: =331
+        X: =Parent.Width/2-Self.Width/2
+        Y: =119
+        ZIndex: =4
+
+    btnSPSearch As button:
+        Fill: =RGBA(220, 153, 153, 1)
+        Height: =48
+        HoverFill: =ColorFade(RGBA(220,153,153,1), -20%)
+        OnSelect: |-
+            =Set(
+                varProgress,
+                If(
+                    IsBlank(txtSPSearch.Text),
+                    Blank(),
+                    LookUp(
+                        Choices(TBL_WorkProgressTracker4.Progress),
+                        txtSPSearch.Text in ThisRecord.Value
+                    )
+                )
+            );
+            Set(
+                varAssignedTo,
+                If(
+                    IsBlank(txtSPSearch.Text),
+                    Blank(),
+                    First(
+                        Office365Users.SearchUserV2(
+                            {
+                                searchTerm: txtSPSearch.Text,
+                                top: 1
+                            }
+                        ).value
+                    )
+                )
+            );
+            Set(
+                varDepartment,
+                If(
+                    IsBlank(txtSPSearch.Text),
+                    Blank(),
+                    LookUp(
+                        Choices(TBL_WorkProgressTracker4.Departament),
+                        txtSPSearch.Text in ThisRecord.Value
+                    )
+                )
+            );
+            Set(
+                varSearchText,
+                txtSPSearch.Text
+            )
+        Size: =19
+        Text: ="Search"
+        X: =896
+        Y: =119
+        ZIndex: =6
+
