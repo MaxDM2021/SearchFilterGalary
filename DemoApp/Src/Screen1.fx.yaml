@@ -1,0 +1,179 @@
+Screen1 As screen:
+
+    Label1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(99, 139, 44, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =77
+        Size: =20
+        Text: ="This os my first canvas app"
+        Width: =1366
+        ZIndex: =1
+
+    Icon1 As icon.Diamond:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Icon: =Icon.Home
+        Width: =62
+        X: =17
+        Y: =8
+        ZIndex: =2
+
+    TextInput1 As text:
+        Default: ="Text input"
+        X: =713
+        Y: =620
+        ZIndex: =3
+
+    DatePicker1 As datepicker:
+        X: =357
+        Y: =620
+        ZIndex: =4
+
+    Button1 As button:
+        Text: ="Button"
+        X: =1079
+        Y: =684
+        ZIndex: =5
+
+    Circle1 As circle:
+        Height: =215
+        Width: =230
+        X: =37
+        Y: =175
+        ZIndex: =6
+
+    Icon2 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Icon: =Icon.BackArrow
+        Width: =48
+        X: =1302
+        Y: =8
+        ZIndex: =7
+
+    PenInput1 As inkControl:
+        Height: =200
+        Width: =285
+        X: =37
+        Y: =524
+        ZIndex: =8
+
+    ComboBox1 As combobox:
+        ChevronBackground: =RGBA(99, 139, 44, 1)
+        Items: =ComboBoxSample
+        SearchItems: =Search(ComboBoxSample,ComboBox1.SearchText,Value1)
+        X: =357
+        Y: =684
+        ZIndex: =9
+
+    Dropdown1 As dropdown:
+        Items: =DropDownSample
+        X: =713
+        Y: =684
+        ZIndex: =10
+
+    Slider1 As slider:
+        Default: =100
+        Height: =50
+        Max: =1000
+        Width: =867
+        X: =357
+        Y: =540
+        ZIndex: =11
+
+    Radio1 As radio:
+        Items: =RadioSample
+        X: =357
+        Y: =438
+        ZIndex: =12
+
+    Checkbox1 As checkbox:
+        Text: ="Option"
+        X: =485
+        Y: =488
+        ZIndex: =13
+
+    Toggle1 As toggleSwitch:
+        Height: =46
+        Width: =117
+        X: =624
+        Y: =488
+        ZIndex: =14
+
+    ListBox1 As listbox:
+        Items: =["Apple", "Mango", "Grapes"]
+        X: =896
+        Y: =405
+        ZIndex: =15
+
+    Rating1 As rating:
+        Default: =3
+        DisabledFill: =Self.Fill
+        DisplayMode: =DisplayMode.Edit
+        FocusedBorderColor: =Self.BorderColor
+        Height: =66
+        HoverFill: =Self.Fill
+        PressedFill: =Self.Fill
+        Width: =222
+        X: =376
+        Y: =343
+        ZIndex: =16
+
+    Timer1 As timer:
+        Height: =36
+        Width: =328
+        X: =896
+        Y: =342
+        ZIndex: =17
+
+    RichTextEditor1 As richTextEditor:
+        Default: ="Enter some <strong>rich text</strong> here."
+        Height: =184
+        Width: =392
+        X: =381
+        Y: =158
+        ZIndex: =18
+
+    "AddressInput1 As 'Address input'":
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFillColor: =RGBA(244, 244, 244, 1)
+        DisabledFontColor: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.Edit
+        FillColor: =RGBA(255, 255, 255, 1)
+        Height: =49
+        HoverBorderColor: =RGBA(0, 18, 107, 1)
+        HoverFillColor: =RGBA(186, 202, 226, 1)
+        HoverFontColor: =RGBA(0, 0, 0, 1)
+        OnAddressSelect: =false
+        PressedBorderColor: =RGBA(0, 18, 107, 1)
+        PressedFillColor: =RGBA(255, 255, 255, 1)
+        PressedFontColor: =RGBA(0, 0, 0, 1)
+        TextColor: =RGBA(0, 0, 0, 1)
+        Width: =338
+        X: =896
+        Y: =258
+        ZIndex: =19
+
+    HtmlText1 As htmlViewer:
+        Height: =52
+        Width: =320
+        X: =37
+        Y: =106
+        ZIndex: =20
+
+    Image1 As image:
+        Height: =135
+        Image: =ball
+        RadiusBottomLeft: =200
+        RadiusBottomRight: =200
+        RadiusTopLeft: =200
+        RadiusTopRight: =200
+        Width: =131
+        X: =896
+        Y: =106
+        ZIndex: =21
+
