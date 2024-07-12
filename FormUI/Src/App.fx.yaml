@@ -1,0 +1,26 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |-
+        =ClearCollect(
+            colPartsInformation,
+            {
+                
+                PartsName: "",
+                Description: "",
+                UnitPrice: 0,
+                Quantity: 0,
+                FormID: 1,
+                ID: 1
+               
+            }
+        )
+    StartScreen: =Screen2
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

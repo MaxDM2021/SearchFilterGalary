@@ -1,0 +1,178 @@
+Screen3 As screen:
+
+    DataTable1 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =431
+        Items: =TBL_Demo
+        Width: =770
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+        Title_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Title"
+            FieldName: ="Title"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.Title
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        Name_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Name"
+            FieldName: ="Name"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.Name
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        Age_Column1 As dataTableColumn.textualColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Age"
+            FieldName: ="Age"
+            FieldVariantName: ="textualColumn"
+            Height: =431
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Age
+            Width: =145
+            X: =311
+            Y: =0
+            ZIndex: =3
+
+        ID_Column1 As dataTableColumn.numberColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="ID"
+            FieldName: ="ID"
+            FieldVariantName: ="numberColumn"
+            Height: =431
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.ID
+            Width: =179
+            X: =314
+            Y: =0
+            ZIndex: =4
+
+        Email_Column1 As dataTableColumn.textualColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Email"
+            FieldName: ="Email"
+            FieldVariantName: ="textualColumn"
+            Height: =431
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.Email
+            Width: =277
+            X: =489
+            Y: =0
+            ZIndex: =5
+
+    TextInput2 As text:
+        Default: =
+        Width: =111
+        X: =40
+        Y: =559
+        ZIndex: =2
+
+    TextInput4 As text:
+        Default: =
+        Height: =39
+        Width: =148
+        X: =174
+        Y: =560
+        ZIndex: =3
+
+    TextInput5 As text:
+        Default: =
+        Height: =39
+        Width: =105
+        X: =345
+        Y: =560
+        ZIndex: =4
+
+    Button3 As button:
+        OnSelect: |-
+            =Patch(TBL_Demo,
+            {Title: TextInput2.Text,
+            Name: TextInput4.Text,
+            Age: Value(TextInput5.Text),
+            Email: User().Email
+            
+            })
+        Text: ="Save to SP"
+        X: =40
+        Y: =632
+        ZIndex: =5
+
+    Button3_1 As button:
+        OnSelect: |-
+            =Patch(TBL_Demo,
+            LookUp(TBL_Demo, ID=Value(TextInput5_1.Text)),
+            {
+            Age: Value(TextInput5.Text),
+            Name: TextInput4.Text,
+            Title: TextInput2.Text
+            }
+            )
+        Text: ="Update to SP"
+        X: =231
+        Y: =632
+        ZIndex: =6
+
+    TextInput5_1 As text:
+        Default: =
+        Height: =39
+        Width: =105
+        X: =471
+        Y: =559
+        ZIndex: =7
+
+    Label7 As label:
+        Height: =33
+        Text: ="Title"
+        Width: =111
+        X: =40
+        Y: =512
+        ZIndex: =8
+
+    Label7_1 As label:
+        Height: =33
+        Text: ="Name"
+        Width: =111
+        X: =174
+        Y: =512
+        ZIndex: =9
+
+    Label7_2 As label:
+        Height: =33
+        Text: ="Age"
+        Width: =111
+        X: =339
+        Y: =512
+        ZIndex: =10
+
+    Label7_3 As label:
+        Height: =33
+        Text: ="ID"
+        Width: =111
+        X: =471
+        Y: =512
+        ZIndex: =11
+

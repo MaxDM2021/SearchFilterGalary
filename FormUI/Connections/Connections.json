@@ -1,0 +1,116 @@
+{
+  "613db771-48a9-424c-a15c-343703b0ebee": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "613db771-48a9-424c-a15c-343703b0ebee"
+  },
+  "78deb880-b3d5-4cbe-b368-371f5b8c20ed": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://dldc-my.sharepoint.com/personal/mdymtriiev_dldc_org/": {
+        "dataSources": {
+          "TBL_TimeOFF": {
+            "tableName": "b5f99329-0580-4a04-a768-eb919c3ba216"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "TBL_TimeOFF"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "78deb880-b3d5-4cbe-b368-371f5b8c20ed"
+  },
+  "87b01685-6dff-40a7-a62d-e7c71e2be80a": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://dldc-my.sharepoint.com/personal/mdymtriiev_dldc_org/": {
+        "dataSources": {
+          "TBL_Billing_Info": {
+            "tableName": "127ce81c-01f6-48dc-995f-07cf4ea20a59"
+          },
+          "TBL_Demo": {
+            "tableName": "3a9cf19e-8bef-4b6f-9eb1-1c443bd9726f"
+          },
+          "TBL_Parts_Info": {
+            "tableName": "9414ca89-61c0-45b9-956c-47ff2b04b9fa"
+          },
+          "TBL_Shiping_Info": {
+            "tableName": "c01b1c36-2886-43f5-9ce3-1e80157937a7"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "TBL_Demo",
+      "TBL_Shiping_Info",
+      "TBL_Billing_Info",
+      "TBL_Parts_Info"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "87b01685-6dff-40a7-a62d-e7c71e2be80a"
+  },
+  "a0b14658-a69a-4d2e-8852-dbf91668a912": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "me,b%2521l6Ctx8cnhkqngMffrhX_zBCRkcsZkrxMv8RJHquJRUFbulT8YEomSaWGp49UFoVq,01LDTEOKQC4KIUWCAHGFBK6FKIZZW27YKG": {
+        "dataSources": {
+          "Table1": {
+            "tableName": "{469ADD9F-33AF-4461-8AAC-D137E532E873}"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Table1"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "a0b14658-a69a-4d2e-8852-dbf91668a912"
+  }
+}

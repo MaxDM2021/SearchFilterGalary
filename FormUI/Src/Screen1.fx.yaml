@@ -1,0 +1,359 @@
+Screen1 As screen:
+
+    "'Form Container' As groupContainer.manualLayoutContainer":
+        Height: =Parent.Height
+        Width: =Parent.Width
+        Y: =Parent.Height/2-Self.Height/2
+        ZIndex: =1
+
+        Circle1 As circle:
+            Fill: =RGBA(141, 198, 63, 1)
+            Height: =Parent.Height
+            Width: =Parent.Height
+            X: =Parent.Width/2-Self.Width/2
+            Y: =Parent.Height/2
+            ZIndex: =1
+
+        "'form Body' As groupContainer.manualLayoutContainer":
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Button1.Y+Button1.Height+20
+            Width: =Parent.Height-200
+            X: =Parent.Width/2-Self.Width/2
+            Y: =40
+            ZIndex: =2
+
+            TimeOfRequestLabel As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(54, 176, 75, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =18
+                Text: ="Time of Request"
+                Width: =Parent.Width
+                Y: ='Header Container'.Y+'Header Container'.Height
+                ZIndex: =3
+
+            "'Header Container' As groupContainer.manualLayoutContainer":
+                Fill: =RGBA(141, 198, 63, 1)
+                Height: =100
+                Width: =Parent.Width
+                ZIndex: =4
+
+                Label2 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =100
+                    Size: =18
+                    Text: ="Form of traveling" &Char(10)& "DLDC"
+                    Width: =Parent.Width*.4
+                    X: =Image1.X+Image1.Width
+                    ZIndex: =1
+
+                Image1 As image:
+                    Height: =70
+                    Image: =bike
+                    Width: =124
+                    X: =Parent.Width*.05
+                    Y: =Label2.Height/2-Self.Height/2
+                    ZIndex: =2
+
+                Button1_2 As button:
+                    BorderColor: =ColorFade(Self.Fill, -20%)
+                    BorderThickness: =1
+                    Fill: =RGBA(141, 198, 63, 1)
+                    Height: =50
+                    HoverFill: =ColorFade(Self.Fill, -20%)
+                    OnSelect: |
+                        =Navigate(Screen2, ScreenTransition.Fade)
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    Size: =12
+                    Text: ="Customer Form"
+                    Width: =Parent.Width*.2
+                    X: =TimeOfRequestLabel.Width-Self.Width-20
+                    Y: =25
+                    ZIndex: =3
+
+            Label3 As label:
+                Text: ="You Name*"
+                Width: =Parent.Width*.4
+                X: =Parent.Width*.05
+                Y: =TimeOfRequestLabel.Y+TimeOfRequestLabel.Height+20
+                ZIndex: =5
+
+            Label3_1 As label:
+                Color: =RGBA(102, 102, 102, 1)
+                Height: =30
+                Size: =11
+                Text: ="First Name"
+                Width: =Parent.Width*.4
+                X: =Parent.Width*.05
+                Y: =TextInput1_1.Y+TextInput1_1.Height
+                ZIndex: =6
+
+            Label3_2 As label:
+                Color: =RGBA(102, 102, 102, 1)
+                Height: =30
+                Size: =11
+                Text: ="Last Name"
+                Width: =Parent.Width*.4
+                X: =TextInput1.X
+                Y: =TextInput1_1.Y+TextInput1_1.Height
+                ZIndex: =7
+
+            TextInput1 As text:
+                BorderColor: =RGBA(99, 139, 44, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(
+                        varLoadPrevValue,
+                        varLastName,
+                        ""
+                    )
+                Fill: =RGBA(152, 208, 70, 1)
+                FocusedBorderColor: =
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                Reset: =varReset
+                Width: =Parent.Width*.425
+                X: =TextInput1_1.X+TextInput1_1.Width+Parent.Width*.05
+                Y: =Label3.Y+Label3.Height
+                ZIndex: =8
+
+            TextInput1_1 As text:
+                BorderColor: =RGBA(99, 139, 44, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(
+                        varLoadPrevValue,
+                        varFirstName,
+                        ""
+                    )
+                Fill: =RGBA(152, 208, 70, 1)
+                FocusedBorderColor: =
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                Reset: =varReset
+                Width: =Parent.Width*.425
+                X: =Parent.Width*.05
+                Y: =Label3.Y+Label3.Height
+                ZIndex: =9
+
+            Label3_3 As label:
+                Text: ="Email*"
+                Width: =Parent.Width*.4
+                X: =Parent.Width*.05
+                Y: =Label3_1.Y+Label3_1.Height
+                ZIndex: =10
+
+            TextInput1_2 As text:
+                BorderColor: =RGBA(99, 139, 44, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(
+                        varLoadPrevValue,
+                        varEmail,
+                        ""
+                    )
+                Fill: =RGBA(152, 208, 70, 1)
+                FocusedBorderColor: =
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                Reset: =varReset
+                Width: =Parent.Width*.9
+                X: =Parent.Width*.05
+                Y: =Label3_3.Y+Label3_3.Height
+                ZIndex: =11
+
+            Label3_4 As label:
+                Text: ="Start Date"
+                Width: =Parent.Width*.4
+                X: =Parent.Width*.05
+                Y: =TextInput1_2.Y+TextInput1_2.Height+20
+                ZIndex: =12
+
+            Label3_5 As label:
+                Text: ="End Date"
+                Width: =Parent.Width*.4
+                X: =Label3_4.X+Label3_4.Width+Parent.Width*.1
+                Y: =TextInput1_2.Y+TextInput1_2.Height+20
+                ZIndex: =13
+
+            Label3_6 As label:
+                Text: ="Number of Hours Total"
+                Width: =Parent.Width*.4
+                X: =Parent.Width*.05
+                Y: =DatePicker1.Y+DatePicker1.Height+20
+                ZIndex: =14
+
+            DatePicker1 As datepicker:
+                BorderColor: =RGBA(141, 198, 63, 1)
+                BorderThickness: =0
+                Color: =RGBA(141, 198, 63, 1)
+                DefaultDate: |-
+                    =If(
+                        varLoadPrevValue,
+                        varStartDate,
+                        ""
+                    )
+                DisabledBorderColor: =RGBA(141, 198, 63, 1)
+                DisabledColor: =RGBA(141, 198, 63, 1)
+                DisabledFill: =RGBA(141, 198, 63, 1)
+                IconBackground: =RGBA(141, 198, 63, 100)
+                IconFill: =RGBA(255, 255, 255,1)
+                InputTextPlaceholder: =
+                Reset: =varReset
+                Width: =Parent.Width*.425
+                X: =Parent.Width*.05
+                Y: =Label3_4.Y+Label3_4.Height
+                ZIndex: =15
+
+            DatePicker1_1 As datepicker:
+                BorderColor: =RGBA(141, 198, 63, 1)
+                BorderThickness: =0
+                Color: =RGBA(141, 198, 63, 1)
+                DefaultDate: |-
+                    =If(
+                        varLoadPrevValue,
+                        varEndDate,
+                        ""
+                    )
+                DisabledBorderColor: =RGBA(141, 198, 63, 1)
+                DisabledColor: =RGBA(141, 198, 63, 1)
+                DisabledFill: =RGBA(141, 198, 63, 1)
+                IconBackground: =RGBA(141, 198, 63, 100)
+                IconFill: =RGBA(255, 255, 255,1)
+                InputTextPlaceholder: =
+                Reset: =varReset
+                Width: =Parent.Width*.425
+                X: =DatePicker1.X+DatePicker1.Width+Parent.Width*.05
+                Y: =Label3_4.Y+Label3_4.Height
+                ZIndex: =16
+
+            TextInput1_3 As text:
+                BorderColor: =RGBA(99, 139, 44, 1)
+                BorderThickness: =0
+                Default: |+
+                    =If (varLoadPrevValue,
+                    // After Reset
+                    varTotalHours,
+                    //Before Reset
+                        If (IsBlank(DatePicker1.SelectedDate),"",
+                        DateDiff(
+                            DatePicker1.SelectedDate, 
+                            DatePicker1_1.SelectedDate, TimeUnit.Hours
+                        )+24
+                    ))
+                    
+                    
+                    
+                    
+                    
+                Fill: =RGBA(152, 208, 70, 1)
+                FocusedBorderColor: =
+                Format: =TextFormat.Number
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                Reset: =varReset
+                Width: =Parent.Width*.9
+                X: =Parent.Width*.05
+                Y: =Label3_6.Y+Label3_6.Height
+                ZIndex: =17
+
+            Button1 As button:
+                BorderThickness: =0
+                Fill: =RGBA(141, 198, 63, 1)
+                Height: =50
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: |
+                    =Patch(
+                        TBL_TimeOFF,
+                        {
+                            'First Name': TextInput1_1.Text,
+                            'Last Name': TextInput1.Text,
+                            Email: TextInput1_2.Text,
+                            'Start Date': DatePicker1.SelectedDate,
+                            'End Date': DatePicker1_1.SelectedDate,
+                            'Total Hours': Value(TextInput1_3.Text),
+                            Title: "New Record"
+                        }
+                    );
+                    //Global Variables
+                    Set(
+                        varFirstName,
+                        TextInput1_1.Text
+                    );
+                    Set(
+                        varLastName,
+                        TextInput1.Text
+                    );
+                    Set(
+                        varEmail,
+                        TextInput1_2.Text
+                    );
+                    Set(
+                        varStartDate,
+                        DatePicker1.SelectedDate
+                    );
+                    Set(
+                        varEndDate,
+                        DatePicker1_1.SelectedDate
+                    );
+                    Set(
+                        varTotalHours,
+                        TextInput1_3.Text
+                    );
+                    //Context Variables
+                    UpdateContext({varReset: false});
+                    UpdateContext({varReset: true});
+                    //Works after click "Undo"
+                    UpdateContext({varLoadPrevValue: false});
+                Text: ="Submit Request"
+                Width: =Parent.Width*.425
+                X: =Parent.Width*.05
+                Y: =TextInput1_3.Y+TextInput1_3.Height+20
+                ZIndex: =18
+
+            Button1_1 As button:
+                BorderThickness: =0
+                Fill: =RGBA(141, 198, 63, 1)
+                Height: =50
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: |
+                    =//Global Variables
+                    Set(varFirstName, TextInput1_1.Text);
+                    Set(varLastName, TextInput1.Text);
+                    Set(varEmail, TextInput1_2.Text);
+                    Set(varStartDate, DatePicker1.SelectedDate);
+                    Set(varEndDate, DatePicker1_1.SelectedDate);
+                    Set(varTotalHours, TextInput1_3.Text);
+                    
+                    
+                    
+                    //Context Variables
+                    UpdateContext({varReset: false});
+                    UpdateContext({varReset: true});
+                    
+                    //Works after click "Undo"
+                    UpdateContext({varLoadPrevValue: false});
+                Text: ="Reset"
+                Width: =Parent.Width*.425
+                X: =TextInput1.X
+                Y: =570
+                ZIndex: =19
+
+            Icon2 As icon.Reset:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =TimeOfRequestLabel.Height
+                Icon: =Icon.Reset
+                OnSelect: |-
+                    =//Context variables
+                    UpdateContext({varLoadPrevValue: true})
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =TimeOfRequestLabel.Height
+                X: =TimeOfRequestLabel.Width-Self.Width
+                Y: =TimeOfRequestLabel.Y
+                ZIndex: =20
+

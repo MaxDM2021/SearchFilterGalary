@@ -1,0 +1,52 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-04-23T16:42:19.1430000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "Attachments",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{FilenameWithExtension}": "File name with extension",
+      "{FullPath}": "Full Path",
+      "{HasAttachments}": "Has attachments",
+      "{Identifier}": "Identifier",
+      "{IsFolder}": "IsFolder",
+      "{Link}": "Link to item",
+      "{ModerationComment}": "Comments associated with the content approval of this list item",
+      "{ModerationStatus}": "Content approval status",
+      "{Name}": "Name",
+      "{Path}": "Folder path",
+      "{Thumbnail}": "Thumbnail",
+      "{TriggerWindowEndToken}": "Trigger Window End Token",
+      "{TriggerWindowStartToken}": "Trigger Window Start Token",
+      "{VersionNumber}": "Version number",
+      "Address": "Address",
+      "AirCode": "EirCode",
+      "Author": "Created By",
+      "Author#Claims": "Created By Claims",
+      "City_x002f_Town": "City/Town",
+      "ComplianceAssetId": "Compliance Asset Id",
+      "County": "County",
+      "Created": "Created",
+      "Editor": "Modified By",
+      "Editor#Claims": "Modified By Claims",
+      "First": "First Name",
+      "FormID": "Form_ID",
+      "ID": "ID",
+      "LastName": "Last Name",
+      "MiddleName": "Middle Name",
+      "Modified": "Modified",
+      "OData__ColorTag": "Color Tag",
+      "Title": "Title"
+    },
+    "DatasetName": "https://dldc-my.sharepoint.com/personal/mdymtriiev_dldc_org/",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "TBL_Shiping_Info",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]
