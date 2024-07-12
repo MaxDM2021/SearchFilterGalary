@@ -1,0 +1,16 @@
+AssetScreen As screen:
+
+    TextInput1 As text:
+        AccessibleLabel: ="1"
+        Default: ="Enter Asset Title"
+        X: =40
+        Y: =60
+        ZIndex: =1
+
+    Button1 As button:
+        OnSelect: =InApp.Run(TextInput1.Text)
+        Text: ="Button"
+        X: =40
+        Y: =220
+        ZIndex: =2
+

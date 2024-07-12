@@ -1,0 +1,63 @@
+{
+  "ComponentIndexes": {},
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "AssetScreen": 4,
+    "Button1": 6,
+    "Host": 3,
+    "TextInput1": 5
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "07/12/2024 09:20:33",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {
+    "2e03bc5f-7bc8-4f42-801d-02802fa48026": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/38cb66ce397840a0a9db5aabada91e12\"",
+    "cc0bcfe3-3cc5-4631-a64f-64c24c400a29": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/bb5bd10d2e5d4ae59c0d2c34586203a1-937aa380f424fb5d\""
+  },
+  "LocalDatabaseReferencesAsEmpty": true,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OrderComponentMetadata": {},
+  "OrderComponentTemplate": {},
+  "OrderDataSource": {
+    "InApp": 0
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "button": 1,
+    "text": 0
+  },
+  "OverridablePropertiesEntry": {
+    "App": {},
+    "AssetScreen": {},
+    "Button1": {},
+    "Host": {},
+    "TextInput1": {}
+  },
+  "PCFDynamicSchemaForIRRetrievalEntry": {},
+  "PCFTemplateEntry": {},
+  "PublishOrderIndices": {
+    "App": 0,
+    "AssetScreen": 0,
+    "Button1": 1,
+    "Host": 0,
+    "TextInput1": 0
+  },
+  "ResourcesJsonIndices": {},
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.1038108,
+    "ControlCount": {
+      "button": 1,
+      "screen": 1,
+      "text": 1
+    },
+    "DeserializationLoadTime": 1.0172822
+  },
+  "WasLocalDatabaseReferencesEmpty": true
+}

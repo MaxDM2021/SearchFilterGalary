@@ -1,0 +1,64 @@
+{
+  "2e03bc5f-7bc8-4f42-801d-02802fa48026": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "cc0bcfe3-3cc5-4631-a64f-64c24c400a29"
+    ],
+    "id": "2e03bc5f-7bc8-4f42-801d-02802fa48026"
+  },
+  "cc0bcfe3-3cc5-4631-a64f-64c24c400a29": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "2e03bc5f-7bc8-4f42-801d-02802fa48026": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowDisplayName": {
+          "value": "InApp"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "bb5bd10d-2e5d-4ae5-9c0d-2c34586203a1"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "2e03bc5f-7bc8-4f42-801d-02802fa48026"
+        },
+        "workflowDisplayName": {
+          "value": "InApp"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "bb5bd10d-2e5d-4ae5-9c0d-2c34586203a1"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "InApp"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "2e03bc5f-7bc8-4f42-801d-02802fa48026"
+    },
+    "dependents": [],
+    "id": "cc0bcfe3-3cc5-4631-a64f-64c24c400a29"
+  }
+}
