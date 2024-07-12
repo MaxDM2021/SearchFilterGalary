@@ -1,0 +1,231 @@
+RegistrationScreen As screen:
+    OnVisible: |-
+        =UpdateContext({var_Password_Visible: false});
+        UpdateContext({var_ConfirmPassword_Visible: false});
+
+    Image2 As image:
+        Height: =768
+        Image: =tablet
+        Width: =931
+        X: =435
+        ZIndex: =1
+
+    Container1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Bold
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =698
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Width: =523
+        X: =78
+        Y: =39
+        ZIndex: =2
+
+        Label1 As label:
+            FontWeight: =FontWeight.Bold
+            Size: =20
+            Text: ="SIGN IN"
+            X: =40
+            Y: =40
+            ZIndex: =1
+
+        Label1_1 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =38
+            Size: =16
+            Text: ="Email/Username *"
+            Width: =236
+            X: =40
+            Y: =80
+            ZIndex: =2
+
+        Label1_2 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =38
+            Size: =16
+            Text: ="Password *"
+            Width: =236
+            X: =40
+            Y: =190
+            ZIndex: =3
+
+        Label1_3 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =38
+            Size: =16
+            Text: ="Confirm Password *"
+            Width: =236
+            X: =40
+            Y: =299
+            ZIndex: =4
+
+        TextInput1 As text:
+            BorderColor: =If(IsBlank(Self.Text),RGBA(0, 18, 107, 1),If(IsMatch(TextInput1.Text, Match.Email),RGBA(0, 18, 107, 1), Color.Red))
+            Default: =
+            FocusedBorderThickness: =2
+            Height: =50
+            HoverBorderColor: =Self.BorderColor
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Width: =450
+            X: =40
+            Y: =124
+            ZIndex: =5
+
+        TextInput1_1 As text:
+            BorderColor: |-
+                =If(IsBlank(Self.Text),RGBA(0,18,107,1), If(IsMatch(Self.Text, "^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$"), RGBA(0,18,107,1), Color.Red))
+            Default: =
+            FocusedBorderThickness: =2
+            Height: =50
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Mode: =If(var_Password_Visible, TextMode.SingleLine, TextMode.Password)
+            Width: =450
+            X: =40
+            Y: =238
+            ZIndex: =6
+
+        TextInput1_2 As text:
+            BorderColor: =If (Self.Text=TextInput1_1.Text, RGBA(0, 18, 107, 1), Color.Red)
+            Default: =
+            FocusedBorderThickness: =2
+            Height: =50
+            HoverBorderColor: =Self.BorderColor
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Mode: =If(var_ConfirmPassword_Visible, TextMode.SingleLine, TextMode.Password)
+            Width: =450
+            X: =40
+            Y: =343
+            ZIndex: =7
+
+        Icon1 As icon.View:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =25
+            Icon: =If(var_Password_Visible, Icon.Hide, Icon.View)
+            OnSelect: |-
+                =UpdateContext({var_Password_Visible: !var_Password_Visible})
+            Width: =25
+            X: =446
+            Y: =250
+            ZIndex: =8
+
+        Icon1_2 As icon.View:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =25
+            Icon: =If(var_ConfirmPassword_Visible, Icon.Hide, Icon.View)
+            OnSelect: |-
+                =UpdateContext({var_ConfirmPassword_Visible: !var_ConfirmPassword_Visible});
+            Width: =25
+            X: =446
+            Y: =355
+            ZIndex: =10
+
+        Container2 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Bold
+            Height: =66
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =450
+            X: =40
+            Y: =480
+            ZIndex: =11
+
+            Button2 As button:
+                DisplayMode: |-
+                    =If(IsMatch(TextInput1.Text, Match.Email) && IsMatch(TextInput1_1.Text, "^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$") && TextInput1_2.Text=TextInput1_1.Text, DisplayMode.Edit, DisplayMode.View)
+                Height: =67
+                OnSelect: |-
+                    =If(IsEmpty(
+                        Filter(
+                            TBL_User_Credential,
+                            User_email = User().Email
+                        )
+                    ),
+                    IfError(Patch(TBL_User_Credential, 
+                    Defaults(TBL_User_Credential),
+                    {
+                    Title: "New Record",    
+                    Username:TextInput1.Text,
+                    User_email:User().Email,
+                    User_cred:TextInput1_1.Text
+                    }
+                    ),Notify("Something went wrong :(, "&FirstError.Message, NotificationType.Error),
+                    Notify("Data has been successfuly saved ;)", NotificationType.Success)),
+                    Notify("User already has axisting account, here is your Username: " & LookUp(TBL_User_Credential,User_email=User().Email, Username), NotificationType.Information))
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =16
+                Text: ="SIGN UP"
+                Width: =450
+                ZIndex: =1
+
+        Label5 As label:
+            Color: =RGBA(128, 128, 128, 1)
+            Text: ="Must be 8 or more characters and contain at least 1 number and 1 special character."
+            Width: =450
+            X: =40
+            Y: =415
+            ZIndex: =12
+
+        Rectangle1 As rectangle:
+            Fill: =RGBA(128, 128, 128, 1)
+            Height: =2
+            Width: =450
+            X: =40
+            Y: =575
+            ZIndex: =13
+
+        Image1 As image:
+            Height: =46
+            Image: ='google-color-svgrepo-com'
+            Width: =41
+            X: =170
+            Y: =594
+            ZIndex: =14
+
+        Image1_1 As image:
+            Height: =52
+            Image: ='facebook-1-svgrepo-com'
+            Width: =61
+            X: =234
+            Y: =591
+            ZIndex: =15
+
+        Image1_2 As image:
+            Height: =57
+            Image: ='linkedin-svgrepo-com'
+            Width: =58
+            X: =312
+            Y: =591
+            ZIndex: =16
+
+        Label1_4 As label:
+            Color: =RGBA(77, 77, 77, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =38
+            Size: =16
+            Text: ="Already a user?"
+            Width: =171
+            X: =92
+            Y: =648
+            ZIndex: =17
+
+        Button3 As button:
+            Align: =Align.Left
+            Color: =RGBA(56, 96, 178, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 94, 146, 1)
+            HoverFill: =Color.Transparent
+            OnSelect: =Navigate(LoginScreen, ScreenTransition.Fade)
+            Size: =16
+            Text: ="LOGIN"
+            Underline: =true
+            X: =263
+            Y: =648
+            ZIndex: =18
+
