@@ -1,0 +1,196 @@
+HomeScreen As screen:
+
+    Header_2 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(141, 198, 63, 1)
+        Height: =80
+        Width: =Parent.Width
+        ZIndex: =1
+
+        "Icon1_2 As icon.'3DPrinting'":
+            Color: =RGBA(204, 231, 246, 1)
+            Height: =80
+            Icon: =Icon.ListWatchlistRemind
+            X: =50
+            ZIndex: =1
+
+        Label1_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(215, 223, 240, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =52
+            Size: =25
+            Text: ="ISSUE TRACKING HOME"
+            Width: =Parent.Width*.29
+            X: =537
+            Y: =Parent.Height/2-Parent.Height/3
+            ZIndex: =2
+
+    "galIssues As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+        BorderColor: =RGBA(219, 219, 219, 1)
+        DelayItemLoading: =true
+        Items: =TBL_IssueTracking
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowNavigation: =true
+        TemplateFill: =RGBA(209, 232, 178, 1)
+        TemplatePadding: =10
+        TemplateSize: =130
+        Transition: =Transition.Push
+        Width: =1274
+        WrapCount: =3
+        X: =46
+        Y: =155
+        ZIndex: =1
+
+        Title4 As label:
+            Color: =RGBA(221, 79, 14, 1)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 86
+            X: =43
+            Y: =13
+            ZIndex: =1
+
+        Subtitle3 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.IssueDecription
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title4.Width
+            X: =Title4.X
+            Y: =Title4.Y + Title4.Height
+            ZIndex: =2
+
+        Body1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =10
+            Text: =ThisItem.Status.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =116
+            X: =295
+            Y: =90
+            ZIndex: =3
+
+        Separator4 As rectangle:
+            Fill: =RGBA(152, 208, 70, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle4 As rectangle:
+            Fill: =RGBA(221, 79, 14, 1)
+            Height: =Parent.TemplateHeight - Separator4.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Subtitle3_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =19
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Expected_Completion_Date
+            VerticalAlign: =VerticalAlign.Top
+            Width: =140
+            X: =43
+            Y: =71
+            ZIndex: =7
+
+        Body1_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =10
+            Text: =ThisItem.Priority.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =73
+            X: =16
+            Y: =90
+            ZIndex: =8
+
+        Body1_2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =10
+            Text: =ThisItem.'Assigned to'.DisplayName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =153
+            X: =129
+            Y: =90
+            ZIndex: =9
+
+        Title4_1 As label:
+            Color: =RGBA(221, 79, 14, 1)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =ThisItem.ID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =27
+            X: =16
+            Y: =13
+            ZIndex: =10
+
+        Icon4 As icon.NextArrow:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =28
+            Icon: =Icon.NextArrow
+            OnSelect: =ResetForm(formIssueTracker);ViewForm(formIssueTracker);Navigate(FormScreen)
+            Width: =35
+            X: =320
+            Y: =47
+            ZIndex: =11
+
+        Icon5 As icon.Edit:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =36
+            Icon: =Icon.Edit
+            OnSelect: =ResetForm(formIssueTracker);EditForm(formIssueTracker);Navigate(FormScreen)
+            Width: =22
+            X: =368
+            Y: =41
+            ZIndex: =12
+
+    Icon2 As icon.Add:
+        Color: =RGBA(215, 223, 240, 1)
+        Height: =57
+        Icon: =Icon.Add
+        OnSelect: =ResetForm(formIssueTracker);NewForm(formIssueTracker);Navigate(FormScreen)
+        Width: =54
+        X: =1251
+        Y: =11
+        ZIndex: =2
+

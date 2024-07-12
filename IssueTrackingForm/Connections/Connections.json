@@ -1,0 +1,35 @@
+{
+  "8d8f17ba-3610-4326-aafb-f7d3993bed31": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://dldc-my.sharepoint.com/personal/mdymtriiev_dldc_org/_layouts": {
+        "dataSources": {
+          "TBL_Issue_Priority": {
+            "tableName": "e3169f84-db1f-4505-944e-d1486415c571"
+          },
+          "TBL_IssueTracking": {
+            "tableName": "aa2c16e4-903f-4c05-be67-9b33fb0ab010"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "TBL_IssueTracking",
+      "TBL_Issue_Priority"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "8d8f17ba-3610-4326-aafb-f7d3993bed31"
+  }
+}
