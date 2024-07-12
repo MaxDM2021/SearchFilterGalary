@@ -1,0 +1,149 @@
+"'Home Screen' As screen":
+    Fill: =RGBA(242, 242, 242, 1)
+    LoadingSpinnerColor: =RGBA(197, 24, 128, 1)
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        '#CopilotOverlayLabel': ="Filtered"
+        BorderColor: =RGBA(189, 189, 189, 1)
+        Height: =561
+        Items: =TBL_CameraPictureFile
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =ClearCollect(colAttachments,ThisItem.Attachments);ResetForm(InfoForm);ViewForm(InfoForm);Navigate('Form Screen',ScreenTransition.Fade)
+        TemplatePadding: =20
+        TemplateSize: =192
+        Transition: =Transition.Push
+        Width: =1366
+        WrapCount: =3
+        Y: =159
+        ZIndex: =1
+
+        Button4 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FontWeight: =FontWeight.Semibold
+            Height: =192
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =Self.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =Self.Fill
+            Size: =15
+            Text: =""
+            Width: =428.6666666666667
+            ZIndex: =1
+
+        Title2 As label:
+            Color: =RGBA(29, 29, 29, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =37
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =15
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =195
+            X: =216
+            Y: =24
+            ZIndex: =2
+
+        Image4 As image:
+            BorderColor: =RGBA(189, 189, 189, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =145
+            Image: =LookUp(ThisItem.Attachments,EndsWith( DisplayName,".jpg")||EndsWith( DisplayName,".png")).Value
+            OnSelect: =Select(Parent)
+            Width: =165
+            X: =17
+            Y: =23
+            ZIndex: =3
+
+        Title2_1 As label:
+            Color: =RGBA(29, 29, 29, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =63
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Description
+            VerticalAlign: =VerticalAlign.Top
+            Width: =195
+            X: =216
+            Y: =73
+            ZIndex: =4
+
+        Title2_2 As label:
+            Color: =RGBA(29, 29, 29, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =24
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: |-
+                ="Total 📎:" & CountRows(ThisItem.Attachments) 
+            VerticalAlign: =VerticalAlign.Top
+            Width: =177
+            X: =216
+            Y: =136
+            ZIndex: =5
+
+    Image1 As image:
+        BorderColor: =RGBA(189, 189, 189, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =95
+        Image: =Header
+        ImagePosition: =ImagePosition.Stretch
+        ImageRotation: =ImageRotation.Rotate180
+        Width: =1366
+        ZIndex: =3
+
+    Label1 As label:
+        Align: =LayoutAlignItems.Center
+        BorderColor: =RGBA(189, 189, 189, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =63
+        Size: =32
+        Text: ="📷 Camera  & 🖼️ Pictures  &  📁 Files"
+        Width: =955
+        X: =242
+        Y: =16
+        ZIndex: =4
+
+    Button2 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(197, 24, 128, 1)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(197, 24, 128, 1), -20%)
+        OnSelect: |-
+            =Clear(colAttachments);
+            Set(varType,"add");
+            ResetForm(InfoForm);
+            NewForm(InfoForm);
+            
+            Navigate(
+                'Form Screen',
+                ScreenTransition.Fade
+            )
+        Size: =15
+        Text: ="+ New Record"
+        Width: =201
+        X: =1086
+        Y: =107
+        ZIndex: =7
+
