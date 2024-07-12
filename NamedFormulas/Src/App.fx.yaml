@@ -1,0 +1,43 @@
+App As appinfo:
+    BackEnabled: =true
+    Formulas: |-
+        =x=110;
+        calcProfitLoss(costprice:Number,sellingprice:Number):Text =IfError(With({PLval: ((sellingprice-costprice)/costprice*100)},If(PLval>0,"⬆","⬇") & " " & Text(PLval,"##.00")),"NA");
+        
+        IssuesCreatedByMe = Filter(TBL_IssueTracking, 'Created By'.Email=User().Email);
+        IssuesAssignedToMe = Filter(TBL_IssueTracking, 'Assigned to'.Email=User().Email);
+        
+        nfMyProfile=Office365Users.MyProfileV2();
+        nfHighPriorityTask=Filter(TBL_IssueTracking, Priority.Value="High");
+        nfBrandPrimaryColor=ColorValue("#3498db");
+        nfBrandSecondaryColor=ColorValue("#2ecc71");
+        
+        
+        
+        //nfUserAdmin=SystemAdministrator in LookUp(Users, 'AzureAD Object ID') = GUID(varMyProfile.id)).'Securiry Roles(systemuserroles_association)'.Name;
+        //isUserMarker= EnvironmentMarker in LookUp(Users, 'Azure AD Object ID' = GUID(varMyProfile.id)).'Securiry Roles(systemuserroles_association)'.Name;
+        
+        
+        //Set(varMyProfile,Office365Users.MyProfileV2());
+        //ClearCollect(colItems, Filter(TBL_IssueTracking, Priority.Value="High"));
+        //Set(BrandPrimaryColor, ColorValue("#3498db"));
+        //Set(BrandSecondaryColor, ColorValue("#2ecc71"));
+        //Set(isUserAdmin, SystemAdministrator in LookUp(Users, 'AzureAD Object ID') = GUID(varMyProfile.id)).'Securiry Roles(systemuserroles_association)'.Name);
+        //Set(isUserMarker, EnvironmentMarker in LookUp(Users, 'Azure AD Object ID' = GUID(varMyProfile.id)).'Securiry Roles(systemuserroles_association)'.Name);
+    OnStart: |-
+        =Set(varMyProfile,
+        Office365Users.MyProfileV2());
+        ClearCollect(colItems, Filter(TBL_IssueTracking, Priority.Value="High"));
+        Set(BrandPrimaryColor, ColorValue("#3498db"));
+        Set(BrandSecondaryColor, ColorValue("#2ecc71"));
+        Set(isUserAdmin, SystemAdministrator in LookUp(Users, 'AzureAD Object ID') = GUID(varMyProfile.id)).'Securiry Roles(systemuserroles_association)'.Name);
+        Set(isUserMarker, EnvironmentMarker in LookUp(Users, 'Azure AD Object ID' = GUID(varMyProfile.id)).'Securiry Roles(systemuserroles_association)'.Name);
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

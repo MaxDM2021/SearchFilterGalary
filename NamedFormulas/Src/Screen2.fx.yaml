@@ -1,0 +1,15 @@
+Screen2 As screen:
+
+    Label2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(187, 221, 140, 1)
+        Height: =63
+        Size: =20
+        Text: |-
+            ="Global variable: " &varData
+        Width: =297
+        X: =40
+        Y: =36
+        ZIndex: =1
+

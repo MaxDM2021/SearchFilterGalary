@@ -1,0 +1,50 @@
+{
+  "679ac663-60db-414c-aa90-68dcd2062970": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://dldc-my.sharepoint.com/personal/mdymtriiev_dldc_org/_layouts": {
+        "dataSources": {
+          "TBL_IssueTracking": {
+            "tableName": "aa2c16e4-903f-4c05-be67-9b33fb0ab010"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "TBL_IssueTracking"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "679ac663-60db-414c-aa90-68dcd2062970"
+  },
+  "d86933c8-5fbb-43fe-ba9d-3a15d5da45b8": {
+    "appActions": [
+      "MyProfile_V2"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1694/1.0.1694.3752/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "d86933c8-5fbb-43fe-ba9d-3a15d5da45b8"
+  }
+}
